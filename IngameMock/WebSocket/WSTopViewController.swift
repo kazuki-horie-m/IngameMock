@@ -53,6 +53,7 @@ class WSTopViewController: UIViewController {
     
     
     private func start() {
+        socket.removeAllHandlers()
         
         socket.on("connect") { [weak self] data, ack in
             print("socket connected")
@@ -60,6 +61,7 @@ class WSTopViewController: UIViewController {
         }
         
         socket.on("from_server") { [weak self] data, ack in
+            print("socket from_server")
             if let msg = data[0] as? String {
                 let text = self?.tvLog?.text ?? ""
                 self?.tvLog?.text = msg + "\n" + text
