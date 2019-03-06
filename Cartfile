@@ -1,0 +1,4 @@
+github "ReactiveX/RxSwift" ~> 4.0
+github "shogo4405/HaishinKit.swift"
+github "RxSwiftCommunity/RxAlamofire"
+github "SwiftyJSON/SwiftyJSON"

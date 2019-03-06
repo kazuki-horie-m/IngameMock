@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Streaming Top View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StreamingTopViewController" customModule="IngameMock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czT-rW-KdJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="OYh-DP-dPS" kind="embed" id="h4p-Pb-rBy"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ1-Jw-2we">
+                                <rect key="frame" x="16" y="516" width="240" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mQ1-Jw-2we" secondAttribute="height" multiplier="16:9" id="ppt-gb-E1s"/>
+                                    <constraint firstAttribute="width" constant="240" id="yTm-eE-vVN"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Zqu-dS-oGp" kind="embed" id="b7Z-0R-qCr"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71d-qF-sQE">
+                                <rect key="frame" x="127.5" y="227" width="120" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="71d-qF-sQE" secondAttribute="height" multiplier="9:16" id="M7h-e1-sND"/>
+                                    <constraint firstAttribute="width" constant="120" id="VXG-R8-Nbh"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="4ma-V3-hGF" kind="embed" id="3N3-1g-8QC"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iet-3P-rOH">
+                                <rect key="frame" x="180" y="190" width="15" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.081321229716778798" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaY-7t-hUA">
+                                <rect key="frame" x="250" y="52" width="93" height="30"/>
+                                <state key="normal" title="Switch Player"/>
+                                <connections>
+                                    <action selector="switchPlayerWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u0i-Q5-3VS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c5-Yf-qli">
+                                <rect key="frame" x="254.5" y="98" width="84" height="30"/>
+                                <state key="normal" title="Switch View"/>
+                                <connections>
+                                    <action selector="switchViewWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgY-5g-To3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sR-i1-fg6">
+                                <rect key="frame" x="16" y="36" width="66" height="30"/>
+                                <state key="normal" title="Live Start"/>
+                                <connections>
+                                    <action selector="startLiveWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OQz-0o-V5z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KR-ci-ZAP">
+                                <rect key="frame" x="17" y="82" width="64" height="30"/>
+                                <state key="normal" title="Live Stop"/>
+                                <connections>
+                                    <action selector="stopLiveWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Gh-2F-2R8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yaY-7t-hUA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="0ou-ON-FWf"/>
+                            <constraint firstItem="3c5-Yf-qli" firstAttribute="top" secondItem="yaY-7t-hUA" secondAttribute="bottom" constant="16" id="11v-fo-dcv"/>
+                            <constraint firstItem="71d-qF-sQE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4fX-W8-RCW"/>
+                            <constraint firstItem="czT-rW-KdJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CCn-kY-zA0"/>
+                            <constraint firstAttribute="bottom" secondItem="czT-rW-KdJ" secondAttribute="bottom" id="E6L-mm-IJp"/>
+                            <constraint firstItem="71d-qF-sQE" firstAttribute="centerX" secondItem="iet-3P-rOH" secondAttribute="centerX" id="Ila-N5-egn"/>
+                            <constraint firstItem="71d-qF-sQE" firstAttribute="top" secondItem="iet-3P-rOH" secondAttribute="bottom" constant="16" id="MP7-pP-aZn"/>
+                            <constraint firstItem="1sR-i1-fg6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Taa-da-NV6"/>
+                            <constraint firstItem="8KR-ci-ZAP" firstAttribute="top" secondItem="1sR-i1-fg6" secondAttribute="bottom" constant="16" id="ZoO-G8-JLb"/>
+                            <constraint firstItem="mQ1-Jw-2we" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="euZ-ly-vdp"/>
+                            <constraint firstAttribute="trailing" secondItem="czT-rW-KdJ" secondAttribute="trailing" id="huQ-15-nfm"/>
+                            <constraint firstItem="1sR-i1-fg6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ief-Ul-D2y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mQ1-Jw-2we" secondAttribute="bottom" constant="16" id="kq4-i1-N44"/>
+                            <constraint firstItem="71d-qF-sQE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pmo-84-nPh"/>
+                            <constraint firstItem="8KR-ci-ZAP" firstAttribute="centerX" secondItem="1sR-i1-fg6" secondAttribute="centerX" id="snX-hV-PsN"/>
+                            <constraint firstItem="czT-rW-KdJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tf2-lF-f6M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yaY-7t-hUA" secondAttribute="trailing" constant="32" id="uNR-fL-ZMx"/>
+                            <constraint firstItem="3c5-Yf-qli" firstAttribute="centerX" secondItem="yaY-7t-hUA" secondAttribute="centerX" id="vtm-Uq-0nH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="71d-qF-sQE" id="VlS-9J-gPU"/>
+                        <outlet property="childView" destination="mQ1-Jw-2we" id="gv3-fS-iKd"/>
+                        <outlet property="ipaddressLabel" destination="iet-3P-rOH" id="57P-zB-zdC"/>
+                        <outlet property="parentView" destination="czT-rW-KdJ" id="wNI-SW-qIb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Streaming Parent Player View Controller-->
+        <scene sceneID="mnt-hj-4Is">
+            <objects>
+                <viewController id="OYh-DP-dPS" customClass="StreamingParentPlayerViewController" customModule="IngameMock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QCw-CG-cYs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zGw-YD-XRk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggf-ex-PnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="356"/>
+        </scene>
+        <!--Streaming Child Player View Controller-->
+        <scene sceneID="PWH-bW-mdk">
+            <objects>
+                <viewController id="Zqu-dS-oGp" customClass="StreamingChildPlayerViewController" customModule="IngameMock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gH6-rm-z7M">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HYv-sQ-Tiv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6a-3e-Uhd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413" y="-135"/>
+        </scene>
+        <!--Streaming Haishin View Controller-->
+        <scene sceneID="kVc-We-WZJ">
+            <objects>
+                <viewController id="4ma-V3-hGF" customClass="StreamingHaishinViewController" customModule="IngameMock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0HS-UK-gMG">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="213"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xcJ-y8-fbo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueK-1F-5k3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1261" y="-368"/>
+        </scene>
+    </scenes>
+</document>
