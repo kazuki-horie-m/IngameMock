@@ -12,5 +12,11 @@ class TopNavigationContrller: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        navigationBar.isTranslucent = true
+//        navigationBar.backgroundImage(for: <#T##UIBarMetrics#>)
+        
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+
     }
 }

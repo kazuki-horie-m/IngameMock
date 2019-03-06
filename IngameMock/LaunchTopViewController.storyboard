@@ -13,7 +13,7 @@
         <!--Top Navigation Contrller-->
         <scene sceneID="v9w-9M-1un">
             <objects>
-                <navigationController hidesBarsOnTap="YES" id="24g-PN-Hta" customClass="TopNavigationContrller" customModule="IngameMock" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="24g-PN-Hta" customClass="TopNavigationContrller" customModule="IngameMock" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AnS-66-8rx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
