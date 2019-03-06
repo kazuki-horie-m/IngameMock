@@ -14,16 +14,21 @@ class WSTopViewController: UIViewController {
     @IBOutlet private weak var tfAddress: UITextField?
     @IBOutlet private weak var tvLog: UITextView?
     
+    private lazy var manager: SocketManager = SocketManager(socketURL: URL(string: "http://192.168.2.1:3000")!, config: [.log(true), .compress])
+    private var socket: SocketIOClient {
+        return manager.defaultSocket
+    }
+    
     @IBAction private func btnHello(sender: UIButton) {
-        
+        socket.emit("from_client", "Hello")
     }
     
     @IBAction private func btnBang(sender: UIButton) {
-        
+        socket.emit("from_client", "Bang")
     }
     
     @IBAction private func btnBye(sender: UIButton) {
-        
+        socket.emit("from_client", "Bye")
     }
     
     @IBAction private func btnConnect(sender: UIButton) {
@@ -31,6 +36,11 @@ class WSTopViewController: UIViewController {
     }
     
     @IBAction private func btnDisconnect(sender: UIButton) {
+        socket.disconnect()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
     }
     
@@ -42,21 +52,19 @@ class WSTopViewController: UIViewController {
     
     
     private func start() {
-        let manager = SocketManager(socketURL: URL(string: "http://localhost:8080")!, config: [.log(true), .compress])
-        let socket = manager.defaultSocket
         
-        socket.on(clientEvent: .connect) {data, ack in
+        socket.on("connect") { [unowned self] data, ack in
             print("socket connected")
+            
+            print("send message")
+            self.socket.emit("from_client", "Hello")
         }
         
-        socket.on("currentAmount") {data, ack in
-            guard let cur = data[0] as? Double else { return }
-            
-            socket.emitWithAck("canUpdate", cur).timingOut(after: 0) {data in
-                socket.emit("update", ["amount": cur + 2.50])
+        socket.on("from_server") { [weak self] data, ack in
+            if let msg = data[0] as? String {
+                let text = self?.tvLog?.text ?? ""
+                self?.tvLog?.text = msg + "\n" + text
             }
-            
-            ack.with("Got your currentAmount", "dude")
         }
         
         socket.connect()
