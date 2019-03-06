@@ -38,6 +38,7 @@ class WSTopViewController: UIViewController {
     
     @IBAction private func btnDisconnect(sender: UIButton) {
         socket.disconnect()
+        socket.removeAllHandlers()
     }
     
     override func viewDidLoad() {
@@ -51,6 +52,11 @@ class WSTopViewController: UIViewController {
         lblAddress?.text = NetworkManager.getIPAddress()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        socket.removeAllHandlers()
+    }
     
     private func start() {
         socket.removeAllHandlers()
