@@ -14,7 +14,8 @@ class WSTopViewController: UIViewController {
     @IBOutlet private weak var tfAddress: UITextField?
     @IBOutlet private weak var tvLog: UITextView?
     
-    private lazy var manager: SocketManager = SocketManager(socketURL: URL(string: "http://192.168.2.1:3000")!, config: [.log(true), .compress])
+    private let destinationURL: String = "http://192.168.2.1:3000"
+    private lazy var manager: SocketManager = SocketManager(socketURL: URL(string: destinationURL)!, config: [.log(true), .compress])
     private var socket: SocketIOClient {
         return manager.defaultSocket
     }
@@ -41,7 +42,7 @@ class WSTopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tfAddress?.text = destinationURL
     }
     
     override func viewWillAppear(_ animated: Bool) {
