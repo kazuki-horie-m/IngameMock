@@ -67,3 +67,7 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# npm
+Server/node_modules
+Server/package-lock.json

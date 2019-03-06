@@ -53,11 +53,9 @@ class WSTopViewController: UIViewController {
     
     private func start() {
         
-        socket.on("connect") { [unowned self] data, ack in
+        socket.on("connect") { [weak self] data, ack in
             print("socket connected")
-            
-            print("send message")
-            self.socket.emit("from_client", "Hello")
+            self?.socket.emit("from_client", "Hello")
         }
         
         socket.on("from_server") { [weak self] data, ack in
