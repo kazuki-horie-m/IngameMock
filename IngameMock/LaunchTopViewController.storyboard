@@ -42,19 +42,28 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce4-Rd-RbP">
-                                <rect key="frame" x="157.5" y="130" width="60" height="30"/>
+                                <rect key="frame" x="157.5" y="176" width="60" height="30"/>
                                 <state key="normal" title="WebRTC"/>
                                 <connections>
                                     <segue destination="4ub-EM-cPE" kind="show" id="uQF-l5-cpx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYL-do-8Ee" userLabel="WebSocket">
+                                <rect key="frame" x="148" y="130" width="79" height="30"/>
+                                <state key="normal" title="WebSocket"/>
+                                <connections>
+                                    <segue destination="rht-02-yBQ" kind="show" id="HzE-Ua-SBI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="gYL-do-8Ee" firstAttribute="top" secondItem="Dpf-d9-fHp" secondAttribute="bottom" constant="16" id="2lS-yy-ktw"/>
                             <constraint firstItem="ce4-Rd-RbP" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="3M1-0v-yBV"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="9JV-Mg-hOd"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="top" secondItem="9ut-n3-Cpu" secondAttribute="top" constant="64" id="EqX-YB-u0c"/>
-                            <constraint firstItem="ce4-Rd-RbP" firstAttribute="top" secondItem="Dpf-d9-fHp" secondAttribute="bottom" constant="16" id="N0F-3v-b0k"/>
+                            <constraint firstItem="gYL-do-8Ee" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="iyE-4Z-fxZ"/>
+                            <constraint firstItem="ce4-Rd-RbP" firstAttribute="top" secondItem="gYL-do-8Ee" secondAttribute="bottom" constant="16" id="y71-N2-U9w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ut-n3-Cpu"/>
                     </view>
@@ -71,7 +80,15 @@
                 <viewControllerPlaceholder storyboardName="StreamingTopViewController" id="wsG-4r-Prv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6o-zl-Wbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="-523"/>
+            <point key="canvasLocation" x="854" y="-414"/>
+        </scene>
+        <!--WSTopViewController-->
+        <scene sceneID="eYK-5V-7cF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WSTopViewController" id="rht-02-yBQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGT-Sn-NKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-335"/>
         </scene>
         <!--WRTopViewController-->
         <scene sceneID="Y6h-9J-7jE">
@@ -79,7 +96,7 @@
                 <viewControllerPlaceholder storyboardName="WRTopViewController" id="4ub-EM-cPE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ow5-5s-pva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-284"/>
+            <point key="canvasLocation" x="821" y="-264"/>
         </scene>
     </scenes>
 </document>

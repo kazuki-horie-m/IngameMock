@@ -17,7 +17,7 @@ class StreamingParentPlayerViewController: AVPlayerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "http://10.196.42.175:8080/resources/stream.m3u8")
+        let url = URL(string: "http://10.196.222.172:8080/resources/stream.m3u8")
         let playerItem = AVPlayerItem(url: url!)
         let player = AVPlayer(playerItem: playerItem)
         

@@ -31,7 +31,11 @@ class StreamingTopViewController: UIViewController {
     }
     
     @IBAction private func switchView(sender: UIButton) {
+        let parent = StreamingPlayerManager.shared.vcParent?.player
+        let child = StreamingPlayerManager.shared.vcChild?.player
         
+        parent?.play()
+        child?.play()
     }
     
     @IBAction private func startLive(sender: UIButton) {

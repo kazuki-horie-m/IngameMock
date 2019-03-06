@@ -15,6 +15,8 @@
 		7655FF282226593A0054B5A8 /* IngameMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF272226593A0054B5A8 /* IngameMockTests.swift */; };
 		7655FF332226593A0054B5A8 /* IngameMockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF322226593A0054B5A8 /* IngameMockUITests.swift */; };
 		7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF4122265D200054B5A8 /* StreamingChildPlayerViewController.swift */; };
+		76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */; };
+		76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */; };
 		76DC485E222F5B7300ED1B0B /* LaunchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */; };
 		76DC4860222F5B8D00ED1B0B /* LaunchTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */; };
 		76DC4863222F5C4700ED1B0B /* WRTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */; };
@@ -69,6 +71,8 @@
 		7655FF322226593A0054B5A8 /* IngameMockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngameMockUITests.swift; sourceTree = "<group>"; };
 		7655FF342226593A0054B5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7655FF4122265D200054B5A8 /* StreamingChildPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingChildPlayerViewController.swift; sourceTree = "<group>"; };
+		76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSTopViewController.swift; sourceTree = "<group>"; };
+		76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WSTopViewController.storyboard; sourceTree = "<group>"; };
 		76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTopViewController.swift; sourceTree = "<group>"; };
 		76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchTopViewController.storyboard; sourceTree = "<group>"; };
 		76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTopViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 			children = (
 				76DC4866222F5FB700ED1B0B /* Extension */,
 				76EDDB95222F5A560017D1F6 /* Streaming */,
+				76A3756B222F8DB300B2AF9A /* WebSocket */,
 				76DC4861222F5C2400ED1B0B /* WebRTC */,
 				7655FF12222659370054B5A8 /* AppDelegate.swift */,
 				76EDDB7A222E5A3F0017D1F6 /* Bridging-Header.h */,
@@ -209,6 +214,15 @@
 				7655FF342226593A0054B5A8 /* Info.plist */,
 			);
 			path = IngameMockUITests;
+			sourceTree = "<group>";
+		};
+		76A3756B222F8DB300B2AF9A /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */,
+				76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */,
+			);
+			path = WebSocket;
 			sourceTree = "<group>";
 		};
 		76DC4861222F5C2400ED1B0B /* WebRTC */ = {
@@ -350,6 +364,7 @@
 				7655FF1D2226593A0054B5A8 /* LaunchScreen.storyboard in Resources */,
 				76DC4865222F5F9B00ED1B0B /* WRTopViewController.storyboard in Resources */,
 				7655FF1A2226593A0054B5A8 /* Assets.xcassets in Resources */,
+				76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */,
 				76DC4860222F5B8D00ED1B0B /* LaunchTopViewController.storyboard in Resources */,
 				7655FF18222659370054B5A8 /* StreamingTopViewController.storyboard in Resources */,
 			);
@@ -432,6 +447,7 @@
 				7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */,
 				76DC4868222F5FC900ED1B0B /* NSObject+Ex.swift in Sources */,
 				76EDDB79222E57D00017D1F6 /* StreamingHaishinViewController.swift in Sources */,
+				76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */,
 				76EDDB97222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift in Sources */,
 				7655FF13222659370054B5A8 /* AppDelegate.swift in Sources */,
 				76DC486A222F628200ED1B0B /* TopNavigationContrller.swift in Sources */,

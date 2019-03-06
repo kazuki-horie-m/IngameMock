@@ -24,7 +24,7 @@ class StreamingHaishinViewController: UIViewController {
         httpStream.attachAudio(AVCaptureDevice.default(for: .audio))
         httpStream.publish("hello")
         
-        let hkView = HKView(frame: view.bounds)
+        let hkView = GLHKView(frame: view.bounds)
         hkView.attachStream(httpStream)
         
         let httpService = HLSService(domain: "", type: "_http._tcp", name: "HaishinKit", port: 8080)
