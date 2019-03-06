@@ -19,6 +19,7 @@
 		76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */; };
 		76A37575222F9CFE00B2AF9A /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A37570222F9BB600B2AF9A /* SocketIO.framework */; };
 		76A37577222F9CFF00B2AF9A /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A37576222F9CFE00B2AF9A /* Starscream.framework */; };
+		76A37579222F9F7E00B2AF9A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A37578222F9F7E00B2AF9A /* NetworkManager.swift */; };
 		76DC485E222F5B7300ED1B0B /* LaunchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */; };
 		76DC4860222F5B8D00ED1B0B /* LaunchTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */; };
 		76DC4863222F5C4700ED1B0B /* WRTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */; };
@@ -77,6 +78,7 @@
 		76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WSTopViewController.storyboard; sourceTree = "<group>"; };
 		76A37570222F9BB600B2AF9A /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
 		76A37576222F9CFE00B2AF9A /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		76A37578222F9F7E00B2AF9A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTopViewController.swift; sourceTree = "<group>"; };
 		76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchTopViewController.storyboard; sourceTree = "<group>"; };
 		76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTopViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */,
 				76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */,
 				76DC4869222F628200ED1B0B /* TopNavigationContrller.swift */,
+				76A37578222F9F7E00B2AF9A /* NetworkManager.swift */,
 			);
 			path = IngameMock;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A37579222F9F7E00B2AF9A /* NetworkManager.swift in Sources */,
 				76EDDB7C222E5FDD0017D1F6 /* StreamingPlayerManager.swift in Sources */,
 				7655FF15222659370054B5A8 /* StreamingTopViewController.swift in Sources */,
 				7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */,

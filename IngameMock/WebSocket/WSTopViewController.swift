@@ -10,6 +10,7 @@ import UIKit
 import SocketIO
 
 class WSTopViewController: UIViewController {
+    @IBOutlet private weak var lblAddress: UILabel?
     @IBOutlet private weak var tfAddress: UITextField?
     @IBOutlet private weak var tvLog: UITextView?
     
@@ -31,6 +32,12 @@ class WSTopViewController: UIViewController {
     
     @IBAction private func btnDisconnect(sender: UIButton) {
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        lblAddress?.text = NetworkManager.getIPAddress()
     }
     
     
