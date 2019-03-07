@@ -21,6 +21,13 @@
 		76A37577222F9CFF00B2AF9A /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A37576222F9CFE00B2AF9A /* Starscream.framework */; };
 		76A37579222F9F7E00B2AF9A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A37578222F9F7E00B2AF9A /* NetworkManager.swift */; };
 		76A3757D222FB23E00B2AF9A /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76A3757A222FB02200B2AF9A /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76A375802230E50100B2AF9A /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3757F2230E50100B2AF9A /* WebRTCClient.swift */; };
+		76A375822230E51500B2AF9A /* SignalingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A375812230E51500B2AF9A /* SignalingClient.swift */; };
+		76A375842230E53800B2AF9A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A375832230E53800B2AF9A /* Message.swift */; };
+		76A375862230E56F00B2AF9A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A375852230E56F00B2AF9A /* Config.swift */; };
+		76A375882230E59400B2AF9A /* RTCStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A375872230E59400B2AF9A /* RTCStates.swift */; };
+		76A3758A2230E5AC00B2AF9A /* SessionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A375892230E5AC00B2AF9A /* SessionDescription.swift */; };
+		76A3758C2230E5BE00B2AF9A /* IceCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3758B2230E5BE00B2AF9A /* IceCandidate.swift */; };
 		76DC485E222F5B7300ED1B0B /* LaunchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */; };
 		76DC4860222F5B8D00ED1B0B /* LaunchTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */; };
 		76DC4863222F5C4700ED1B0B /* WRTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */; };
@@ -95,6 +102,13 @@
 		76A37576222F9CFE00B2AF9A /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		76A37578222F9F7E00B2AF9A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		76A3757A222FB02200B2AF9A /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = Carthage/Build/iOS/WebRTC.framework; sourceTree = "<group>"; };
+		76A3757F2230E50100B2AF9A /* WebRTCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCClient.swift; sourceTree = "<group>"; };
+		76A375812230E51500B2AF9A /* SignalingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingClient.swift; sourceTree = "<group>"; };
+		76A375832230E53800B2AF9A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		76A375852230E56F00B2AF9A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		76A375872230E59400B2AF9A /* RTCStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCStates.swift; sourceTree = "<group>"; };
+		76A375892230E5AC00B2AF9A /* SessionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDescription.swift; sourceTree = "<group>"; };
+		76A3758B2230E5BE00B2AF9A /* IceCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCandidate.swift; sourceTree = "<group>"; };
 		76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTopViewController.swift; sourceTree = "<group>"; };
 		76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchTopViewController.storyboard; sourceTree = "<group>"; };
 		76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTopViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +272,13 @@
 			children = (
 				76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */,
 				76DC4864222F5F9B00ED1B0B /* WRTopViewController.storyboard */,
+				76A3757F2230E50100B2AF9A /* WebRTCClient.swift */,
+				76A375812230E51500B2AF9A /* SignalingClient.swift */,
+				76A375832230E53800B2AF9A /* Message.swift */,
+				76A375852230E56F00B2AF9A /* Config.swift */,
+				76A375872230E59400B2AF9A /* RTCStates.swift */,
+				76A375892230E5AC00B2AF9A /* SessionDescription.swift */,
+				76A3758B2230E5BE00B2AF9A /* IceCandidate.swift */,
 			);
 			path = WebRTC;
 			sourceTree = "<group>";
@@ -478,15 +499,22 @@
 				76A37579222F9F7E00B2AF9A /* NetworkManager.swift in Sources */,
 				76EDDB7C222E5FDD0017D1F6 /* StreamingPlayerManager.swift in Sources */,
 				7655FF15222659370054B5A8 /* StreamingTopViewController.swift in Sources */,
+				76A375882230E59400B2AF9A /* RTCStates.swift in Sources */,
 				7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */,
 				76DC4868222F5FC900ED1B0B /* NSObject+Ex.swift in Sources */,
+				76A3758C2230E5BE00B2AF9A /* IceCandidate.swift in Sources */,
 				76EDDB79222E57D00017D1F6 /* StreamingHaishinViewController.swift in Sources */,
 				76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */,
+				76A375822230E51500B2AF9A /* SignalingClient.swift in Sources */,
 				76EDDB97222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift in Sources */,
 				7655FF13222659370054B5A8 /* AppDelegate.swift in Sources */,
 				76DC486A222F628200ED1B0B /* TopNavigationContrller.swift in Sources */,
 				76DC485E222F5B7300ED1B0B /* LaunchTopViewController.swift in Sources */,
+				76A3758A2230E5AC00B2AF9A /* SessionDescription.swift in Sources */,
+				76A375842230E53800B2AF9A /* Message.swift in Sources */,
+				76A375862230E56F00B2AF9A /* Config.swift in Sources */,
 				76DC4863222F5C4700ED1B0B /* WRTopViewController.swift in Sources */,
+				76A375802230E50100B2AF9A /* WebRTCClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
