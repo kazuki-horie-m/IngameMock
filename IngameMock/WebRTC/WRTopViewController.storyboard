@@ -18,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGl-7r-mCG" customClass="RTCCameraPreviewView">
-                                <rect key="frame" x="119" y="516" width="240" height="135"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="OwB-cR-cRT"/>
-                                    <constraint firstAttribute="width" secondItem="cGl-7r-mCG" secondAttribute="height" multiplier="16:9" id="QJh-L1-4b1"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjq-ks-qUO" userLabel="VideoView" customClass="RTCEAGLVideoView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjq-ks-qUO" userLabel="VideoView" customClass="RTCMTLVideoView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGl-7r-mCG" customClass="RTCMTLVideoView">
+                                <rect key="frame" x="219" y="402" width="140" height="249"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="OwB-cR-cRT"/>
+                                    <constraint firstAttribute="width" secondItem="cGl-7r-mCG" secondAttribute="height" multiplier="9:16" id="QJh-L1-4b1"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73x-Si-LbV">
                                 <rect key="frame" x="16" y="52" width="120" height="30"/>
@@ -37,7 +37,6 @@
                                 </constraints>
                                 <state key="normal" title="Enable Video"/>
                                 <connections>
-                                    <action selector="connectButtonAction:" destination="eKX-uL-j7F" eventType="touchUpInside" id="jJg-KN-jWE"/>
                                     <action selector="enableVideoAction:" destination="eKX-uL-j7F" eventType="touchUpInside" id="0yt-Te-Ena"/>
                                 </connections>
                             </button>
@@ -50,7 +49,6 @@
                                     <color key="titleColor" red="1" green="0.081321229719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="connectButtonAction:" destination="eKX-uL-j7F" eventType="touchUpInside" id="zzq-wM-W01"/>
                                     <action selector="disableVideoAction:" destination="eKX-uL-j7F" eventType="touchUpInside" id="c0P-8g-nDX"/>
                                 </connections>
                             </button>
@@ -59,18 +57,18 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Vsh-mR-rlO"/>
                                 </constraints>
-                                <state key="normal" title="Connect"/>
+                                <state key="normal" title="Offer"/>
                                 <connections>
-                                    <action selector="connectButtonAction:" destination="eKX-uL-j7F" eventType="touchUpInside" id="pPo-Rf-BkO"/>
+                                    <action selector="offerButtonAction:" destination="eKX-uL-j7F" eventType="touchUpInside" id="qlW-99-iWa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2E-az-aPe">
-                                <rect key="frame" x="260" y="98" width="78" height="30"/>
-                                <state key="normal" title="Disconnect">
-                                    <color key="titleColor" red="1" green="0.081321229719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="272" y="98" width="54" height="30"/>
+                                <state key="normal" title="Receive">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.2418384067811794" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="closeButtonAction:" destination="eKX-uL-j7F" eventType="touchUpInside" id="ikS-41-tN0"/>
+                                    <action selector="receiveButtonAction:" destination="eKX-uL-j7F" eventType="touchUpInside" id="bYu-Ag-Lm5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,8 +92,8 @@
                         <viewLayoutGuide key="safeArea" id="Wte-aZ-h9e"/>
                     </view>
                     <connections>
-                        <outlet property="cameraView" destination="cGl-7r-mCG" id="9u2-XC-zZ3"/>
-                        <outlet property="videoView" destination="sjq-ks-qUO" id="thW-xM-0LR"/>
+                        <outlet property="cameraView" destination="cGl-7r-mCG" id="wNK-ld-RAy"/>
+                        <outlet property="videoView" destination="sjq-ks-qUO" id="xE6-UW-J3y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gn-Uv-Bju" userLabel="First Responder" sceneMemberID="firstResponder"/>

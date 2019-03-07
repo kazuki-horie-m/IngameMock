@@ -152,20 +152,19 @@ final class WebRTCClient: NSObject {
         
         // Audio
         let audioTrack = self.createAudioTrack()
-        //TODO:        self.peerConnection.add(audioTrack, streamIds: [streamId])
         localStream.addAudioTrack(audioTrack)
         
         // Video
         let videoTrack = self.createVideoTrack()
         self.localVideoTrack = videoTrack
         
-        //TODO:        self.peerConnection.add(videoTrack, streamIds: [streamId])
         localStream.addVideoTrack(videoTrack)
+        self.peerConnection.add(localStream)
         
         //TODO:        self.remoteVideoTrack = self.peerConnection.transceivers.first { $0.mediaType == .video }?.receiver.track as? RTCVideoTrack
-        self.remoteVideoTrack = self.peerConnection.localStreams.first?.videoTracks.first
+        self.remoteVideoTrack = self.peerConnection.receivers.map{ $0.track }.filter { $0.kind  == "video" }.first as? RTCVideoTrack
+        //self.peerConnection.localStreams.first?.videoTracks.compactMap { $0 }.first
         
-        self.peerConnection.add(localStream)
         
         // Data
         // TODO:
@@ -220,10 +219,12 @@ extension WebRTCClient: RTCPeerConnectionDelegate {
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didAdd stream: RTCMediaStream) {
         debugPrint("peerConnection did add stream")
+        self.remoteVideoTrack = stream.videoTracks.first
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didRemove stream: RTCMediaStream) {
         debugPrint("peerConnection did remote stream")
+        self.remoteVideoTrack = nil
     }
     
     func peerConnectionShouldNegotiate(_ peerConnection: RTCPeerConnection) {

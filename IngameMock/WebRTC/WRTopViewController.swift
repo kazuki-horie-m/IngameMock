@@ -12,8 +12,8 @@ import Starscream
 import AVFoundation
 
 class WRTopViewController: UIViewController {
-    @IBOutlet private weak var videoView: RTCEAGLVideoView!
-    @IBOutlet private weak var cameraView: RTCCameraPreviewView?
+    @IBOutlet private weak var videoView: RTCMTLVideoView!
+    @IBOutlet private weak var cameraView: RTCMTLVideoView!//RTCCameraPreviewView!
     
     @IBOutlet private weak var signalingStatusLabel: UILabel?
     @IBOutlet private weak var localSdpStatusLabel: UILabel?
@@ -88,19 +88,27 @@ class WRTopViewController: UIViewController {
         }
     }
     
-    @IBAction func connectButtonAction(_ sender: UIButton) {
+    @IBAction func offerButtonAction(_ sender: UIButton) {
+        self.webRTCClient.offer { (sdp) in
+            self.hasLocalSdp = true
+            self.signalClient.send(sdp: sdp)
+        }
     }
     
-    @IBAction func closeButtonAction(_ sender: UIButton) {
-        // Closeボタンを押した時
+    @IBAction func receiveButtonAction(_ sender: UIButton) {
+        self.webRTCClient.answer { (localSdp) in
+            self.hasLocalSdp = true
+            self.signalClient.send(sdp: localSdp)
+        }
     }
     
     @IBAction func enableVideoAction(_ sender: UIButton) {
+        self.webRTCClient.startCaptureLocalVideo(renderer: cameraView)
+        self.webRTCClient.renderRemoteVideo(to: videoView)
         
     }
     
     @IBAction func disableVideoAction(_ sender: UIButton) {
-        
     }
     
     override func viewDidLoad() {
@@ -118,6 +126,8 @@ class WRTopViewController: UIViewController {
         self.webRTCClient.delegate = self
         self.signalClient.delegate = self
         
+        cameraView.contentMode = .scaleAspectFill
+        videoView.contentMode = .scaleAspectFill
     }
     
 }
