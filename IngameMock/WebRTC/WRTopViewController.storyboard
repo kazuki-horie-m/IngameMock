@@ -36,6 +36,9 @@
                                     <constraint firstAttribute="width" constant="120" id="Vsh-mR-rlO"/>
                                 </constraints>
                                 <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="connectButtonAction:" destination="eKX-uL-j7F" eventType="touchUpInside" id="pPo-Rf-BkO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2E-az-aPe">
                                 <rect key="frame" x="260" y="98" width="78" height="30"/>
