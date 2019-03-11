@@ -21,10 +21,6 @@ final class WebRTCClient: NSObject {
     // A new RTCPeerConnection should be created every new call, but the factory is shared.
     private static let factory: RTCPeerConnectionFactory = {
         RTCInitializeSSL()
-        //TODO: empty
-//        let videoEncoderFactory = RTCDefaultVideoEncoderFactory()
-//        let videoDecoderFactory = RTCDefaultVideoDecoderFactory()
-//        return RTCPeerConnectionFactory(encoderFactory: videoEncoderFactory, decoderFactory: videoDecoderFactory)
         return RTCPeerConnectionFactory()
     }()
     
@@ -128,6 +124,13 @@ final class WebRTCClient: NSObject {
                               fps: Int(fps.maxFrameRate))
         
         self.localVideoTrack?.add(renderer)
+    }
+    
+    func stopCapture() {
+        guard let capturer = self.videoCapturer as? RTCCameraVideoCapturer else {
+            return
+        }
+        capturer.stopCapture()
     }
     
     func renderRemoteVideo(to renderer: RTCVideoRenderer) {

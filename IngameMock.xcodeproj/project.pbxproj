@@ -33,7 +33,7 @@
 		76DC4863222F5C4700ED1B0B /* WRTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */; };
 		76DC4865222F5F9B00ED1B0B /* WRTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DC4864222F5F9B00ED1B0B /* WRTopViewController.storyboard */; };
 		76DC4868222F5FC900ED1B0B /* NSObject+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC4867222F5FC900ED1B0B /* NSObject+Ex.swift */; };
-		76DC486A222F628200ED1B0B /* TopNavigationContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC4869222F628200ED1B0B /* TopNavigationContrller.swift */; };
+		76DC486A222F628200ED1B0B /* TopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC4869222F628200ED1B0B /* TopNavigationController.swift */; };
 		76EDDB79222E57D00017D1F6 /* StreamingHaishinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDDB78222E57D00017D1F6 /* StreamingHaishinViewController.swift */; };
 		76EDDB7C222E5FDD0017D1F6 /* StreamingPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDDB7B222E5FDD0017D1F6 /* StreamingPlayerManager.swift */; };
 		76EDDB86222E68990017D1F6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EDDB7D222E68980017D1F6 /* Alamofire.framework */; };
@@ -114,7 +114,7 @@
 		76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTopViewController.swift; sourceTree = "<group>"; };
 		76DC4864222F5F9B00ED1B0B /* WRTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WRTopViewController.storyboard; sourceTree = "<group>"; };
 		76DC4867222F5FC900ED1B0B /* NSObject+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ex.swift"; sourceTree = "<group>"; };
-		76DC4869222F628200ED1B0B /* TopNavigationContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationContrller.swift; sourceTree = "<group>"; };
+		76DC4869222F628200ED1B0B /* TopNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationController.swift; sourceTree = "<group>"; };
 		76EDDB78222E57D00017D1F6 /* StreamingHaishinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingHaishinViewController.swift; sourceTree = "<group>"; };
 		76EDDB7A222E5A3F0017D1F6 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		76EDDB7B222E5FDD0017D1F6 /* StreamingPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingPlayerManager.swift; sourceTree = "<group>"; };
@@ -234,7 +234,7 @@
 				7655FF1E2226593A0054B5A8 /* Info.plist */,
 				76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */,
 				76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */,
-				76DC4869222F628200ED1B0B /* TopNavigationContrller.swift */,
+				76DC4869222F628200ED1B0B /* TopNavigationController.swift */,
 				76A37578222F9F7E00B2AF9A /* NetworkManager.swift */,
 			);
 			path = IngameMock;
@@ -508,7 +508,7 @@
 				76A375822230E51500B2AF9A /* SignalingClient.swift in Sources */,
 				76EDDB97222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift in Sources */,
 				7655FF13222659370054B5A8 /* AppDelegate.swift in Sources */,
-				76DC486A222F628200ED1B0B /* TopNavigationContrller.swift in Sources */,
+				76DC486A222F628200ED1B0B /* TopNavigationController.swift in Sources */,
 				76DC485E222F5B7300ED1B0B /* LaunchTopViewController.swift in Sources */,
 				76A3758A2230E5AC00B2AF9A /* SessionDescription.swift in Sources */,
 				76A375842230E53800B2AF9A /* Message.swift in Sources */,
@@ -620,7 +620,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -675,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

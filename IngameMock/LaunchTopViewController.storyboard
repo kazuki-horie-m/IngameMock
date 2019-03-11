@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Top Navigation Contrller-->
+        <!--Top Navigation Controller-->
         <scene sceneID="v9w-9M-1un">
             <objects>
-                <navigationController id="24g-PN-Hta" customClass="TopNavigationContrller" customModule="IngameMock" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="24g-PN-Hta" customClass="TopNavigationController" customModule="IngameMock" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AnS-66-8rx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

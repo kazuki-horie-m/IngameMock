@@ -109,6 +109,7 @@ class WRTopViewController: UIViewController {
     }
     
     @IBAction func disableVideoAction(_ sender: UIButton) {
+        webRTCClient.stopCapture()
     }
     
     override func viewDidLoad() {
@@ -127,7 +128,17 @@ class WRTopViewController: UIViewController {
         self.signalClient.delegate = self
         
         cameraView.contentMode = .scaleAspectFill
+        cameraView.clipsToBounds = true
+        cameraView.subviews.forEach {
+            $0.contentMode = .scaleAspectFill
+            $0.layer.contentsGravity = .bottom
+        }
+        
+        videoView.clipsToBounds = true
         videoView.contentMode = .scaleAspectFill
+        videoView.subviews.forEach {
+            $0.contentMode = .scaleAspectFill
+        }
     }
     
 }
@@ -146,6 +157,7 @@ extension WRTopViewController: SignalClientDelegate {
         self.webRTCClient.set(remoteSdp: sdp) { (error) in
             self.hasRemoteSdp = true
         }
+        
     }
     
     func signalClient(_ signalClient: SignalingClient, didReceiveCandidate candidate: RTCIceCandidate) {
