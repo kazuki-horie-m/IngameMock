@@ -36,6 +36,10 @@
 		76DC486A222F628200ED1B0B /* TopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC4869222F628200ED1B0B /* TopNavigationController.swift */; };
 		76DDE4D7223754D700EFACB0 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DDE4D6223754D700EFACB0 /* WebRTC.framework */; };
 		76DDE4D8223754FA00EFACB0 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 762E268B223742AF00B8BFF4 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76DDE4DD223756F300EFACB0 /* SFUHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDE4DC223756F300EFACB0 /* SFUHostViewController.swift */; };
+		76DDE4DF2237571800EFACB0 /* SFUHostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DDE4DE2237571800EFACB0 /* SFUHostViewController.storyboard */; };
+		76DDE4E12237575400EFACB0 /* SFUAudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDE4E02237575400EFACB0 /* SFUAudienceViewController.swift */; };
+		76DDE4E32237576E00EFACB0 /* SFUAudienceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DDE4E22237576E00EFACB0 /* SFUAudienceViewController.storyboard */; };
 		76EDDB79222E57D00017D1F6 /* StreamingHaishinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDDB78222E57D00017D1F6 /* StreamingHaishinViewController.swift */; };
 		76EDDB7C222E5FDD0017D1F6 /* StreamingPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDDB7B222E5FDD0017D1F6 /* StreamingPlayerManager.swift */; };
 		76EDDB86222E68990017D1F6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EDDB7D222E68980017D1F6 /* Alamofire.framework */; };
@@ -118,6 +122,10 @@
 		76DC4867222F5FC900ED1B0B /* NSObject+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ex.swift"; sourceTree = "<group>"; };
 		76DC4869222F628200ED1B0B /* TopNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationController.swift; sourceTree = "<group>"; };
 		76DDE4D6223754D700EFACB0 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = Lib/WebRTC.framework; sourceTree = "<group>"; };
+		76DDE4DC223756F300EFACB0 /* SFUHostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFUHostViewController.swift; sourceTree = "<group>"; };
+		76DDE4DE2237571800EFACB0 /* SFUHostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SFUHostViewController.storyboard; sourceTree = "<group>"; };
+		76DDE4E02237575400EFACB0 /* SFUAudienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFUAudienceViewController.swift; sourceTree = "<group>"; };
+		76DDE4E22237576E00EFACB0 /* SFUAudienceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SFUAudienceViewController.storyboard; sourceTree = "<group>"; };
 		76EDDB78222E57D00017D1F6 /* StreamingHaishinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingHaishinViewController.swift; sourceTree = "<group>"; };
 		76EDDB7A222E5A3F0017D1F6 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		76EDDB7B222E5FDD0017D1F6 /* StreamingPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingPlayerManager.swift; sourceTree = "<group>"; };
@@ -229,10 +237,12 @@
 		7655FF11222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				76DDE4DA223756C700EFACB0 /* New Group */,
 				76DC4866222F5FB700ED1B0B /* Extension */,
 				76EDDB95222F5A560017D1F6 /* Streaming */,
 				76A3756B222F8DB300B2AF9A /* WebSocket */,
 				76DC4861222F5C2400ED1B0B /* WebRTC */,
+				76DDE4DB223756CB00EFACB0 /* SFU */,
 				7655FF12222659370054B5A8 /* AppDelegate.swift */,
 				76EDDB7A222E5A3F0017D1F6 /* Bridging-Header.h */,
 				7655FF192226593A0054B5A8 /* Assets.xcassets */,
@@ -303,6 +313,24 @@
 				76DDE4D6223754D700EFACB0 /* WebRTC.framework */,
 			);
 			name = Lib;
+			sourceTree = "<group>";
+		};
+		76DDE4DA223756C700EFACB0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		76DDE4DB223756CB00EFACB0 /* SFU */ = {
+			isa = PBXGroup;
+			children = (
+				76DDE4DC223756F300EFACB0 /* SFUHostViewController.swift */,
+				76DDE4DE2237571800EFACB0 /* SFUHostViewController.storyboard */,
+				76DDE4E02237575400EFACB0 /* SFUAudienceViewController.swift */,
+				76DDE4E22237576E00EFACB0 /* SFUAudienceViewController.storyboard */,
+			);
+			path = SFU;
 			sourceTree = "<group>";
 		};
 		76EDDB95222F5A560017D1F6 /* Streaming */ = {
@@ -425,11 +453,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76DDE4DF2237571800EFACB0 /* SFUHostViewController.storyboard in Resources */,
 				7655FF1D2226593A0054B5A8 /* LaunchScreen.storyboard in Resources */,
 				76DC4865222F5F9B00ED1B0B /* WRTopViewController.storyboard in Resources */,
 				7655FF1A2226593A0054B5A8 /* Assets.xcassets in Resources */,
 				76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */,
 				76DC4860222F5B8D00ED1B0B /* LaunchTopViewController.storyboard in Resources */,
+				76DDE4E32237576E00EFACB0 /* SFUAudienceViewController.storyboard in Resources */,
 				7655FF18222659370054B5A8 /* StreamingTopViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76A37579222F9F7E00B2AF9A /* NetworkManager.swift in Sources */,
+				76DDE4DD223756F300EFACB0 /* SFUHostViewController.swift in Sources */,
 				76EDDB7C222E5FDD0017D1F6 /* StreamingPlayerManager.swift in Sources */,
 				7655FF15222659370054B5A8 /* StreamingTopViewController.swift in Sources */,
 				76A375882230E59400B2AF9A /* RTCStates.swift in Sources */,
@@ -518,6 +549,7 @@
 				76A3758C2230E5BE00B2AF9A /* IceCandidate.swift in Sources */,
 				76EDDB79222E57D00017D1F6 /* StreamingHaishinViewController.swift in Sources */,
 				76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */,
+				76DDE4E12237575400EFACB0 /* SFUAudienceViewController.swift in Sources */,
 				76A375822230E51500B2AF9A /* SignalingClient.swift in Sources */,
 				76EDDB97222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift in Sources */,
 				7655FF13222659370054B5A8 /* AppDelegate.swift in Sources */,

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,10 +41,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce4-Rd-RbP">
-                                <rect key="frame" x="157.5" y="176" width="60" height="30"/>
-                                <state key="normal" title="WebRTC"/>
+                                <rect key="frame" x="136" y="176" width="103" height="30"/>
+                                <state key="normal" title="WebRTC (P2P)"/>
                                 <connections>
                                     <segue destination="4ub-EM-cPE" kind="show" id="uQF-l5-cpx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIC-45-nry">
+                                <rect key="frame" x="133.5" y="268" width="108" height="30"/>
+                                <state key="normal" title="SFU (Audience)"/>
+                                <connections>
+                                    <segue destination="Zna-BB-yhK" kind="show" id="7te-Ev-f8v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYL-do-8Ee" userLabel="WebSocket">
@@ -55,6 +61,13 @@
                                     <segue destination="rht-02-yBQ" kind="show" id="HzE-Ua-SBI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNI-Co-UnW">
+                                <rect key="frame" x="149.5" y="222" width="76" height="30"/>
+                                <state key="normal" title="SFU (Host)"/>
+                                <connections>
+                                    <segue destination="34W-4N-9TM" kind="show" id="fOl-BV-sm3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -62,7 +75,11 @@
                             <constraint firstItem="ce4-Rd-RbP" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="3M1-0v-yBV"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="9JV-Mg-hOd"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="top" secondItem="9ut-n3-Cpu" secondAttribute="top" constant="64" id="EqX-YB-u0c"/>
+                            <constraint firstItem="oNI-Co-UnW" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="IvS-HK-2Yr"/>
+                            <constraint firstItem="TIC-45-nry" firstAttribute="top" secondItem="oNI-Co-UnW" secondAttribute="bottom" constant="16" id="OD0-Sp-T14"/>
+                            <constraint firstItem="oNI-Co-UnW" firstAttribute="top" secondItem="ce4-Rd-RbP" secondAttribute="bottom" constant="16" id="YJE-BO-orK"/>
                             <constraint firstItem="gYL-do-8Ee" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="iyE-4Z-fxZ"/>
+                            <constraint firstItem="TIC-45-nry" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="sjw-Ql-IQ8"/>
                             <constraint firstItem="ce4-Rd-RbP" firstAttribute="top" secondItem="gYL-do-8Ee" secondAttribute="bottom" constant="16" id="y71-N2-U9w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ut-n3-Cpu"/>
@@ -80,7 +97,7 @@
                 <viewControllerPlaceholder storyboardName="StreamingTopViewController" id="wsG-4r-Prv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6o-zl-Wbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-414"/>
+            <point key="canvasLocation" x="859" y="-587"/>
         </scene>
         <!--WSTopViewController-->
         <scene sceneID="eYK-5V-7cF">
@@ -88,7 +105,7 @@
                 <viewControllerPlaceholder storyboardName="WSTopViewController" id="rht-02-yBQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uGT-Sn-NKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="-335"/>
+            <point key="canvasLocation" x="829" y="-515"/>
         </scene>
         <!--WRTopViewController-->
         <scene sceneID="Y6h-9J-7jE">
@@ -96,7 +113,23 @@
                 <viewControllerPlaceholder storyboardName="WRTopViewController" id="4ub-EM-cPE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ow5-5s-pva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="821" y="-264"/>
+            <point key="canvasLocation" x="829" y="-438"/>
+        </scene>
+        <!--SFUHostViewController-->
+        <scene sceneID="2uq-aP-hn5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SFUHostViewController" id="34W-4N-9TM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KEc-cJ-rsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="-365"/>
+        </scene>
+        <!--SFUAudienceViewController-->
+        <scene sceneID="iyI-eV-w34">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SFUAudienceViewController" id="Zna-BB-yhK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezj-cG-KYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="-286"/>
         </scene>
     </scenes>
 </document>
