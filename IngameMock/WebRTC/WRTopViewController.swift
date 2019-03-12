@@ -74,7 +74,6 @@ class WRTopViewController: UIViewController {
         cameraView.clipsToBounds = true
         cameraView.subviews.forEach {
             $0.contentMode = .scaleAspectFill
-            $0.layer.contentsGravity = .bottom
         }
         
         videoView.clipsToBounds = true

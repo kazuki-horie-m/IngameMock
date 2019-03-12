@@ -1,6 +1,5 @@
 github "Alamofire/Alamofire" "4.8.1"
-github "Anakros/WebRTC" "63.11.20455"
-github "ReactiveX/RxSwift" "4.4.1"
+github "ReactiveX/RxSwift" "4.4.2"
 github "RxSwiftCommunity/RxAlamofire" "4.3.0"
 github "SwiftyJSON/SwiftyJSON" "4.2.0"
 github "daltoniam/Starscream" "3.0.6"

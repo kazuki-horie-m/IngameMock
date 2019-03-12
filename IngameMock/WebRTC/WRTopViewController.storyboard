@@ -24,13 +24,12 @@
                                         <rect key="frame" x="-9" y="-16" width="393" height="699"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="sjq-ks-qUO" secondAttribute="height" multiplier="9:16" id="Cxu-AI-8Pn"/>
+                                            <constraint firstAttribute="width" secondItem="sjq-ks-qUO" secondAttribute="height" multiplier="9:16" id="4yL-bd-Q2h"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="sjq-ks-qUO" firstAttribute="centerY" secondItem="Kyo-4i-yOR" secondAttribute="centerY" id="L9e-W9-Ria"/>
                                     <constraint firstItem="sjq-ks-qUO" firstAttribute="top" secondItem="Kyo-4i-yOR" secondAttribute="top" constant="-16" id="RW6-Ix-MzR"/>
                                     <constraint firstItem="sjq-ks-qUO" firstAttribute="centerX" secondItem="Kyo-4i-yOR" secondAttribute="centerX" id="cOX-Rb-QiK"/>
                                     <constraint firstAttribute="bottom" secondItem="sjq-ks-qUO" secondAttribute="bottom" constant="-16" id="l6n-fw-Skb"/>
@@ -43,7 +42,7 @@
                                         <rect key="frame" x="-4.5" y="-16" width="149" height="265"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="cGl-7r-mCG" secondAttribute="height" multiplier="9:16" id="qLK-FH-XjS"/>
+                                            <constraint firstAttribute="width" secondItem="cGl-7r-mCG" secondAttribute="height" multiplier="9:16" id="lDR-2D-PqJ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -56,6 +55,12 @@
                                     <constraint firstItem="cGl-7r-mCG" firstAttribute="centerX" secondItem="Ei5-h9-9cu" secondAttribute="centerX" id="lw0-Ci-s35"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vff-9k-kue">
+                                <rect key="frame" x="163" y="56.5" width="49.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73x-Si-LbV">
                                 <rect key="frame" x="16" y="52" width="120" height="30"/>
                                 <constraints>
@@ -104,12 +109,14 @@
                             <constraint firstItem="6at-Ei-WBb" firstAttribute="top" secondItem="73x-Si-LbV" secondAttribute="bottom" constant="16" id="Dc7-ut-MbG"/>
                             <constraint firstItem="Kyo-4i-yOR" firstAttribute="leading" secondItem="eJc-Bh-K04" secondAttribute="leading" id="Ope-FI-d1g"/>
                             <constraint firstItem="C2E-az-aPe" firstAttribute="top" secondItem="6Hs-QZ-pxM" secondAttribute="bottom" constant="16" id="WT6-ni-P2q"/>
+                            <constraint firstItem="vff-9k-kue" firstAttribute="centerX" secondItem="eJc-Bh-K04" secondAttribute="centerX" id="cIt-Ag-Dds"/>
                             <constraint firstItem="Kyo-4i-yOR" firstAttribute="top" secondItem="eJc-Bh-K04" secondAttribute="top" id="dta-XB-eaf"/>
                             <constraint firstItem="73x-Si-LbV" firstAttribute="top" secondItem="Wte-aZ-h9e" secondAttribute="top" constant="32" id="edW-ip-XPh"/>
                             <constraint firstItem="6Hs-QZ-pxM" firstAttribute="top" secondItem="Wte-aZ-h9e" secondAttribute="top" constant="32" id="fHp-ZY-ahc"/>
                             <constraint firstItem="6at-Ei-WBb" firstAttribute="centerX" secondItem="73x-Si-LbV" secondAttribute="centerX" id="fsv-QZ-dpt"/>
                             <constraint firstItem="73x-Si-LbV" firstAttribute="leading" secondItem="Wte-aZ-h9e" secondAttribute="leading" constant="16" id="gDD-kn-a94"/>
                             <constraint firstItem="Wte-aZ-h9e" firstAttribute="trailing" secondItem="6Hs-QZ-pxM" secondAttribute="trailing" constant="16" id="gje-KB-Uc6"/>
+                            <constraint firstItem="vff-9k-kue" firstAttribute="centerY" secondItem="6Hs-QZ-pxM" secondAttribute="centerY" id="l1C-2P-8ab"/>
                             <constraint firstAttribute="bottom" secondItem="Kyo-4i-yOR" secondAttribute="bottom" id="mD9-h2-5Mb"/>
                             <constraint firstItem="Wte-aZ-h9e" firstAttribute="trailing" secondItem="Ei5-h9-9cu" secondAttribute="trailing" constant="16" id="otY-N0-4ku"/>
                             <constraint firstItem="C2E-az-aPe" firstAttribute="centerX" secondItem="6Hs-QZ-pxM" secondAttribute="centerX" id="yIc-kT-c0w"/>
@@ -120,6 +127,7 @@
                     <connections>
                         <outlet property="cameraView" destination="cGl-7r-mCG" id="wNK-ld-RAy"/>
                         <outlet property="videoView" destination="sjq-ks-qUO" id="xE6-UW-J3y"/>
+                        <outlet property="webRTCStatusLabel" destination="vff-9k-kue" id="fFR-Og-Yub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gn-Uv-Bju" userLabel="First Responder" sceneMemberID="firstResponder"/>

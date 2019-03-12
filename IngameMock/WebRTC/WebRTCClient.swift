@@ -165,7 +165,7 @@ final class WebRTCClient: NSObject {
         self.peerConnection.add(localStream)
         
         //TODO:        self.remoteVideoTrack = self.peerConnection.transceivers.first { $0.mediaType == .video }?.receiver.track as? RTCVideoTrack
-        self.remoteVideoTrack = self.peerConnection.receivers.map{ $0.track }.filter { $0.kind  == "video" }.first as? RTCVideoTrack
+        self.remoteVideoTrack = self.peerConnection.receivers.map{ $0.track }.filter { $0?.kind  == "video" }.first as? RTCVideoTrack
         //self.peerConnection.localStreams.first?.videoTracks.compactMap { $0 }.first
         
         
