@@ -1,16 +1,3 @@
-/*
- *  Copyright 2018 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree. An additional intellectual property rights grant can be found
- *  in the file PATENTS.  All contributing project authors may
- *  be found in the AUTHORS file in the root of the source tree.
- */
-
-#import <Foundation/Foundation.h>
-
-#import "RTCMacros.h"
-
-RTC_OBJC_EXPORT extern NSString* const kRTCVideoCodecVp8Name;
-RTC_OBJC_EXPORT extern NSString* const kRTCVideoCodecVp9Name;
+version https://git-lfs.github.com/spec/v1
+oid sha256:d98f177e22528269c3ba28ba78cbd718db6769633c83eee35e3e1a4a11b7ae72
+size 592

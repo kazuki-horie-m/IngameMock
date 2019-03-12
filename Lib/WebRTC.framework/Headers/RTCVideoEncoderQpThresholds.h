@@ -1,28 +1,3 @@
-/*
- *  Copyright 2017 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree. An additional intellectual property rights grant can be found
- *  in the file PATENTS.  All contributing project authors may
- *  be found in the AUTHORS file in the root of the source tree.
- */
-
-#import <Foundation/Foundation.h>
-
-#import "RTCMacros.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/** QP thresholds for encoder. Corresponds to webrtc::VideoEncoder::QpThresholds. */
-RTC_OBJC_EXPORT
-@interface RTCVideoEncoderQpThresholds : NSObject
-
-- (instancetype)initWithThresholdsLow:(NSInteger)low high:(NSInteger)high;
-
-@property(nonatomic, readonly) NSInteger low;
-@property(nonatomic, readonly) NSInteger high;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d3cfbc5a74bd7c2f594748b59f48d354d19d184447db9512b4fcddf45178baf
+size 843

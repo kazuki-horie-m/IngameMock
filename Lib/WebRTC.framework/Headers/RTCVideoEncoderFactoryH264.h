@@ -1,18 +1,3 @@
-/*
- *  Copyright 2017 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree. An additional intellectual property rights grant can be found
- *  in the file PATENTS.  All contributing project authors may
- *  be found in the AUTHORS file in the root of the source tree.
- */
-
-#import <Foundation/Foundation.h>
-
-#import "RTCMacros.h"
-#import "RTCVideoEncoderFactory.h"
-
-RTC_OBJC_EXPORT
-@interface RTCVideoEncoderFactoryH264 : NSObject <RTCVideoEncoderFactory>
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5455e27652dc2e3a9654047d8644efb9931f7960942614e48d3e50f210c1a68f
+size 598

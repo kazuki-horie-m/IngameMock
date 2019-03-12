@@ -1,24 +1,3 @@
-/*
- *  Copyright 2017 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree. An additional intellectual property rights grant can be found
- *  in the file PATENTS.  All contributing project authors may
- *  be found in the AUTHORS file in the root of the source tree.
- */
-
-#import <Foundation/Foundation.h>
-
-#import "RTCMacros.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/** Implement this protocol to pass codec specific info from the encoder.
- *  Corresponds to webrtc::CodecSpecificInfo.
- */
-RTC_OBJC_EXPORT
-@protocol RTCCodecSpecificInfo <NSObject>
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:a46f318a1f40fb9916fef501e03002214ce2ec8f8af6e0dcb6ea2d700f8f2e62
+size 703

@@ -1,20 +1,3 @@
-/*
- *  Copyright 2016 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree. An additional intellectual property rights grant can be found
- *  in the file PATENTS.  All contributing project authors may
- *  be found in the AUTHORS file in the root of the source tree.
- */
-
-#import <Foundation/Foundation.h>
-
-#import "RTCMacros.h"
-
-/**
- * Initialize and clean up the SSL library. Failure is fatal. These call the
- * corresponding functions in webrtc/rtc_base/ssladapter.h.
- */
-RTC_EXTERN BOOL RTCInitializeSSL(void);
-RTC_EXTERN BOOL RTCCleanupSSL(void);
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c395c5e71d9e8efbf4c6bb82258e17ac94bd9274ea7ccd94f43ed5cb4f157b4
+size 690

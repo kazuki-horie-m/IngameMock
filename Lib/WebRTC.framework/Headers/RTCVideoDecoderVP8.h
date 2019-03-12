@@ -1,25 +1,3 @@
-/*
- *  Copyright 2017 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree. An additional intellectual property rights grant can be found
- *  in the file PATENTS.  All contributing project authors may
- *  be found in the AUTHORS file in the root of the source tree.
- */
-
-#import <Foundation/Foundation.h>
-
-#import "RTCMacros.h"
-#import "RTCVideoDecoder.h"
-
-RTC_OBJC_EXPORT
-@interface RTCVideoDecoderVP8 : NSObject
-
-/* This returns a VP8 decoder that can be returned from a RTCVideoDecoderFactory injected into
- * RTCPeerConnectionFactory. Even though it implements the RTCVideoDecoder protocol, it can not be
- * used independently from the RTCPeerConnectionFactory.
- */
-+ (id<RTCVideoDecoder>)vp8Decoder;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d5a84720d3cde5b841a6f83cc48e0f59f8bd7fa7beaa0d9d0d02d6968f73bafb
+size 850

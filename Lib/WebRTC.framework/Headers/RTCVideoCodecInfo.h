@@ -1,36 +1,3 @@
-/*
- *  Copyright 2017 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree. An additional intellectual property rights grant can be found
- *  in the file PATENTS.  All contributing project authors may
- *  be found in the AUTHORS file in the root of the source tree.
- */
-
-#import <Foundation/Foundation.h>
-
-#import "RTCMacros.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/** Holds information to identify a codec. Corresponds to webrtc::SdpVideoFormat. */
-RTC_OBJC_EXPORT
-@interface RTCVideoCodecInfo : NSObject <NSCoding>
-
-- (instancetype)init NS_UNAVAILABLE;
-
-- (instancetype)initWithName:(NSString *)name;
-
-- (instancetype)initWithName:(NSString *)name
-                  parameters:(nullable NSDictionary<NSString *, NSString *> *)parameters
-    NS_DESIGNATED_INITIALIZER;
-
-- (BOOL)isEqualToCodecInfo:(RTCVideoCodecInfo *)info;
-
-@property(nonatomic, readonly) NSString *name;
-@property(nonatomic, readonly) NSDictionary<NSString *, NSString *> *parameters;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:74112a307cf5a12e5644c11c6ae43bc5b1ed1d96138c147793fe0ff1420f0a86
+size 1111

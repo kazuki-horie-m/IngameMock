@@ -1,22 +1,3 @@
-/*
- *  Copyright 2018 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree. An additional intellectual property rights grant can be found
- *  in the file PATENTS.  All contributing project authors may
- *  be found in the AUTHORS file in the root of the source tree.
- */
-
-#import <AVFoundation/AVFoundation.h>
-
-#import "RTCYUVPlanarBuffer.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/** Protocol for RTCYUVPlanarBuffers containing I420 data */
-RTC_OBJC_EXPORT
-@protocol RTCI420Buffer <RTCYUVPlanarBuffer>
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:532913723a358dca19036d129cedd7c172b0db6f785b57d6835729655817f032
+size 656

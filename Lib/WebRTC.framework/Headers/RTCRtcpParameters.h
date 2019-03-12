@@ -1,30 +1,3 @@
-/*
- *  Copyright 2018 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree. An additional intellectual property rights grant can be found
- *  in the file PATENTS.  All contributing project authors may
- *  be found in the AUTHORS file in the root of the source tree.
- */
-
-#import <Foundation/Foundation.h>
-
-#import "RTCMacros.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-RTC_OBJC_EXPORT
-@interface RTCRtcpParameters : NSObject
-
-/** The Canonical Name used by RTCP. */
-@property(nonatomic, readonly, copy) NSString *cname;
-
-/** Whether reduced size RTCP is configured or compound RTCP. */
-@property(nonatomic, assign) BOOL isReducedSize;
-
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:346bc24e0de3e737ca37a166670073f362af17e44792107ecf46721c9558ac7f
+size 837
