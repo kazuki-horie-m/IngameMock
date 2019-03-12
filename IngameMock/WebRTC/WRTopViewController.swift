@@ -15,78 +15,21 @@ class WRTopViewController: UIViewController {
     @IBOutlet private weak var videoView: RTCMTLVideoView!
     @IBOutlet private weak var cameraView: RTCMTLVideoView!//RTCCameraPreviewView!
     
-    @IBOutlet private weak var signalingStatusLabel: UILabel?
-    @IBOutlet private weak var localSdpStatusLabel: UILabel?
-    @IBOutlet private weak var localCandidatesLabel: UILabel?
-    @IBOutlet private weak var remoteSdpStatusLabel: UILabel?
-    @IBOutlet private weak var remoteCandidatesLabel: UILabel?
-    @IBOutlet private weak var speakerButton: UIButton?
-    @IBOutlet private weak var muteButton: UIButton?
     @IBOutlet private weak var webRTCStatusLabel: UILabel?
     
     private lazy var signalClient = SignalingClient(serverUrl: Config.default.signalingServerUrl)
     private lazy var webRTCClient = WebRTCClient(iceServers: Config.default.webRTCIceServers)
     
-    private var signalingConnected: Bool = false {
-        didSet {
-            DispatchQueue.main.async {
-                if self.signalingConnected {
-                    self.signalingStatusLabel?.text = "Connected"
-                    self.signalingStatusLabel?.textColor = UIColor.green
-                }
-                else {
-                    self.signalingStatusLabel?.text = "Not connected"
-                    self.signalingStatusLabel?.textColor = UIColor.red
-                }
-            }
-        }
-    }
+    private var signalingConnected: Bool = false
     
-    private var hasLocalSdp: Bool = false {
-        didSet {
-            DispatchQueue.main.async {
-                self.localSdpStatusLabel?.text = self.hasLocalSdp ? "✅" : "❌"
-            }
-        }
-    }
+    private var hasLocalSdp: Bool  = false
+    private var hasRemoteSdp: Bool = false
     
-    private var localCandidateCount: Int = 0 {
-        didSet {
-            DispatchQueue.main.async {
-                self.localCandidatesLabel?.text = "\(self.localCandidateCount)"
-            }
-        }
-    }
+    private var localCandidateCount: Int = 0
+    private var remoteCandidateCount: Int = 0
     
-    private var hasRemoteSdp: Bool = false {
-        didSet {
-            DispatchQueue.main.async {
-                self.remoteSdpStatusLabel?.text = self.hasRemoteSdp ? "✅" : "❌"
-            }
-        }
-    }
-    
-    private var remoteCandidateCount: Int = 0 {
-        didSet {
-            DispatchQueue.main.async {
-                self.remoteCandidatesLabel?.text = "\(self.remoteCandidateCount)"
-            }
-        }
-    }
-    
-    private var speakerOn: Bool = false {
-        didSet {
-            let title = "Speaker: \(self.speakerOn ? "On" : "Off" )"
-            self.speakerButton?.setTitle(title, for: .normal)
-        }
-    }
-    
-    private var mute: Bool = false {
-        didSet {
-            let title = "Mute: \(self.mute ? "on" : "off")"
-            self.muteButton?.setTitle(title, for: .normal)
-        }
-    }
+    private var speakerOn: Bool = false
+    private var mute: Bool = false
     
     @IBAction func offerButtonAction(_ sender: UIButton) {
         self.webRTCClient.offer { (sdp) in
@@ -140,7 +83,6 @@ class WRTopViewController: UIViewController {
             $0.contentMode = .scaleAspectFill
         }
     }
-    
 }
 
 extension WRTopViewController: SignalClientDelegate {
@@ -157,7 +99,6 @@ extension WRTopViewController: SignalClientDelegate {
         self.webRTCClient.set(remoteSdp: sdp) { (error) in
             self.hasRemoteSdp = true
         }
-        
     }
     
     func signalClient(_ signalClient: SignalingClient, didReceiveCandidate candidate: RTCIceCandidate) {
