@@ -74,12 +74,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a93-c7-SwM">
+                                        <rect key="frame" x="16" y="62" width="55" height="30"/>
+                                        <state key="normal" title="Get Info"/>
+                                        <connections>
+                                            <action selector="getInfoAction:" destination="r8b-TK-E2z" eventType="touchUpInside" id="bNH-sG-9ql"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="EKO-JK-o4e" firstAttribute="width" secondItem="QTe-Tg-1iu" secondAttribute="width" id="9Vh-R6-lXk"/>
                                     <constraint firstAttribute="bottom" secondItem="goy-n2-W3v" secondAttribute="bottom" constant="16" id="Kw5-Aq-Y4Y"/>
                                     <constraint firstItem="QTe-Tg-1iu" firstAttribute="top" secondItem="xfW-R4-LYd" secondAttribute="top" constant="16" id="MmC-ao-4Tx"/>
+                                    <constraint firstItem="a93-c7-SwM" firstAttribute="leading" secondItem="xfW-R4-LYd" secondAttribute="leading" constant="16" id="NoX-bw-yKC"/>
+                                    <constraint firstItem="a93-c7-SwM" firstAttribute="top" secondItem="QTe-Tg-1iu" secondAttribute="bottom" constant="16" id="Toz-7B-jgb"/>
                                     <constraint firstItem="goy-n2-W3v" firstAttribute="centerX" secondItem="xfW-R4-LYd" secondAttribute="centerX" id="Uic-Mg-hZh"/>
                                     <constraint firstItem="EKO-JK-o4e" firstAttribute="leading" secondItem="QTe-Tg-1iu" secondAttribute="trailing" constant="8" id="ZFY-QN-M8m"/>
                                     <constraint firstItem="i9N-Bg-vom" firstAttribute="centerY" secondItem="QTe-Tg-1iu" secondAttribute="centerY" id="deM-BB-FtU"/>

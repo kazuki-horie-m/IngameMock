@@ -106,6 +106,10 @@ extension WRTopViewController: SignalClientDelegate {
         self.remoteCandidateCount += 1
         self.webRTCClient.set(remoteCandidate: candidate)
     }
+    
+    func didReceiveMessage(_ signalClient: SignalingClient, message: String) {
+        print("RdidReceiveMessage: " + message)
+    }
 }
 
 extension WRTopViewController: WebRTCClientDelegate {

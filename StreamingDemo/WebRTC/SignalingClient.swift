@@ -15,6 +15,7 @@ protocol SignalClientDelegate: class {
     func signalClientDidDisconnect(_ signalClient: SignalingClient)
     func signalClient(_ signalClient: SignalingClient, didReceiveRemoteSdp sdp: RTCSessionDescription)
     func signalClient(_ signalClient: SignalingClient, didReceiveCandidate candidate: RTCIceCandidate)
+    func didReceiveMessage(_ signalClient: SignalingClient, message: String)
 }
 
 final class SignalingClient {
@@ -32,7 +33,17 @@ final class SignalingClient {
     }
     func connect() {
         self.socket.delegate = self
+        self.socket.pongDelegate = self
         self.socket.connect()
+    }
+    
+    func send(packet: [String: Any], completion: (() -> ())? = nil) {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: packet)
+            socket.write(data: jsonData, completion: completion)
+        } catch {
+            print("error send")
+        }
     }
     
     func send(sdp rtcSdp: RTCSessionDescription) {
@@ -93,6 +104,12 @@ extension SignalingClient: WebSocketDelegate {
     }
     
     func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        self.delegate?.didReceiveMessage(self, message: text)
     }
 }
 
+extension SignalingClient: WebSocketPongDelegate {
+    func websocketDidReceivePong(socket: WebSocketClient, data: Data?) {
+        print("websocketDidReceivePong")
+    }
+}
