@@ -14,7 +14,9 @@ class WSTopViewController: UIViewController {
     @IBOutlet private weak var tfAddress: UITextField?
     @IBOutlet private weak var tvLog: UITextView?
     
-    private let destinationURL: String = "http://192.168.2.1:3000"
+//    private let destinationURL: String = "http://192.168.2.1:8188"
+    private let destinationURL: String = "ws://192.168.2.1:8188"
+//    private let destinationURL: String = "ws://10.196.42.175:8188"
     private lazy var manager: SocketManager = SocketManager(socketURL: URL(string: destinationURL)!, config: [.log(true), .compress])
     private var socket: SocketIOClient {
         return manager.defaultSocket
@@ -22,6 +24,13 @@ class WSTopViewController: UIViewController {
     
     @IBAction private func btnHello(sender: UIButton) {
         socket.emit("from_client", "Hello")
+//        let data: [String: String] = [
+//            "display": "t",
+//            "ptype": "publisher",
+//            "request": "join",
+//            "room": "1234"
+//        ]
+//        socket.emit("janus", data)
     }
     
     @IBAction private func btnBang(sender: UIButton) {

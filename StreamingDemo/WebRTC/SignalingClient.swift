@@ -23,9 +23,12 @@ final class SignalingClient {
     private let encoder = JSONEncoder()
     weak var delegate: SignalClientDelegate?
     
-    init(serverUrl: URL) {
-        self.socket = WebSocket(url: serverUrl)
-        
+    init(serverUrl: URL, protocols: [String] = []) {
+        if protocols.isEmpty {
+            self.socket = WebSocket(url: serverUrl)
+        } else {
+            self.socket = WebSocket(url: serverUrl, protocols: protocols)
+        }
     }
     func connect() {
         self.socket.delegate = self
@@ -57,12 +60,12 @@ final class SignalingClient {
 
 extension SignalingClient: WebSocketDelegate {
     func websocketDidConnect(socket: WebSocketClient) {
+        print("websocketDidConnect")
         self.delegate?.signalClientDidConnect(self)
     }
     
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
         self.delegate?.signalClientDidDisconnect(self)
-        
         // try to reconnect every two seconds
         DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
             debugPrint("Trying to reconnect to signaling server...")
@@ -71,6 +74,7 @@ extension SignalingClient: WebSocketDelegate {
     }
     
     func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+        print("websocketDidReceiveData")
         let message: Message
         do {
             message = try self.decoder.decode(Message.self, from: data)

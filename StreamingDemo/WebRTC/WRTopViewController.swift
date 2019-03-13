@@ -22,7 +22,7 @@ class WRTopViewController: UIViewController {
     
     private var signalingConnected: Bool = false
     
-    private var hasLocalSdp: Bool  = false
+    private var hasLocalSdp: Bool = false
     private var hasRemoteSdp: Bool = false
     
     private var localCandidateCount: Int = 0
@@ -66,9 +66,10 @@ class WRTopViewController: UIViewController {
         self.speakerOn = false
         self.webRTCStatusLabel?.text = "New"
         
-        self.signalClient.connect()
         self.webRTCClient.delegate = self
         self.signalClient.delegate = self
+        
+        self.signalClient.connect()
         
         cameraView.contentMode = .scaleAspectFill
         cameraView.clipsToBounds = true

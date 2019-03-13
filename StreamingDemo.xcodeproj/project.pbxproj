@@ -237,7 +237,6 @@
 		7655FF11222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				76DDE4DA223756C700EFACB0 /* New Group */,
 				76DC4866222F5FB700ED1B0B /* Extension */,
 				76EDDB95222F5A560017D1F6 /* Streaming */,
 				76A3756B222F8DB300B2AF9A /* WebSocket */,
@@ -313,13 +312,6 @@
 				76DDE4D6223754D700EFACB0 /* WebRTC.framework */,
 			);
 			name = Lib;
-			sourceTree = "<group>";
-		};
-		76DDE4DA223756C700EFACB0 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		76DDE4DB223756CB00EFACB0 /* SFU */ = {

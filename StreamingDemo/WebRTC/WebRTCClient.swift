@@ -52,7 +52,7 @@ final class WebRTCClient: NSObject {
         config.continualGatheringPolicy = .gatherContinually
         
         let constraints = RTCMediaConstraints(mandatoryConstraints: nil,
-                                              optionalConstraints: ["DtlsSrtpKeyAgreement":kRTCMediaConstraintsValueTrue])
+                                              optionalConstraints: ["DtlsSrtpKeyAgreement": kRTCMediaConstraintsValueTrue])
         self.peerConnection = WebRTCClient.factory.peerConnection(with: config, constraints: constraints, delegate: nil)
         
         super.init()
@@ -164,7 +164,7 @@ final class WebRTCClient: NSObject {
         localStream.addVideoTrack(videoTrack)
         self.peerConnection.add(localStream)
         
-        //TODO:        self.remoteVideoTrack = self.peerConnection.transceivers.first { $0.mediaType == .video }?.receiver.track as? RTCVideoTrack
+//TODO:        self.remoteVideoTrack = self.peerConnection.transceivers.first { $0.mediaType == .video }?.receiver.track as? RTCVideoTrack
         self.remoteVideoTrack = self.peerConnection.receivers.map{ $0.track }.filter { $0?.kind  == "video" }.first as? RTCVideoTrack
         //self.peerConnection.localStreams.first?.videoTracks.compactMap { $0 }.first
         
