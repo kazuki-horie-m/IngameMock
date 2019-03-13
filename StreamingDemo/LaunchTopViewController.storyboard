@@ -68,14 +68,23 @@
                                     <segue destination="34W-4N-9TM" kind="show" id="fOl-BV-sm3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf4-Ym-wVs">
+                                <rect key="frame" x="144" y="314" width="87" height="30"/>
+                                <state key="normal" title="Voice Stamp"/>
+                                <connections>
+                                    <segue destination="YmF-Be-iLe" kind="show" id="wgy-it-Aj4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gYL-do-8Ee" firstAttribute="top" secondItem="Dpf-d9-fHp" secondAttribute="bottom" constant="16" id="2lS-yy-ktw"/>
                             <constraint firstItem="ce4-Rd-RbP" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="3M1-0v-yBV"/>
+                            <constraint firstItem="bf4-Ym-wVs" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="8aq-Tc-RXC"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="9JV-Mg-hOd"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="top" secondItem="9ut-n3-Cpu" secondAttribute="top" constant="64" id="EqX-YB-u0c"/>
                             <constraint firstItem="oNI-Co-UnW" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="IvS-HK-2Yr"/>
+                            <constraint firstItem="bf4-Ym-wVs" firstAttribute="top" secondItem="TIC-45-nry" secondAttribute="bottom" constant="16" id="IvW-Sc-v8u"/>
                             <constraint firstItem="TIC-45-nry" firstAttribute="top" secondItem="oNI-Co-UnW" secondAttribute="bottom" constant="16" id="OD0-Sp-T14"/>
                             <constraint firstItem="oNI-Co-UnW" firstAttribute="top" secondItem="ce4-Rd-RbP" secondAttribute="bottom" constant="16" id="YJE-BO-orK"/>
                             <constraint firstItem="gYL-do-8Ee" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="iyE-4Z-fxZ"/>
@@ -130,6 +139,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezj-cG-KYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="859" y="-286"/>
+        </scene>
+        <!--VoiceStampViewController-->
+        <scene sceneID="7Fg-BR-eaj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VoiceStampViewController" id="YmF-Be-iLe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgy-pG-CbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="-219"/>
         </scene>
     </scenes>
 </document>

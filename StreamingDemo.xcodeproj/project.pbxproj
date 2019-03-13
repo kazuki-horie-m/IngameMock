@@ -28,6 +28,8 @@
 		76A375882230E59400B2AF9A /* RTCStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A375872230E59400B2AF9A /* RTCStates.swift */; };
 		76A3758A2230E5AC00B2AF9A /* SessionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A375892230E5AC00B2AF9A /* SessionDescription.swift */; };
 		76A3758C2230E5BE00B2AF9A /* IceCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3758B2230E5BE00B2AF9A /* IceCandidate.swift */; };
+		76CDA1EE2239055800250653 /* VoiceStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CDA1ED2239055800250653 /* VoiceStampViewController.swift */; };
+		76CDA1F02239058A00250653 /* VoiceStampViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76CDA1EF2239058A00250653 /* VoiceStampViewController.storyboard */; };
 		76DC485E222F5B7300ED1B0B /* LaunchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */; };
 		76DC4860222F5B8D00ED1B0B /* LaunchTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */; };
 		76DC4863222F5C4700ED1B0B /* WRTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */; };
@@ -115,6 +117,8 @@
 		76A375872230E59400B2AF9A /* RTCStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCStates.swift; sourceTree = "<group>"; };
 		76A375892230E5AC00B2AF9A /* SessionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDescription.swift; sourceTree = "<group>"; };
 		76A3758B2230E5BE00B2AF9A /* IceCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCandidate.swift; sourceTree = "<group>"; };
+		76CDA1ED2239055800250653 /* VoiceStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceStampViewController.swift; sourceTree = "<group>"; };
+		76CDA1EF2239058A00250653 /* VoiceStampViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoiceStampViewController.storyboard; sourceTree = "<group>"; };
 		76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTopViewController.swift; sourceTree = "<group>"; };
 		76DC485F222F5B8D00ED1B0B /* LaunchTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchTopViewController.storyboard; sourceTree = "<group>"; };
 		76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTopViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		7655FF11222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				76CDA1EC2239054800250653 /* VoiceStamp */,
 				76DC4866222F5FB700ED1B0B /* Extension */,
 				76EDDB95222F5A560017D1F6 /* Streaming */,
 				76A3756B222F8DB300B2AF9A /* WebSocket */,
@@ -280,6 +285,15 @@
 				76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */,
 			);
 			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		76CDA1EC2239054800250653 /* VoiceStamp */ = {
+			isa = PBXGroup;
+			children = (
+				76CDA1ED2239055800250653 /* VoiceStampViewController.swift */,
+				76CDA1EF2239058A00250653 /* VoiceStampViewController.storyboard */,
+			);
+			path = VoiceStamp;
 			sourceTree = "<group>";
 		};
 		76DC4861222F5C2400ED1B0B /* WebRTC */ = {
@@ -445,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CDA1F02239058A00250653 /* VoiceStampViewController.storyboard in Resources */,
 				76DDE4DF2237571800EFACB0 /* SFUHostViewController.storyboard in Resources */,
 				7655FF1D2226593A0054B5A8 /* LaunchScreen.storyboard in Resources */,
 				76DC4865222F5F9B00ED1B0B /* WRTopViewController.storyboard in Resources */,
@@ -550,6 +565,7 @@
 				76A3758A2230E5AC00B2AF9A /* SessionDescription.swift in Sources */,
 				76A375842230E53800B2AF9A /* Message.swift in Sources */,
 				76A375862230E56F00B2AF9A /* Config.swift in Sources */,
+				76CDA1EE2239055800250653 /* VoiceStampViewController.swift in Sources */,
 				76DC4863222F5C4700ED1B0B /* WRTopViewController.swift in Sources */,
 				76A375802230E50100B2AF9A /* WebRTCClient.swift in Sources */,
 			);
