@@ -18,7 +18,7 @@ class SFUHostViewController: UIViewController {
     
     @IBOutlet private weak var webRTCStatusLabel: UILabel?
     
-    private lazy var signalClient = SignalingClient(serverUrl: Config.janus.signalingServerUrl, protocols: ["janus-protocol"])
+    private lazy var signalClient = SignalingClient(serverUrl: Config.janus.signalingServerUrl, protocols: ["janus-protocol", "janus-admin-protocol"])
     private lazy var webRTCClient = WebRTCClient(iceServers: Config.janus.webRTCIceServers)
     
     private var signalingConnected: Bool = false
@@ -32,7 +32,25 @@ class SFUHostViewController: UIViewController {
     private var speakerOn: Bool = false
     private var mute: Bool = false
     
-    private let transaction1 = "A11111111"
+    enum SignalType: String {
+        case create = "create"
+        case attach = "attach"
+        case handle = "handle"
+        case keepalive = "keepaplive"
+        case info = "info"
+        
+
+        
+        var transaction: String {
+            let device: String = "iPhone"
+            let userId: String = "TCTC"
+            return device + "-" + userId + "-" + self.rawValue
+        }
+    }
+    
+
+    
+    
     
     @IBAction func joinButtonAction(_ sender: UIButton) {
         sendJanusCreate()
@@ -44,7 +62,7 @@ class SFUHostViewController: UIViewController {
     }
     
     @IBAction func getInfoAction(_ sender: UIButton) {
-        sendJanusInfo(transaction: transaction1)
+        sendJanusInfo()
     }
     
     @IBAction func disableVideoAction(_ sender: UIButton) {
@@ -81,57 +99,49 @@ class SFUHostViewController: UIViewController {
     }
     
     private func sendJanusCreate() {
-//        "janus": "create",
-//        "transaction": "kTV0KzovHFNe"
-        
         let packet:[String: Any] = [
                     "janus": "create",
-                    "transaction": transaction1
+                    "transaction": SignalType.create.transaction
         ]
         
         signalClient.send(packet: packet)
     }
     
-    private func sendJanusInfo(transaction: String) {
-//        "janus" : "info",
-//        "transaction" : "<random alphanumeric string>"
+    private func sendJanusInfo() {
         let packet:[String: Any] = [
             "janus": "info",
-            "transaction": transaction
+            "transaction": SignalType.info.transaction
         ]
         
         signalClient.send(packet: packet)
     }
     
     
-    private func sendJanusAttach() {
-//        "janus": "attach",
-//        "plugin": "janus.plugin.videoroom",
-//        "opaque_id": "videoroomtest-DpgSaKili8j7",
-//        "transaction": "mAK1MfuTtyL8"
-        
+    private func sendJanusAttach(_ sessionId: Int64) {
         let packet:[String: Any] = [
             "janus" : "attach",
-            "session_id" : "7430170609432927",
-            "plugin" : "videoroomtest",
-            "transaction" : "kTV0KzovHFNe"
+            "session_id" : sessionId,
+            "plugin" : "janus.plugin.videoroom",
+            "transaction" : SignalType.attach.transaction
         ]
         signalClient.send(packet: packet)
     }
     
-    private func sendJanusJoin() {
-//        "janus": "message",
-//        "body": {
-//            "request": "join",
-//            "room": 1234,
-//            "ptype": "publisher",
-//            "display": "tctc"
-//        },
-//            "transaction": "ZDMAQArOHn0s"
+    private func sendJanusHandle(sessionId: Int64, handleId: Int64) {
+        let packet:[String: Any] = [
+            "janus" : "message",
+            "session_id" : sessionId,
+            "handle_id" : handleId,
+            "transaction" : SignalType.handle.transaction,
+            "body" : [
+                "video": true,
+                "audio":true
+            ]
+        ]
+        
+        signalClient.send(packet: packet)
     }
     
-    private func receiveJanusJoin() {
-    }
     
     private func sendJanusOffer() {
 //        "janus": "message",
@@ -166,6 +176,39 @@ class SFUHostViewController: UIViewController {
 //            "type": "answer",
 //            "sdp": "v=0\r\no=mozilla...略"
 //        }
+    }
+    
+    fileprivate func parse(_ jsonData: JSON) {
+        guard let transaction = jsonData["transaction"].string
+            else {
+                print("unknown message")
+                return
+        }
+        
+        switch transaction {
+        case SignalType.create.transaction:
+            receivedCreated(jsonData)
+        case SignalType.attach.transaction:
+            receivedAttached(jsonData)
+        case SignalType.handle.transaction: break
+        case SignalType.info.transaction: break
+        case SignalType.keepalive.transaction: break
+        default:
+            print("unknown transaction message")
+        }
+    }
+    
+    private func receivedCreated(_ jsonData: JSON) {
+        if let sessionId = jsonData["data"]["id"].int64 {
+            sendJanusAttach(sessionId)
+        }
+    }
+    
+    private func receivedAttached(_ jsonData: JSON) {
+        guard let sessionId = jsonData["session_id"].int64,
+            let handleId = jsonData["data"]["id"].int64
+            else { return }
+        sendJanusHandle(sessionId: sessionId, handleId: handleId)
     }
     
     // 前の。
@@ -210,6 +253,14 @@ extension SFUHostViewController: SignalClientDelegate {
     func didReceiveMessage(_ signalClient: SignalingClient, message: String) {
         let msg = "websocketDidReceiveMessage: " + message
         print(msg)
+        
+        let data = message.data(using: .utf8)!
+        do {
+            let jsonData = try JSON(data: data)
+            parse(jsonData)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 

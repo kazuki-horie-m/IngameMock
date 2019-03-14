@@ -33,11 +33,11 @@ final class SignalingClient {
     }
     func connect() {
         self.socket.delegate = self
-        self.socket.pongDelegate = self
         self.socket.connect()
     }
     
     func send(packet: [String: Any], completion: (() -> ())? = nil) {
+        print("send packet")
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: packet)
             socket.write(data: jsonData, completion: completion)
@@ -47,6 +47,7 @@ final class SignalingClient {
     }
     
     func send(sdp rtcSdp: RTCSessionDescription) {
+        print("send rtcSdp")
         let message = Message.sdp(SessionDescription(from: rtcSdp))
         do {
             let dataMessage = try self.encoder.encode(message)
@@ -58,6 +59,7 @@ final class SignalingClient {
     }
     
     func send(candidate rtcIceCandidate: RTCIceCandidate) {
+        print("send rtcIceCandidate")
         let message = Message.candidate(IceCandidate(from: rtcIceCandidate))
         do {
             let dataMessage = try self.encoder.encode(message)
@@ -67,7 +69,6 @@ final class SignalingClient {
         }
     }
 }
-
 
 extension SignalingClient: WebSocketDelegate {
     func websocketDidConnect(socket: WebSocketClient) {
@@ -105,11 +106,5 @@ extension SignalingClient: WebSocketDelegate {
     
     func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         self.delegate?.didReceiveMessage(self, message: text)
-    }
-}
-
-extension SignalingClient: WebSocketPongDelegate {
-    func websocketDidReceivePong(socket: WebSocketClient, data: Data?) {
-        print("websocketDidReceivePong")
     }
 }
