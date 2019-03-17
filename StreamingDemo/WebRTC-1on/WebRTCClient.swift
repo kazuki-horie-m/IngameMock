@@ -226,7 +226,7 @@ extension WebRTCClient: RTCPeerConnectionDelegate {
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didRemove stream: RTCMediaStream) {
-        debugPrint("peerConnection did remote stream")
+        debugPrint("peerConnection did remove stream")
         self.remoteVideoTrack = nil
     }
     
@@ -235,12 +235,20 @@ extension WebRTCClient: RTCPeerConnectionDelegate {
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {
-        debugPrint("peerConnection new connection state: \(newState)")
+//        debugPrint("peerConnection new connection state: \(newState)") // VCでログだしてる
         self.delegate?.webRTCClient(self, didChangeConnectionState: newState)
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {
-        debugPrint("peerConnection new gathering state: \(newState)")
+//        debugPrint("peerConnection new gathering state: \(newState)")
+//        RTCIceGatheringStateNew,
+//        RTCIceGatheringStateGathering,
+//        RTCIceGatheringStateComplete,
+        switch newState {
+        case .new: print("[STATE] RTCIceGatheringState: .new")
+        case .gathering: print("[STATE] RTCIceGatheringState: .gathering")
+        case .complete: print("[STATE] RTCIceGatheringState: .complete")
+        }
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didGenerate candidate: RTCIceCandidate) {

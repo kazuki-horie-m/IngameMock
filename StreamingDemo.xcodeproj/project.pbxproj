@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65625ECD223C03A00045C073 /* WRRoomTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65625ECC223C03A00045C073 /* WRRoomTopViewController.swift */; };
+		65625ECF223C03CF0045C073 /* WebRTCRoomClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65625ECE223C03CF0045C073 /* WebRTCRoomClient.swift */; };
+		65625ED1223C03E30045C073 /* SignalingRoomClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65625ED0223C03E30045C073 /* SignalingRoomClient.swift */; };
+		65625ED3223C04CA0045C073 /* WRRoomTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65625ED2223C04CA0045C073 /* WRRoomTopViewController.storyboard */; };
 		762E268C223742AF00B8BFF4 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762E268B223742AF00B8BFF4 /* WebRTC.framework */; };
 		7655FF13222659370054B5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF12222659370054B5A8 /* AppDelegate.swift */; };
 		7655FF15222659370054B5A8 /* StreamingTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF14222659370054B5A8 /* StreamingTopViewController.swift */; };
@@ -89,6 +93,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		65625ECC223C03A00045C073 /* WRRoomTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRRoomTopViewController.swift; sourceTree = "<group>"; };
+		65625ECE223C03CF0045C073 /* WebRTCRoomClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCRoomClient.swift; sourceTree = "<group>"; };
+		65625ED0223C03E30045C073 /* SignalingRoomClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingRoomClient.swift; sourceTree = "<group>"; };
+		65625ED2223C04CA0045C073 /* WRRoomTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WRRoomTopViewController.storyboard; sourceTree = "<group>"; };
 		7393DF25F165D7FB40BE6730 /* Pods-StreamingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingDemo.debug.xcconfig"; path = "Target Support Files/Pods-StreamingDemo/Pods-StreamingDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		762E268B223742AF00B8BFF4 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = Lib/WebRTC.framework; sourceTree = "<group>"; };
 		7655FF0F222659370054B5A8 /* StreamingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +203,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		65625ECB223C03690045C073 /* WebRTC-Room */ = {
+			isa = PBXGroup;
+			children = (
+				65625ECC223C03A00045C073 /* WRRoomTopViewController.swift */,
+				65625ED2223C04CA0045C073 /* WRRoomTopViewController.storyboard */,
+				65625ECE223C03CF0045C073 /* WebRTCRoomClient.swift */,
+				65625ED0223C03E30045C073 /* SignalingRoomClient.swift */,
+			);
+			path = "WebRTC-Room";
+			sourceTree = "<group>";
+		};
 		6A8EB810CA936B2E63F42621 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +264,8 @@
 				76DC4866222F5FB700ED1B0B /* Extension */,
 				76EDDB95222F5A560017D1F6 /* Streaming */,
 				76A3756B222F8DB300B2AF9A /* WebSocket */,
-				76DC4861222F5C2400ED1B0B /* WebRTC */,
+				76DC4861222F5C2400ED1B0B /* WebRTC-1on */,
+				65625ECB223C03690045C073 /* WebRTC-Room */,
 				76DDE4DB223756CB00EFACB0 /* SFU */,
 				7655FF12222659370054B5A8 /* AppDelegate.swift */,
 				76EDDB7A222E5A3F0017D1F6 /* Bridging-Header.h */,
@@ -296,7 +316,7 @@
 			path = VoiceStamp;
 			sourceTree = "<group>";
 		};
-		76DC4861222F5C2400ED1B0B /* WebRTC */ = {
+		76DC4861222F5C2400ED1B0B /* WebRTC-1on */ = {
 			isa = PBXGroup;
 			children = (
 				76DC4862222F5C4700ED1B0B /* WRTopViewController.swift */,
@@ -309,7 +329,7 @@
 				76A375892230E5AC00B2AF9A /* SessionDescription.swift */,
 				76A3758B2230E5BE00B2AF9A /* IceCandidate.swift */,
 			);
-			path = WebRTC;
+			path = "WebRTC-1on";
 			sourceTree = "<group>";
 		};
 		76DC4866222F5FB700ED1B0B /* Extension */ = {
@@ -460,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76CDA1F02239058A00250653 /* VoiceStampViewController.storyboard in Resources */,
+				65625ED3223C04CA0045C073 /* WRRoomTopViewController.storyboard in Resources */,
 				76DDE4DF2237571800EFACB0 /* SFUHostViewController.storyboard in Resources */,
 				7655FF1D2226593A0054B5A8 /* LaunchScreen.storyboard in Resources */,
 				76DC4865222F5F9B00ED1B0B /* WRTopViewController.storyboard in Resources */,
@@ -549,14 +570,17 @@
 				76A37579222F9F7E00B2AF9A /* NetworkManager.swift in Sources */,
 				76DDE4DD223756F300EFACB0 /* SFUHostViewController.swift in Sources */,
 				76EDDB7C222E5FDD0017D1F6 /* StreamingPlayerManager.swift in Sources */,
+				65625ED1223C03E30045C073 /* SignalingRoomClient.swift in Sources */,
 				7655FF15222659370054B5A8 /* StreamingTopViewController.swift in Sources */,
 				76A375882230E59400B2AF9A /* RTCStates.swift in Sources */,
 				7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */,
 				76DC4868222F5FC900ED1B0B /* NSObject+Ex.swift in Sources */,
 				76A3758C2230E5BE00B2AF9A /* IceCandidate.swift in Sources */,
+				65625ECD223C03A00045C073 /* WRRoomTopViewController.swift in Sources */,
 				76EDDB79222E57D00017D1F6 /* StreamingHaishinViewController.swift in Sources */,
 				76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */,
 				76DDE4E12237575400EFACB0 /* SFUAudienceViewController.swift in Sources */,
+				65625ECF223C03CF0045C073 /* WebRTCRoomClient.swift in Sources */,
 				76A375822230E51500B2AF9A /* SignalingClient.swift in Sources */,
 				76EDDB97222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift in Sources */,
 				7655FF13222659370054B5A8 /* AppDelegate.swift in Sources */,
@@ -756,9 +780,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.webrtc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = alldevelopment;
+				PROVISIONING_PROFILE_SPECIFIER = "rinrin-dev";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -782,7 +806,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.webrtc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

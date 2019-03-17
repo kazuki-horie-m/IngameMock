@@ -9,8 +9,10 @@
 import Foundation
 
 // Set this to the machine's address which runs the signaling server
-fileprivate let defaultSignalingServerUrl = URL(string: "ws://192.168.2.1:3000")!
-fileprivate let janusSignalingServerUrl = URL(string: "ws://192.168.2.1:8188")!
+fileprivate let defaultSignalingServerUrl = URL(string: "ws://192.168.2.101:3000")!
+fileprivate let roomSignalingServerUrl = URL(string: "http://192.168.2.101:3002")!
+//fileprivate let janusSignalingServerUrl = URL(string: "ws://192.168.2.1:8188")!
+fileprivate let janusSignalingServerUrl = URL(string: "ws://192.168.2.101:8188")!
 //fileprivate let defaultSignalingServerUrl = URL(string: "ws://10.196.42.175:8188")!
 
 // We use Google's public stun servers. For production apps you should deploy your own stun/turn servers.
@@ -26,4 +28,5 @@ struct Config {
     
     static let `default` = Config(signalingServerUrl: defaultSignalingServerUrl, webRTCIceServers: defaultIceServers)
     static let janus     = Config(signalingServerUrl: janusSignalingServerUrl, webRTCIceServers: defaultIceServers)
+    static let room     = Config(signalingServerUrl: roomSignalingServerUrl, webRTCIceServers: defaultIceServers)
 }

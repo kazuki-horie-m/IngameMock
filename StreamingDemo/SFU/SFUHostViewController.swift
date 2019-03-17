@@ -122,6 +122,7 @@ class SFUHostViewController: UIViewController {
             "janus" : "attach",
             "session_id" : sessionId,
             "plugin" : "janus.plugin.videoroom",
+            "ptype": "publisher",
             "transaction" : SignalType.attach.transaction
         ]
         signalClient.send(packet: packet)
@@ -132,10 +133,12 @@ class SFUHostViewController: UIViewController {
             "janus" : "message",
             "session_id" : sessionId,
             "handle_id" : handleId,
+            "ptype": "publisher",
             "transaction" : SignalType.handle.transaction,
             "body" : [
+                "ptype": "publisher",
                 "video": true,
-                "audio":true
+                "audio": true
             ]
         ]
         

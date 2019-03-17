@@ -47,8 +47,6 @@ class WRTopViewController: UIViewController {
     
     @IBAction func enableVideoAction(_ sender: UIButton) {
         self.webRTCClient.startCaptureLocalVideo(renderer: cameraView)
-        self.webRTCClient.renderRemoteVideo(to: videoView)
-        
     }
     
     @IBAction func disableVideoAction(_ sender: UIButton) {
@@ -83,6 +81,12 @@ class WRTopViewController: UIViewController {
             $0.contentMode = .scaleAspectFill
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        webRTCClient.startCaptureLocalVideo(renderer: cameraView)
+    }
 }
 
 extension WRTopViewController: SignalClientDelegate {
@@ -108,7 +112,7 @@ extension WRTopViewController: SignalClientDelegate {
     }
     
     func didReceiveMessage(_ signalClient: SignalingClient, message: String) {
-        print("RdidReceiveMessage: " + message)
+        print("didReceiveMessage: " + message)
     }
 }
 
@@ -121,16 +125,35 @@ extension WRTopViewController: WebRTCClientDelegate {
     }
     
     func webRTCClient(_ client: WebRTCClient, didChangeConnectionState state: RTCIceConnectionState) {
+        
         let textColor: UIColor
         switch state {
-        case .connected, .completed:
+        case .connected:
+            print("[STATE] RTCIceConnectionState: connected")
+            textColor = .green
+            self.webRTCClient.renderRemoteVideo(to: videoView)
+        case .completed:
+            print("[STATE] RTCIceConnectionState: completed")
             textColor = .green
         case .disconnected:
+            print("[STATE] RTCIceConnectionState: disconnected")
             textColor = .orange
-        case .failed, .closed:
+        case .failed:
+            print("[STATE] RTCIceConnectionState: failed")
             textColor = .red
-        case .new, .checking, .count:
+        case .closed:
+            print("[STATE] RTCIceConnectionState: closed")
+            textColor = .red
+        case .new:
+            print("[STATE] RTCIceConnectionState: new:")
             textColor = .black
+        case .checking:
+            print("[STATE] RTCIceConnectionState: checking")
+            textColor = .black
+        case .count:
+            print("[STATE] RTCIceConnectionState: count")
+            textColor = .black
+            
         }
         DispatchQueue.main.async {
             self.webRTCStatusLabel?.text = state.description.capitalized
