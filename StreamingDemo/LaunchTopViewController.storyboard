@@ -82,6 +82,13 @@
                                     <segue destination="6sC-fu-OJ6" kind="show" id="Ga9-nL-fSi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsB-Op-pQX">
+                                <rect key="frame" x="154" y="406" width="67" height="30"/>
+                                <state key="normal" title="OpenEars"/>
+                                <connections>
+                                    <segue destination="WIJ-DN-2qb" kind="show" id="kok-EB-90Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -90,10 +97,12 @@
                             <constraint firstItem="bf4-Ym-wVs" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="8aq-Tc-RXC"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="9JV-Mg-hOd"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="top" secondItem="9ut-n3-Cpu" secondAttribute="top" constant="64" id="EqX-YB-u0c"/>
+                            <constraint firstItem="FsB-Op-pQX" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="Fo1-8V-iyQ"/>
                             <constraint firstItem="oNI-Co-UnW" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="IvS-HK-2Yr"/>
                             <constraint firstItem="bf4-Ym-wVs" firstAttribute="top" secondItem="TIC-45-nry" secondAttribute="bottom" constant="16" id="IvW-Sc-v8u"/>
                             <constraint firstItem="TIC-45-nry" firstAttribute="top" secondItem="oNI-Co-UnW" secondAttribute="bottom" constant="16" id="OD0-Sp-T14"/>
                             <constraint firstItem="oNI-Co-UnW" firstAttribute="top" secondItem="ce4-Rd-RbP" secondAttribute="bottom" constant="16" id="YJE-BO-orK"/>
+                            <constraint firstItem="FsB-Op-pQX" firstAttribute="top" secondItem="ClJ-9F-N0q" secondAttribute="bottom" constant="16" id="dpZ-jQ-vMs"/>
                             <constraint firstItem="ClJ-9F-N0q" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="hGe-Fp-F5d"/>
                             <constraint firstItem="gYL-do-8Ee" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="iyE-4Z-fxZ"/>
                             <constraint firstItem="ClJ-9F-N0q" firstAttribute="top" secondItem="bf4-Ym-wVs" secondAttribute="bottom" constant="16" id="no9-zF-OKg"/>
@@ -164,6 +173,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVv-7c-HBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="837" y="-126"/>
+        </scene>
+        <!--OpenEarsViewController-->
+        <scene sceneID="8lN-Na-KiV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OpenEarsViewController" id="WIJ-DN-2qb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTb-i1-WXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="-48"/>
         </scene>
     </scenes>
 </document>

@@ -32,6 +32,13 @@
 		76A375882230E59400B2AF9A /* RTCStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A375872230E59400B2AF9A /* RTCStates.swift */; };
 		76A3758A2230E5AC00B2AF9A /* SessionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A375892230E5AC00B2AF9A /* SessionDescription.swift */; };
 		76A3758C2230E5BE00B2AF9A /* IceCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3758B2230E5BE00B2AF9A /* IceCandidate.swift */; };
+		76BD9325223F4649005752EA /* OpenEarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BD9324223F4649005752EA /* OpenEarsViewController.swift */; };
+		76BD9327223F4657005752EA /* OpenEarsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76BD9326223F4657005752EA /* OpenEarsViewController.storyboard */; };
+		76BD933C223F4B50005752EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BD933B223F4B50005752EA /* AudioToolbox.framework */; };
+		76BD933E223F4B63005752EA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BD933D223F4B63005752EA /* AVFoundation.framework */; };
+		76BD9343223F4DDB005752EA /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BD9340223F4DDB005752EA /* Slt.framework */; };
+		76BD9344223F4DDB005752EA /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BD9341223F4DDB005752EA /* OpenEars.framework */; };
+		76BD9345223F4DDB005752EA /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76BD9342223F4DDB005752EA /* AcousticModelEnglish.bundle */; };
 		76CDA1EE2239055800250653 /* VoiceStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CDA1ED2239055800250653 /* VoiceStampViewController.swift */; };
 		76CDA1F02239058A00250653 /* VoiceStampViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76CDA1EF2239058A00250653 /* VoiceStampViewController.storyboard */; };
 		76DC485E222F5B7300ED1B0B /* LaunchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */; };
@@ -125,6 +132,17 @@
 		76A375872230E59400B2AF9A /* RTCStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCStates.swift; sourceTree = "<group>"; };
 		76A375892230E5AC00B2AF9A /* SessionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDescription.swift; sourceTree = "<group>"; };
 		76A3758B2230E5BE00B2AF9A /* IceCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCandidate.swift; sourceTree = "<group>"; };
+		76BD9324223F4649005752EA /* OpenEarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenEarsViewController.swift; sourceTree = "<group>"; };
+		76BD9326223F4657005752EA /* OpenEarsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpenEarsViewController.storyboard; sourceTree = "<group>"; };
+		76BD9329223F47CB005752EA /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		76BD932A223F47CB005752EA /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		76BD932B223F47CB005752EA /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		76BD9333223F48A9005752EA /* OpenEarsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenEarsHeader.h; sourceTree = "<group>"; };
+		76BD933B223F4B50005752EA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		76BD933D223F4B63005752EA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		76BD9340223F4DDB005752EA /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		76BD9341223F4DDB005752EA /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		76BD9342223F4DDB005752EA /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
 		76CDA1ED2239055800250653 /* VoiceStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceStampViewController.swift; sourceTree = "<group>"; };
 		76CDA1EF2239058A00250653 /* VoiceStampViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoiceStampViewController.storyboard; sourceTree = "<group>"; };
 		76DC485D222F5B7300ED1B0B /* LaunchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTopViewController.swift; sourceTree = "<group>"; };
@@ -160,10 +178,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BD933E223F4B63005752EA /* AVFoundation.framework in Frameworks */,
+				76BD933C223F4B50005752EA /* AudioToolbox.framework in Frameworks */,
 				762E268C223742AF00B8BFF4 /* WebRTC.framework in Frameworks */,
 				76A37577222F9CFF00B2AF9A /* Starscream.framework in Frameworks */,
 				76A37575222F9CFE00B2AF9A /* SocketIO.framework in Frameworks */,
 				76DDE4D7223754D700EFACB0 /* WebRTC.framework in Frameworks */,
+				76BD9343223F4DDB005752EA /* Slt.framework in Frameworks */,
 				76EDDB90222E695F0017D1F6 /* SwiftyJSON.framework in Frameworks */,
 				76EDDB86222E68990017D1F6 /* Alamofire.framework in Frameworks */,
 				76EDDB87222E68990017D1F6 /* Logboard.framework in Frameworks */,
@@ -174,6 +195,7 @@
 				76EDDB8C222E68990017D1F6 /* HaishinKit.framework in Frameworks */,
 				76EDDB8D222E68990017D1F6 /* RxCocoa.framework in Frameworks */,
 				E30B1AA95261F1F3B9809E7A /* Pods_StreamingDemo.framework in Frameworks */,
+				76BD9344223F4DDB005752EA /* OpenEars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +239,9 @@
 		6A8EB810CA936B2E63F42621 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76BD933D223F4B63005752EA /* AVFoundation.framework */,
+				76BD933B223F4B50005752EA /* AudioToolbox.framework */,
+				76BD9328223F47CB005752EA /* Framework */,
 				762E268B223742AF00B8BFF4 /* WebRTC.framework */,
 				76A37576222F9CFE00B2AF9A /* Starscream.framework */,
 				76A37570222F9BB600B2AF9A /* SocketIO.framework */,
@@ -260,6 +285,8 @@
 		7655FF11222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				76BD933F223F4DDB005752EA /* Framework */,
+				76BD9323223F4638005752EA /* OpenEars */,
 				76CDA1EC2239054800250653 /* VoiceStamp */,
 				76DC4866222F5FB700ED1B0B /* Extension */,
 				76EDDB95222F5A560017D1F6 /* Streaming */,
@@ -269,6 +296,7 @@
 				76DDE4DB223756CB00EFACB0 /* SFU */,
 				7655FF12222659370054B5A8 /* AppDelegate.swift */,
 				76EDDB7A222E5A3F0017D1F6 /* Bridging-Header.h */,
+				76BD9333223F48A9005752EA /* OpenEarsHeader.h */,
 				7655FF192226593A0054B5A8 /* Assets.xcassets */,
 				7655FF1B2226593A0054B5A8 /* LaunchScreen.storyboard */,
 				7655FF1E2226593A0054B5A8 /* Info.plist */,
@@ -306,6 +334,35 @@
 			);
 			path = WebSocket;
 			sourceTree = "<group>";
+		};
+		76BD9323223F4638005752EA /* OpenEars */ = {
+			isa = PBXGroup;
+			children = (
+				76BD9324223F4649005752EA /* OpenEarsViewController.swift */,
+				76BD9326223F4657005752EA /* OpenEarsViewController.storyboard */,
+			);
+			path = OpenEars;
+			sourceTree = "<group>";
+		};
+		76BD9328223F47CB005752EA /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				76BD9329223F47CB005752EA /* Slt.framework */,
+				76BD932A223F47CB005752EA /* OpenEars.framework */,
+				76BD932B223F47CB005752EA /* AcousticModelEnglish.bundle */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		76BD933F223F4DDB005752EA /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				76BD9340223F4DDB005752EA /* Slt.framework */,
+				76BD9341223F4DDB005752EA /* OpenEars.framework */,
+				76BD9342223F4DDB005752EA /* AcousticModelEnglish.bundle */,
+			);
+			path = Framework;
+			sourceTree = SOURCE_ROOT;
 		};
 		76CDA1EC2239054800250653 /* VoiceStamp */ = {
 			isa = PBXGroup;
@@ -484,9 +541,11 @@
 				76DDE4DF2237571800EFACB0 /* SFUHostViewController.storyboard in Resources */,
 				7655FF1D2226593A0054B5A8 /* LaunchScreen.storyboard in Resources */,
 				76DC4865222F5F9B00ED1B0B /* WRTopViewController.storyboard in Resources */,
+				76BD9327223F4657005752EA /* OpenEarsViewController.storyboard in Resources */,
 				7655FF1A2226593A0054B5A8 /* Assets.xcassets in Resources */,
 				76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */,
 				76DC4860222F5B8D00ED1B0B /* LaunchTopViewController.storyboard in Resources */,
+				76BD9345223F4DDB005752EA /* AcousticModelEnglish.bundle in Resources */,
 				76DDE4E32237576E00EFACB0 /* SFUAudienceViewController.storyboard in Resources */,
 				7655FF18222659370054B5A8 /* StreamingTopViewController.storyboard in Resources */,
 			);
@@ -580,6 +639,7 @@
 				76EDDB79222E57D00017D1F6 /* StreamingHaishinViewController.swift in Sources */,
 				76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */,
 				76DDE4E12237575400EFACB0 /* SFUAudienceViewController.swift in Sources */,
+				76BD9325223F4649005752EA /* OpenEarsViewController.swift in Sources */,
 				65625ECF223C03CF0045C073 /* WebRTCRoomClient.swift in Sources */,
 				76A375822230E51500B2AF9A /* SignalingClient.swift in Sources */,
 				76EDDB97222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift in Sources */,
@@ -774,6 +834,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Lib",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = StreamingDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -783,6 +844,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "rinrin-dev";
+				SWIFT_OBJC_BRIDGING_HEADER = StreamingDemo/OpenEarsHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -800,6 +862,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Lib",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = StreamingDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -809,6 +872,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = StreamingDemo/OpenEarsHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
