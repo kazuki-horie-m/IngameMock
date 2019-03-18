@@ -88,8 +88,6 @@ class VoiceStampViewController: UIViewController {
 //        allowAirPlay
         
         let audioSession = AVAudioSession.sharedInstance()
-//        try audioSession.setCategory(AVAudioSession.Category.record)
-//        try audioSession.setMode(AVAudioSession.Mode.measurement)
         try audioSession.setCategory(.record, mode: .measurement, options: [.mixWithOthers])
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         

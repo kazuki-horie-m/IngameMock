@@ -28,6 +28,7 @@ class OpenEarsViewController: UIViewController {
         let languageModelGenerator = OELanguageModelGenerator()
         
         let firstLanguageArray = ["wo",
+                                  "sasaki",
                                   "e-yo",
                                   "aaaa",
                                   "ekei"
