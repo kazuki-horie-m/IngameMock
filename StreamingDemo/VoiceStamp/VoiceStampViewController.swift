@@ -9,9 +9,15 @@
 import UIKit
 import CoreML
 import Speech
+import RxCocoa
+import RxSwift
 
 class VoiceStampViewController: UIViewController {
-    @IBOutlet private weak var outputLabel: UILabel!
+    @IBOutlet private weak var recordButton: UIButton!
+    @IBOutlet private weak var statusLabel: UILabel!
+    @IBOutlet private weak var speechLabel: UILabel!
+    
+    private let disposeBag = DisposeBag()
     
     private var recognitionTask: SFSpeechRecognitionTask?
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -19,34 +25,23 @@ class VoiceStampViewController: UIViewController {
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
     
-    @IBAction private func button1Action(sender: UIButton) {
+    @IBAction private func recordButtonTouchDown(sender: UIButton) {
+        sender.backgroundColor = .green
         if !audioEngine.isRunning {
-            do {
-                try startAppleSpeechRecording()
-            } catch {
-                print(error)
-            }
+            try? startRecording()
         }
     }
     
-    @IBAction private func button2Action(sender: UIButton) {
-        if audioEngine.isRunning {
-            audioEngine.stop()
-        }
-    }
-    
-    @IBAction private func button3Action(sender: UIButton) {
-        
-    }
-    
-    @IBAction private func button4Action(sender: UIButton) {
-        
+    @IBAction private func recordButtonTouchUp(sender: UIButton) {
+        sender.backgroundColor = .clear
+        stopRecoding()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         speechRecognizer.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,16 +63,8 @@ class VoiceStampViewController: UIViewController {
         }
     }
     
-    private func startAppleSpeechRecording() throws {
-//        端末ごとの音声認識回数には制限がある
-//        アプリごとにも認識回数に制限がある
-//        一回のディクテーション時間のMaxは1分
-        
-        if let recognitionTask = recognitionTask {
-            // 既存タスクがあればキャンセル
-            recognitionTask.cancel()
-            self.recognitionTask = nil
-        }
+    private func startRecording() throws {
+        refreshTask()
         
 //        mixWithOthers
 //        duckOthers
@@ -99,20 +86,18 @@ class VoiceStampViewController: UIViewController {
         
         let inputNode = audioEngine.inputNode
         
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { [unowned self] (result, error) in
+        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { [weak self] (result, error) in
+            guard let `self` = self else { return }
             var isFinal = false
             
             if let result = result {
-                self.outputLabel.text = result.bestTranscription.formattedString
+                self.speechLabel.text = result.bestTranscription.formattedString
                 isFinal = result.isFinal
             }
             
             if error != nil || isFinal {
-                self.audioEngine.stop()
+                self.stopRecoding()
                 inputNode.removeTap(onBus: 0)
-                
-                self.recognitionRequest = nil
-                self.recognitionTask = nil
             }
         }
             
@@ -125,9 +110,24 @@ class VoiceStampViewController: UIViewController {
         audioEngine.prepare()
         try audioEngine.start()
         
-        outputLabel.text = "Recognizing..."
+        statusLabel.text = "Recognizing..."
+    }
+ 
+    private func stopRecoding() {
+        if audioEngine.isRunning {
+            audioEngine.stop()
+            recognitionRequest?.endAudio()
+            recognitionRequest = nil
+            recognitionTask = nil
+            
+            self.statusLabel.text = "Stop"
+        }
     }
     
+    private func refreshTask() {
+        recognitionTask?.cancel()
+        recognitionTask = nil
+    }
 }
 
 extension VoiceStampViewController: SFSpeechRecognizerDelegate {
