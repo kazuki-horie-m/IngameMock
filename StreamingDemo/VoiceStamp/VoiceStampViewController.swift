@@ -11,6 +11,7 @@ import CoreML
 import Speech
 import RxCocoa
 import RxSwift
+import WebKit
 
 class VoiceStampViewController: UIViewController {
     @IBOutlet private weak var recordButton: UIButton!
@@ -62,6 +63,20 @@ class VoiceStampViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard let gifView = GifWebView(fileName: "kamehameha") else { return }
+        view.addSubview(gifView)
+        gifView.startAnimate()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.3) {
+            gifView.removeFromSuperview()
+        }
+    }
+    
+    private var timer: Timer?
     
     private func startRecording() throws {
         refreshTask()
