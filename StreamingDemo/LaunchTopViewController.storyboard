@@ -89,6 +89,13 @@
                                     <segue destination="WIJ-DN-2qb" kind="show" id="kok-EB-90Z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiV-G1-2TD">
+                                <rect key="frame" x="136" y="452" width="103" height="30"/>
+                                <state key="normal" title="AudioObserver"/>
+                                <connections>
+                                    <segue destination="Jyd-Xi-Xx2" kind="show" id="Dw6-kX-Ybx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -96,12 +103,14 @@
                             <constraint firstItem="ce4-Rd-RbP" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="3M1-0v-yBV"/>
                             <constraint firstItem="bf4-Ym-wVs" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="8aq-Tc-RXC"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="9JV-Mg-hOd"/>
+                            <constraint firstItem="WiV-G1-2TD" firstAttribute="top" secondItem="FsB-Op-pQX" secondAttribute="bottom" constant="16" id="Ci4-xL-R4I"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="top" secondItem="9ut-n3-Cpu" secondAttribute="top" constant="64" id="EqX-YB-u0c"/>
                             <constraint firstItem="FsB-Op-pQX" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="Fo1-8V-iyQ"/>
                             <constraint firstItem="oNI-Co-UnW" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="IvS-HK-2Yr"/>
                             <constraint firstItem="bf4-Ym-wVs" firstAttribute="top" secondItem="TIC-45-nry" secondAttribute="bottom" constant="16" id="IvW-Sc-v8u"/>
                             <constraint firstItem="TIC-45-nry" firstAttribute="top" secondItem="oNI-Co-UnW" secondAttribute="bottom" constant="16" id="OD0-Sp-T14"/>
                             <constraint firstItem="oNI-Co-UnW" firstAttribute="top" secondItem="ce4-Rd-RbP" secondAttribute="bottom" constant="16" id="YJE-BO-orK"/>
+                            <constraint firstItem="WiV-G1-2TD" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="blF-p6-9pT"/>
                             <constraint firstItem="FsB-Op-pQX" firstAttribute="top" secondItem="ClJ-9F-N0q" secondAttribute="bottom" constant="16" id="dpZ-jQ-vMs"/>
                             <constraint firstItem="ClJ-9F-N0q" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="hGe-Fp-F5d"/>
                             <constraint firstItem="gYL-do-8Ee" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="iyE-4Z-fxZ"/>
@@ -181,6 +190,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTb-i1-WXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="830" y="-48"/>
+        </scene>
+        <!--AudioObserverViewController-->
+        <scene sceneID="AkK-DJ-hkB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AudioObserverViewController" id="Jyd-Xi-Xx2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXY-xJ-0Ea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="87"/>
         </scene>
     </scenes>
 </document>

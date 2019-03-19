@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import CoreML
 import Speech
 import RxCocoa
 import RxSwift
-import WebKit
 
 class VoiceStampViewController: UIViewController {
     @IBOutlet private weak var recordButton: UIButton!
