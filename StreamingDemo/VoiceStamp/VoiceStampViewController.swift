@@ -24,7 +24,7 @@ class VoiceStampViewController: UIViewController {
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private let audioEngine = AVAudioEngine()
     
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))
     
     @IBAction private func recordButtonTouchDown(sender: UIButton) {
         sender.backgroundColor = .green
@@ -41,7 +41,7 @@ class VoiceStampViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        speechRecognizer.delegate = self
+        speechRecognizer?.delegate = self
         
     }
     
@@ -101,7 +101,7 @@ class VoiceStampViewController: UIViewController {
         
         let inputNode = audioEngine.inputNode
         
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { [weak self] (result, error) in
+        recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { [weak self] (result, error) in
             guard let `self` = self else { return }
             var isFinal = false
             
