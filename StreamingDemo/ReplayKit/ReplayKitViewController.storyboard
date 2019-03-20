@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eLJ-Ej-Khq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Replay Kit View Controller-->
+        <scene sceneID="IyI-cK-3Lk">
+            <objects>
+                <viewController id="eLJ-Ej-Khq" customClass="ReplayKitViewController" customModule="StreamingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="99Q-NL-Szt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-ID-6KM">
+                                <rect key="frame" x="0.0" y="551" width="125" height="100"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchUpInside" id="c43-6h-BjK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS7-c4-wRf">
+                                <rect key="frame" x="250" y="551" width="125" height="100"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchUpInside" id="7Cm-7J-jHK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPh-m3-W1i">
+                                <rect key="frame" x="125" y="551" width="125" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="nx5-7j-hDx"/>
+                                </constraints>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchUpInside" id="uyU-ng-ynk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Wz-BI-Czy" firstAttribute="trailing" secondItem="AS7-c4-wRf" secondAttribute="trailing" id="7hj-g6-Ti0"/>
+                            <constraint firstItem="AS7-c4-wRf" firstAttribute="centerY" secondItem="kPh-m3-W1i" secondAttribute="centerY" id="9LW-zu-bGo"/>
+                            <constraint firstItem="kPh-m3-W1i" firstAttribute="leading" secondItem="LJ9-ID-6KM" secondAttribute="trailing" id="BLB-Mj-prr"/>
+                            <constraint firstItem="AS7-c4-wRf" firstAttribute="height" secondItem="kPh-m3-W1i" secondAttribute="height" id="EhN-w6-HQl"/>
+                            <constraint firstItem="LJ9-ID-6KM" firstAttribute="centerY" secondItem="kPh-m3-W1i" secondAttribute="centerY" id="SA1-Se-oHo"/>
+                            <constraint firstItem="AS7-c4-wRf" firstAttribute="leading" secondItem="kPh-m3-W1i" secondAttribute="trailing" id="Yai-Mw-7be"/>
+                            <constraint firstItem="LJ9-ID-6KM" firstAttribute="width" secondItem="kPh-m3-W1i" secondAttribute="width" id="ahn-pt-ZUx"/>
+                            <constraint firstItem="LJ9-ID-6KM" firstAttribute="height" secondItem="kPh-m3-W1i" secondAttribute="height" id="gHv-VM-fHc"/>
+                            <constraint firstItem="AS7-c4-wRf" firstAttribute="width" secondItem="kPh-m3-W1i" secondAttribute="width" id="hWG-7j-dat"/>
+                            <constraint firstItem="LJ9-ID-6KM" firstAttribute="leading" secondItem="5Wz-BI-Czy" secondAttribute="leading" id="k6x-vb-aN8"/>
+                            <constraint firstItem="5Wz-BI-Czy" firstAttribute="bottom" secondItem="kPh-m3-W1i" secondAttribute="bottom" constant="16" id="ucf-bB-cDB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Wz-BI-Czy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Az2-wK-8hv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="68"/>
+        </scene>
+    </scenes>
+</document>

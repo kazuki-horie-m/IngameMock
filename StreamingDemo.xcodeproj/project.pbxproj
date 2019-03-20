@@ -11,6 +11,20 @@
 		65625ECF223C03CF0045C073 /* WebRTCRoomClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65625ECE223C03CF0045C073 /* WebRTCRoomClient.swift */; };
 		65625ED1223C03E30045C073 /* SignalingRoomClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65625ED0223C03E30045C073 /* SignalingRoomClient.swift */; };
 		65625ED3223C04CA0045C073 /* WRRoomTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65625ED2223C04CA0045C073 /* WRRoomTopViewController.storyboard */; };
+		65625ED62242A6AD0045C073 /* ReplayKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65625ED52242A6AD0045C073 /* ReplayKitViewController.swift */; };
+		65625ED82242A6C40045C073 /* ReplayKitViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65625ED72242A6C40045C073 /* ReplayKitViewController.storyboard */; };
+		65625EF52242A8B30045C073 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65625EE12242A8120045C073 /* ReplayKit.framework */; };
+		65625EF82242A8B30045C073 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65625EF72242A8B30045C073 /* SampleHandler.swift */; };
+		65625EFF2242A8B40045C073 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65625EE12242A8120045C073 /* ReplayKit.framework */; };
+		65625F002242A8B40045C073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65625EE32242A8120045C073 /* UIKit.framework */; };
+		65625F032242A8B40045C073 /* BroadcastSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65625F022242A8B40045C073 /* BroadcastSetupViewController.swift */; };
+		65625F072242A8B40045C073 /* StreamingDemoUploadSetupUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 65625EFE2242A8B40045C073 /* StreamingDemoUploadSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		65625F0A2242A8B40045C073 /* StreamingDemoUpload.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 65625EF42242A8B30045C073 /* StreamingDemoUpload.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		65625F122242AAF90045C073 /* RTMPBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65625F112242AAF90045C073 /* RTMPBroadcaster.swift */; };
+		65625F132242ABF10045C073 /* HaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EDDB83222E68990017D1F6 /* HaishinKit.framework */; };
+		65625F142242ABF10045C073 /* HaishinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76EDDB83222E68990017D1F6 /* HaishinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65625F152242ABFC0045C073 /* HaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EDDB83222E68990017D1F6 /* HaishinKit.framework */; };
+		65625F192242B71B0045C073 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65625EE12242A8120045C073 /* ReplayKit.framework */; };
 		760AD4A62240A81C000B1283 /* GifWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760AD4A52240A81C000B1283 /* GifWebView.swift */; };
 		760E302F2240F729007588D7 /* AudioObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E302E2240F729007588D7 /* AudioObserverViewController.swift */; };
 		760E30312240F73F007588D7 /* AudioObserverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760E30302240F73F007588D7 /* AudioObserverViewController.storyboard */; };
@@ -72,6 +86,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		65625F052242A8B40045C073 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7655FF07222659370054B5A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65625EFD2242A8B40045C073;
+			remoteInfo = StreamingDemoUploadSetupUI;
+		};
+		65625F082242A8B40045C073 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7655FF07222659370054B5A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65625EF32242A8B30045C073;
+			remoteInfo = StreamingDemoUpload;
+		};
 		7655FF242226593A0054B5A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7655FF07222659370054B5A8 /* Project object */;
@@ -89,12 +117,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		65625EEF2242A8130045C073 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				65625F072242A8B40045C073 /* StreamingDemoUploadSetupUI.appex in Embed App Extensions */,
+				65625F0A2242A8B40045C073 /* StreamingDemoUpload.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76A3757E222FB23F00B2AF9A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				65625F142242ABF10045C073 /* HaishinKit.framework in Embed Frameworks */,
 				76DDE4D8223754FA00EFACB0 /* WebRTC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -107,6 +148,17 @@
 		65625ECE223C03CF0045C073 /* WebRTCRoomClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCRoomClient.swift; sourceTree = "<group>"; };
 		65625ED0223C03E30045C073 /* SignalingRoomClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingRoomClient.swift; sourceTree = "<group>"; };
 		65625ED2223C04CA0045C073 /* WRRoomTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WRRoomTopViewController.storyboard; sourceTree = "<group>"; };
+		65625ED52242A6AD0045C073 /* ReplayKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayKitViewController.swift; sourceTree = "<group>"; };
+		65625ED72242A6C40045C073 /* ReplayKitViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReplayKitViewController.storyboard; sourceTree = "<group>"; };
+		65625EE12242A8120045C073 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		65625EE32242A8120045C073 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		65625EF42242A8B30045C073 /* StreamingDemoUpload.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StreamingDemoUpload.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		65625EF72242A8B30045C073 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		65625EF92242A8B30045C073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65625EFE2242A8B40045C073 /* StreamingDemoUploadSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StreamingDemoUploadSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		65625F022242A8B40045C073 /* BroadcastSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastSetupViewController.swift; sourceTree = "<group>"; };
+		65625F042242A8B40045C073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65625F112242AAF90045C073 /* RTMPBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMPBroadcaster.swift; sourceTree = "<group>"; };
 		7393DF25F165D7FB40BE6730 /* Pods-StreamingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingDemo.debug.xcconfig"; path = "Target Support Files/Pods-StreamingDemo/Pods-StreamingDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		760AD4A52240A81C000B1283 /* GifWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWebView.swift; sourceTree = "<group>"; };
 		760E302E2240F729007588D7 /* AudioObserverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioObserverViewController.swift; sourceTree = "<group>"; };
@@ -180,10 +232,29 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		65625EF12242A8B30045C073 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65625F152242ABFC0045C073 /* HaishinKit.framework in Frameworks */,
+				65625EF52242A8B30045C073 /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65625EFB2242A8B40045C073 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65625EFF2242A8B40045C073 /* ReplayKit.framework in Frameworks */,
+				65625F002242A8B40045C073 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7655FF0C222659370054B5A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65625F192242B71B0045C073 /* ReplayKit.framework in Frameworks */,
 				76BD933E223F4B63005752EA /* AVFoundation.framework in Frameworks */,
 				76BD933C223F4B50005752EA /* AudioToolbox.framework in Frameworks */,
 				762E268C223742AF00B8BFF4 /* WebRTC.framework in Frameworks */,
@@ -199,6 +270,7 @@
 				76EDDB8A222E68990017D1F6 /* RxSwift.framework in Frameworks */,
 				76EDDB8B222E68990017D1F6 /* RxAtomic.framework in Frameworks */,
 				76EDDB8C222E68990017D1F6 /* HaishinKit.framework in Frameworks */,
+				65625F132242ABF10045C073 /* HaishinKit.framework in Frameworks */,
 				76EDDB8D222E68990017D1F6 /* RxCocoa.framework in Frameworks */,
 				E30B1AA95261F1F3B9809E7A /* Pods_StreamingDemo.framework in Frameworks */,
 				76BD9344223F4DDB005752EA /* OpenEars.framework in Frameworks */,
@@ -242,6 +314,44 @@
 			path = "WebRTC-Room";
 			sourceTree = "<group>";
 		};
+		65625ED42242A6920045C073 /* ReplayKit */ = {
+			isa = PBXGroup;
+			children = (
+				65625ED92242A7230045C073 /* Extension */,
+				65625ED52242A6AD0045C073 /* ReplayKitViewController.swift */,
+				65625ED72242A6C40045C073 /* ReplayKitViewController.storyboard */,
+			);
+			path = ReplayKit;
+			sourceTree = "<group>";
+		};
+		65625ED92242A7230045C073 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				65625EF62242A8B30045C073 /* StreamingDemoUpload */,
+				65625F012242A8B40045C073 /* StreamingDemoUploadSetupUI */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		65625EF62242A8B30045C073 /* StreamingDemoUpload */ = {
+			isa = PBXGroup;
+			children = (
+				65625EF72242A8B30045C073 /* SampleHandler.swift */,
+				65625F112242AAF90045C073 /* RTMPBroadcaster.swift */,
+				65625EF92242A8B30045C073 /* Info.plist */,
+			);
+			path = StreamingDemoUpload;
+			sourceTree = "<group>";
+		};
+		65625F012242A8B40045C073 /* StreamingDemoUploadSetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				65625F022242A8B40045C073 /* BroadcastSetupViewController.swift */,
+				65625F042242A8B40045C073 /* Info.plist */,
+			);
+			path = StreamingDemoUploadSetupUI;
+			sourceTree = "<group>";
+		};
 		6A8EB810CA936B2E63F42621 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +371,8 @@
 				76EDDB84222E68990017D1F6 /* RxCocoa.framework */,
 				76EDDB81222E68990017D1F6 /* RxSwift.framework */,
 				B5EE9731C2ADC6590E0F5AD9 /* Pods_StreamingDemo.framework */,
+				65625EE12242A8120045C073 /* ReplayKit.framework */,
+				65625EE32242A8120045C073 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -293,6 +405,8 @@
 				7655FF0F222659370054B5A8 /* StreamingDemo.app */,
 				7655FF232226593A0054B5A8 /* StreamingDemoTests.xctest */,
 				7655FF2E2226593A0054B5A8 /* StreamingDemoUITests.xctest */,
+				65625EF42242A8B30045C073 /* StreamingDemoUpload.appex */,
+				65625EFE2242A8B40045C073 /* StreamingDemoUploadSetupUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -300,6 +414,7 @@
 		7655FF11222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				65625ED42242A6920045C073 /* ReplayKit */,
 				76BD933F223F4DDB005752EA /* Framework */,
 				760E302D2240F707007588D7 /* AudioObserver */,
 				76BD9323223F4638005752EA /* OpenEars */,
@@ -449,6 +564,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		65625EF32242A8B30045C073 /* StreamingDemoUpload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65625F0E2242A8B40045C073 /* Build configuration list for PBXNativeTarget "StreamingDemoUpload" */;
+			buildPhases = (
+				65625EF02242A8B30045C073 /* Sources */,
+				65625EF12242A8B30045C073 /* Frameworks */,
+				65625EF22242A8B30045C073 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreamingDemoUpload;
+			productName = StreamingDemoUpload;
+			productReference = 65625EF42242A8B30045C073 /* StreamingDemoUpload.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		65625EFD2242A8B40045C073 /* StreamingDemoUploadSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65625F0B2242A8B40045C073 /* Build configuration list for PBXNativeTarget "StreamingDemoUploadSetupUI" */;
+			buildPhases = (
+				65625EFA2242A8B40045C073 /* Sources */,
+				65625EFB2242A8B40045C073 /* Frameworks */,
+				65625EFC2242A8B40045C073 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreamingDemoUploadSetupUI;
+			productName = StreamingDemoUploadSetupUI;
+			productReference = 65625EFE2242A8B40045C073 /* StreamingDemoUploadSetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		7655FF0E222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7655FF372226593A0054B5A8 /* Build configuration list for PBXNativeTarget "StreamingDemo" */;
@@ -459,10 +608,13 @@
 				7655FF0D222659370054B5A8 /* Resources */,
 				76EDDB92222E6B3A0017D1F6 /* Carthage */,
 				76A3757E222FB23F00B2AF9A /* Embed Frameworks */,
+				65625EEF2242A8130045C073 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				65625F062242A8B40045C073 /* PBXTargetDependency */,
+				65625F092242A8B40045C073 /* PBXTargetDependency */,
 			);
 			name = StreamingDemo;
 			productName = StreamingDemo;
@@ -515,6 +667,12 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Kazuki Horie";
 				TargetAttributes = {
+					65625EF32242A8B30045C073 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					65625EFD2242A8B40045C073 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					7655FF0E222659370054B5A8 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -544,11 +702,27 @@
 				7655FF0E222659370054B5A8 /* StreamingDemo */,
 				7655FF222226593A0054B5A8 /* StreamingDemoTests */,
 				7655FF2D2226593A0054B5A8 /* StreamingDemoUITests */,
+				65625EF32242A8B30045C073 /* StreamingDemoUpload */,
+				65625EFD2242A8B40045C073 /* StreamingDemoUploadSetupUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		65625EF22242A8B30045C073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65625EFC2242A8B40045C073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7655FF0D222659370054B5A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -562,6 +736,7 @@
 				76BD9327223F4657005752EA /* OpenEarsViewController.storyboard in Resources */,
 				7655FF1A2226593A0054B5A8 /* Assets.xcassets in Resources */,
 				76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */,
+				65625ED82242A6C40045C073 /* ReplayKitViewController.storyboard in Resources */,
 				76DC4860222F5B8D00ED1B0B /* LaunchTopViewController.storyboard in Resources */,
 				76BD9345223F4DDB005752EA /* AcousticModelEnglish.bundle in Resources */,
 				76DDE4E32237576E00EFACB0 /* SFUAudienceViewController.storyboard in Resources */,
@@ -640,6 +815,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		65625EF02242A8B30045C073 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65625EF82242A8B30045C073 /* SampleHandler.swift in Sources */,
+				65625F122242AAF90045C073 /* RTMPBroadcaster.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65625EFA2242A8B40045C073 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65625F032242A8B40045C073 /* BroadcastSetupViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7655FF0B222659370054B5A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -672,6 +864,7 @@
 				76CDA1EE2239055800250653 /* VoiceStampViewController.swift in Sources */,
 				76DC4863222F5C4700ED1B0B /* WRTopViewController.swift in Sources */,
 				76A375802230E50100B2AF9A /* WebRTCClient.swift in Sources */,
+				65625ED62242A6AD0045C073 /* ReplayKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +887,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		65625F062242A8B40045C073 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65625EFD2242A8B40045C073 /* StreamingDemoUploadSetupUI */;
+			targetProxy = 65625F052242A8B40045C073 /* PBXContainerItemProxy */;
+		};
+		65625F092242A8B40045C073 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65625EF32242A8B30045C073 /* StreamingDemoUpload */;
+			targetProxy = 65625F082242A8B40045C073 /* PBXContainerItemProxy */;
+		};
 		7655FF252226593A0054B5A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7655FF0E222659370054B5A8 /* StreamingDemo */;
@@ -726,6 +929,106 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		65625F0C2242A8B40045C073 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KLPG9KA92W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/StreamingDemo/ReplayKit/Extension/StreamingDemoUploadSetupUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUploadSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "alldevelopment-ex2";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65625F0D2242A8B40045C073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/StreamingDemo/ReplayKit/Extension/StreamingDemoUploadSetupUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUploadSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		65625F0F2242A8B40045C073 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KLPG9KA92W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/StreamingDemo/ReplayKit/Extension/StreamingDemoUpload/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "alldevelopment-ex1";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65625F102242A8B40045C073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/StreamingDemo/ReplayKit/Extension/StreamingDemoUpload/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		7655FF352226593A0054B5A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -846,6 +1149,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7393DF25F165D7FB40BE6730 /* Pods-StreamingDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KLPG9KA92W;
@@ -874,6 +1178,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 891280B8937B6EEEB43569F0 /* Pods-StreamingDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -979,6 +1284,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		65625F0B2242A8B40045C073 /* Build configuration list for PBXNativeTarget "StreamingDemoUploadSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65625F0C2242A8B40045C073 /* Debug */,
+				65625F0D2242A8B40045C073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65625F0E2242A8B40045C073 /* Build configuration list for PBXNativeTarget "StreamingDemoUpload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65625F0F2242A8B40045C073 /* Debug */,
+				65625F102242A8B40045C073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7655FF0A222659370054B5A8 /* Build configuration list for PBXProject "StreamingDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

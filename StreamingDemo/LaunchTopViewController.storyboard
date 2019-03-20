@@ -96,6 +96,13 @@
                                     <segue destination="Jyd-Xi-Xx2" kind="show" id="Dw6-kX-Ybx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-eb-8Km">
+                                <rect key="frame" x="155" y="498" width="65" height="30"/>
+                                <state key="normal" title="ReplayKit"/>
+                                <connections>
+                                    <segue destination="NRc-f8-f3H" kind="show" id="LKB-7M-cGG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -109,6 +116,7 @@
                             <constraint firstItem="oNI-Co-UnW" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="IvS-HK-2Yr"/>
                             <constraint firstItem="bf4-Ym-wVs" firstAttribute="top" secondItem="TIC-45-nry" secondAttribute="bottom" constant="16" id="IvW-Sc-v8u"/>
                             <constraint firstItem="TIC-45-nry" firstAttribute="top" secondItem="oNI-Co-UnW" secondAttribute="bottom" constant="16" id="OD0-Sp-T14"/>
+                            <constraint firstItem="xs3-eb-8Km" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="PVW-b1-D87"/>
                             <constraint firstItem="oNI-Co-UnW" firstAttribute="top" secondItem="ce4-Rd-RbP" secondAttribute="bottom" constant="16" id="YJE-BO-orK"/>
                             <constraint firstItem="WiV-G1-2TD" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="blF-p6-9pT"/>
                             <constraint firstItem="FsB-Op-pQX" firstAttribute="top" secondItem="ClJ-9F-N0q" secondAttribute="bottom" constant="16" id="dpZ-jQ-vMs"/>
@@ -116,6 +124,7 @@
                             <constraint firstItem="gYL-do-8Ee" firstAttribute="centerX" secondItem="Dpf-d9-fHp" secondAttribute="centerX" id="iyE-4Z-fxZ"/>
                             <constraint firstItem="ClJ-9F-N0q" firstAttribute="top" secondItem="bf4-Ym-wVs" secondAttribute="bottom" constant="16" id="no9-zF-OKg"/>
                             <constraint firstItem="TIC-45-nry" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="sjw-Ql-IQ8"/>
+                            <constraint firstItem="xs3-eb-8Km" firstAttribute="top" secondItem="WiV-G1-2TD" secondAttribute="bottom" constant="16" id="ton-bR-HQa"/>
                             <constraint firstItem="ce4-Rd-RbP" firstAttribute="top" secondItem="gYL-do-8Ee" secondAttribute="bottom" constant="16" id="y71-N2-U9w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ut-n3-Cpu"/>
@@ -198,6 +207,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXY-xJ-0Ea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="790" y="87"/>
+        </scene>
+        <!--ReplayKitViewController-->
+        <scene sceneID="ofW-dq-iX7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ReplayKitViewController" id="NRc-f8-f3H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fn2-WU-8QE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="155"/>
         </scene>
     </scenes>
 </document>
