@@ -37,6 +37,7 @@
 		7655FF282226593A0054B5A8 /* StreamingDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF272226593A0054B5A8 /* StreamingDemoTests.swift */; };
 		7655FF332226593A0054B5A8 /* StreamingDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF322226593A0054B5A8 /* StreamingDemoUITests.swift */; };
 		7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF4122265D200054B5A8 /* StreamingChildPlayerViewController.swift */; };
+		766D94F9224495CF005D383E /* BroadcastSetupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766D94F722449517005D383E /* BroadcastSetupViewController.storyboard */; };
 		76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */; };
 		76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */; };
 		76A37575222F9CFE00B2AF9A /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A37570222F9BB600B2AF9A /* SocketIO.framework */; };
@@ -178,6 +179,7 @@
 		7655FF322226593A0054B5A8 /* StreamingDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingDemoUITests.swift; sourceTree = "<group>"; };
 		7655FF342226593A0054B5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7655FF4122265D200054B5A8 /* StreamingChildPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingChildPlayerViewController.swift; sourceTree = "<group>"; };
+		766D94F722449517005D383E /* BroadcastSetupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BroadcastSetupViewController.storyboard; sourceTree = "<group>"; };
 		76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSTopViewController.swift; sourceTree = "<group>"; };
 		76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WSTopViewController.storyboard; sourceTree = "<group>"; };
 		76A37570222F9BB600B2AF9A /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				65625F022242A8B40045C073 /* BroadcastSetupViewController.swift */,
+				766D94F722449517005D383E /* BroadcastSetupViewController.storyboard */,
 				65625F042242A8B40045C073 /* Info.plist */,
 			);
 			path = StreamingDemoUploadSetupUI;
@@ -720,6 +723,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766D94F9224495CF005D383E /* BroadcastSetupViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

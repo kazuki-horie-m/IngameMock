@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>StreamingDemoUploadSetupUI</string>
+	<string>SDUI</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -35,10 +35,10 @@
 				<true/>
 			</dict>
 		</dict>
+		<key>NSExtensionMainStoryboard</key>
+		<string>BroadcastSetupViewController</string>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.broadcast-services-setupui</string>
-		<key>NSExtensionPrincipalClass</key>
-		<string>$(PRODUCT_MODULE_NAME).BroadcastSetupViewController</string>
 	</dict>
 </dict>
 </plist>

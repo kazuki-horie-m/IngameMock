@@ -15,8 +15,15 @@ class SampleHandler: RPBroadcastSampleHandler {
 
     override func broadcastStarted(withSetupInfo setupInfo: [String : NSObject]?) {
         // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional.
-        print("broadcastStarted")
+        NSLog("[TCTC] SampleHandler broadcastStarted")
         super.broadcastStarted(withSetupInfo: setupInfo)
+        
+//        if setupInfo?["fromUI"] as? String != "true" {
+//            let userInfo = [NSLocalizedFailureReasonErrorKey : "Not From UI"]
+//            let error = NSError(domain: "RPBroadcastErrorDomain", code: 401, userInfo: userInfo)
+//            finishBroadcastWithError(error)
+//        }
+        
 //        guard
 //            let endpointURL: String = setupInfo?["endpointURL"] as? String,
 //            let streamName: String = setupInfo?["streamName"] as? String else {

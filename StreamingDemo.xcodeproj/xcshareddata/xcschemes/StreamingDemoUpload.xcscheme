@@ -67,8 +67,11 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <PathRunnable
+         runnableDebuggingMode = "0"
+         FilePath = "/&lt;placeholder&gt;">
+      </PathRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7655FF0E222659370054B5A8"
@@ -76,7 +79,7 @@
             BlueprintName = "StreamingDemo"
             ReferencedContainer = "container:StreamingDemo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

@@ -19,13 +19,27 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-ID-6KM">
                                 <rect key="frame" x="0.0" y="551" width="125" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.93162207823965248" blue="0.92524497581356724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchUpInside" id="c43-6h-BjK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23X-jJ-g9n">
+                                <rect key="frame" x="0.0" y="443" width="187.5" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.93162207819999998" blue="0.92524497579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="JvD-G6-AIp"/>
+                                </constraints>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="connectActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchUpInside" id="ait-NA-pP2"/>
+                                    <action selector="startActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchUpInside" id="RNO-MQ-Vce"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS7-c4-wRf">
                                 <rect key="frame" x="250" y="551" width="125" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.93162207823965248" blue="0.92524497581356724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
                                     <action selector="stopActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchUpInside" id="7Cm-7J-jHK"/>
@@ -33,6 +47,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPh-m3-W1i">
                                 <rect key="frame" x="125" y="551" width="125" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.93162207823965248" blue="0.92524497581356724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="nx5-7j-hDx"/>
                                 </constraints>
@@ -41,23 +56,54 @@
                                     <action selector="pauseActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchUpInside" id="uyU-ng-ynk"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdI-8r-QOp" customClass="RPSystemBroadcastPickerView">
+                                <rect key="frame" x="259" y="36" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.24183840679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5xJ-OV-XzD"/>
+                                    <constraint firstAttribute="width" secondItem="PdI-8r-QOp" secondAttribute="height" multiplier="1:1" id="8es-oh-uEt"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92f-LI-P2u">
+                                <rect key="frame" x="187.5" y="443" width="187.5" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.93162207819999998" blue="0.92524497579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9Dg-d1-DXk"/>
+                                </constraints>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <action selector="resumeActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchDragInside" id="fqc-L2-iT0"/>
+                                    <action selector="startActionWithSender:" destination="eLJ-Ej-Khq" eventType="touchUpInside" id="YlD-dp-9ui"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5Wz-BI-Czy" firstAttribute="trailing" secondItem="AS7-c4-wRf" secondAttribute="trailing" id="7hj-g6-Ti0"/>
                             <constraint firstItem="AS7-c4-wRf" firstAttribute="centerY" secondItem="kPh-m3-W1i" secondAttribute="centerY" id="9LW-zu-bGo"/>
                             <constraint firstItem="kPh-m3-W1i" firstAttribute="leading" secondItem="LJ9-ID-6KM" secondAttribute="trailing" id="BLB-Mj-prr"/>
                             <constraint firstItem="AS7-c4-wRf" firstAttribute="height" secondItem="kPh-m3-W1i" secondAttribute="height" id="EhN-w6-HQl"/>
+                            <constraint firstItem="5Wz-BI-Czy" firstAttribute="trailing" secondItem="PdI-8r-QOp" secondAttribute="trailing" constant="16" id="OYD-fb-JWQ"/>
+                            <constraint firstItem="92f-LI-P2u" firstAttribute="leading" secondItem="23X-jJ-g9n" secondAttribute="trailing" id="QAC-ZV-4Dv"/>
                             <constraint firstItem="LJ9-ID-6KM" firstAttribute="centerY" secondItem="kPh-m3-W1i" secondAttribute="centerY" id="SA1-Se-oHo"/>
                             <constraint firstItem="AS7-c4-wRf" firstAttribute="leading" secondItem="kPh-m3-W1i" secondAttribute="trailing" id="Yai-Mw-7be"/>
+                            <constraint firstItem="23X-jJ-g9n" firstAttribute="leading" secondItem="5Wz-BI-Czy" secondAttribute="leading" id="Yqn-aS-80p"/>
                             <constraint firstItem="LJ9-ID-6KM" firstAttribute="width" secondItem="kPh-m3-W1i" secondAttribute="width" id="ahn-pt-ZUx"/>
+                            <constraint firstItem="5Wz-BI-Czy" firstAttribute="trailing" secondItem="92f-LI-P2u" secondAttribute="trailing" id="dWu-nT-50H"/>
+                            <constraint firstItem="PdI-8r-QOp" firstAttribute="top" secondItem="5Wz-BI-Czy" secondAttribute="top" constant="16" id="fgk-yK-V6a"/>
                             <constraint firstItem="LJ9-ID-6KM" firstAttribute="height" secondItem="kPh-m3-W1i" secondAttribute="height" id="gHv-VM-fHc"/>
                             <constraint firstItem="AS7-c4-wRf" firstAttribute="width" secondItem="kPh-m3-W1i" secondAttribute="width" id="hWG-7j-dat"/>
                             <constraint firstItem="LJ9-ID-6KM" firstAttribute="leading" secondItem="5Wz-BI-Czy" secondAttribute="leading" id="k6x-vb-aN8"/>
+                            <constraint firstItem="92f-LI-P2u" firstAttribute="width" secondItem="23X-jJ-g9n" secondAttribute="width" id="kkJ-Uw-WMW"/>
+                            <constraint firstItem="92f-LI-P2u" firstAttribute="centerY" secondItem="23X-jJ-g9n" secondAttribute="centerY" id="sNw-UK-qHy"/>
+                            <constraint firstItem="LJ9-ID-6KM" firstAttribute="top" secondItem="23X-jJ-g9n" secondAttribute="bottom" constant="8" id="u20-09-HhM"/>
                             <constraint firstItem="5Wz-BI-Czy" firstAttribute="bottom" secondItem="kPh-m3-W1i" secondAttribute="bottom" constant="16" id="ucf-bB-cDB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Wz-BI-Czy"/>
                     </view>
+                    <connections>
+                        <outlet property="broadcastPicker" destination="PdI-8r-QOp" id="9Vw-Ci-OcV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Az2-wK-8hv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
