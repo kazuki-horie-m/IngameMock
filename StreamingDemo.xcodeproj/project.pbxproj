@@ -945,7 +945,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUploadSetupUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "alldevelopment-ex2";
 				SKIP_INSTALL = YES;
@@ -970,7 +970,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUploadSetupUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -995,7 +995,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "alldevelopment-ex1";
 				SKIP_INSTALL = YES;
@@ -1020,7 +1020,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
