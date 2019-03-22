@@ -38,6 +38,9 @@
 		7655FF332226593A0054B5A8 /* StreamingDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF322226593A0054B5A8 /* StreamingDemoUITests.swift */; };
 		7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF4122265D200054B5A8 /* StreamingChildPlayerViewController.swift */; };
 		766D94F9224495CF005D383E /* BroadcastSetupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766D94F722449517005D383E /* BroadcastSetupViewController.storyboard */; };
+		766D95012244E8C6005D383E /* MicVolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D95002244E8C6005D383E /* MicVolumeViewController.swift */; };
+		766D95032244E91D005D383E /* MicVolumeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766D95022244E91D005D383E /* MicVolumeViewController.storyboard */; };
+		766D95052244E996005D383E /* PowerLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D95042244E996005D383E /* PowerLevel.swift */; };
 		76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */; };
 		76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */; };
 		76A37575222F9CFE00B2AF9A /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A37570222F9BB600B2AF9A /* SocketIO.framework */; };
@@ -180,6 +183,9 @@
 		7655FF342226593A0054B5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7655FF4122265D200054B5A8 /* StreamingChildPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingChildPlayerViewController.swift; sourceTree = "<group>"; };
 		766D94F722449517005D383E /* BroadcastSetupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BroadcastSetupViewController.storyboard; sourceTree = "<group>"; };
+		766D95002244E8C6005D383E /* MicVolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicVolumeViewController.swift; sourceTree = "<group>"; };
+		766D95022244E91D005D383E /* MicVolumeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MicVolumeViewController.storyboard; sourceTree = "<group>"; };
+		766D95042244E996005D383E /* PowerLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerLevel.swift; sourceTree = "<group>"; };
 		76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSTopViewController.swift; sourceTree = "<group>"; };
 		76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WSTopViewController.storyboard; sourceTree = "<group>"; };
 		76A37570222F9BB600B2AF9A /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
@@ -417,6 +423,7 @@
 		7655FF11222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				766D94FF2244E8A9005D383E /* MicVolume */,
 				65625ED42242A6920045C073 /* ReplayKit */,
 				76BD933F223F4DDB005752EA /* Framework */,
 				760E302D2240F707007588D7 /* AudioObserver */,
@@ -458,6 +465,16 @@
 				7655FF342226593A0054B5A8 /* Info.plist */,
 			);
 			path = StreamingDemoUITests;
+			sourceTree = "<group>";
+		};
+		766D94FF2244E8A9005D383E /* MicVolume */ = {
+			isa = PBXGroup;
+			children = (
+				766D95002244E8C6005D383E /* MicVolumeViewController.swift */,
+				766D95022244E91D005D383E /* MicVolumeViewController.storyboard */,
+				766D95042244E996005D383E /* PowerLevel.swift */,
+			);
+			path = MicVolume;
 			sourceTree = "<group>";
 		};
 		76A3756B222F8DB300B2AF9A /* WebSocket */ = {
@@ -738,6 +755,7 @@
 				760E30312240F73F007588D7 /* AudioObserverViewController.storyboard in Resources */,
 				76DC4865222F5F9B00ED1B0B /* WRTopViewController.storyboard in Resources */,
 				76BD9327223F4657005752EA /* OpenEarsViewController.storyboard in Resources */,
+				766D95032244E91D005D383E /* MicVolumeViewController.storyboard in Resources */,
 				7655FF1A2226593A0054B5A8 /* Assets.xcassets in Resources */,
 				76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */,
 				65625ED82242A6C40045C073 /* ReplayKitViewController.storyboard in Resources */,
@@ -849,6 +867,7 @@
 				7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */,
 				760E302F2240F729007588D7 /* AudioObserverViewController.swift in Sources */,
 				76DC4868222F5FC900ED1B0B /* NSObject+Ex.swift in Sources */,
+				766D95052244E996005D383E /* PowerLevel.swift in Sources */,
 				76A3758C2230E5BE00B2AF9A /* IceCandidate.swift in Sources */,
 				65625ECD223C03A00045C073 /* WRRoomTopViewController.swift in Sources */,
 				76EDDB79222E57D00017D1F6 /* StreamingHaishinViewController.swift in Sources */,
@@ -856,6 +875,7 @@
 				76DDE4E12237575400EFACB0 /* SFUAudienceViewController.swift in Sources */,
 				76BD9325223F4649005752EA /* OpenEarsViewController.swift in Sources */,
 				65625ECF223C03CF0045C073 /* WebRTCRoomClient.swift in Sources */,
+				766D95012244E8C6005D383E /* MicVolumeViewController.swift in Sources */,
 				76A375822230E51500B2AF9A /* SignalingClient.swift in Sources */,
 				760AD4A62240A81C000B1283 /* GifWebView.swift in Sources */,
 				76EDDB97222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift in Sources */,
