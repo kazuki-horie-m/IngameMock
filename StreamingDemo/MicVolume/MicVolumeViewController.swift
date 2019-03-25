@@ -25,8 +25,8 @@ class MicVolumeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        observer.updated = { [unowned self] ave, peak in
-            print("\(ave) / \(peak)")
+        observer.updated = { [unowned self] index, ave, peak in
+            print("\(index), \(ave), \(peak)")
             
             DispatchQueue.main.async {
                 self.lblAve?.text = "Average: \(ave)"

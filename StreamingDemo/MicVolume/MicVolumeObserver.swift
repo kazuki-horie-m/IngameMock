@@ -12,7 +12,7 @@ final class MicVolumeObserver: NSObject {
     private let captureSession = AVCaptureSession()
     let serialQueue = DispatchQueue(label: "MicVolumeObserver.serialqueue.audio")
     
-    var updated: ((Float, Float) -> Void)?
+    var updated: ((_ index: Int, _ average: Float, _ peak: Float) -> Void)?
     
     override init() {
         super.init()
@@ -44,20 +44,10 @@ final class MicVolumeObserver: NSObject {
 
 extension MicVolumeObserver: AVCaptureAudioDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        let audioChannels = connection.audioChannels
-        
-        print("[TCTC] count: \(audioChannels.count)")
-        audioChannels.forEach {
-            let ave = $0.averagePowerLevel
-            let peak = $0.peakHoldLevel
-            print("[TCTC] ave: \(ave), peak: \(peak)\n")
+        connection.audioChannels.enumerated().forEach { [unowned self] index, channel in
+            let averagePowerLevel = channel.averagePowerLevel
+            let peakHoldLevel     = channel.peakHoldLevel
+            self.updated?(index, averagePowerLevel, peakHoldLevel)
         }
-        
-        guard audioChannels.count > 0 else { return }
-        let averagePowerLevel = audioChannels.reduce(0.0){ $0 + $1.averagePowerLevel }
-            / Float(audioChannels.count)
-        let peakHoldLevel = audioChannels.reduce(0.0){ $0 + $1.peakHoldLevel }
-            / Float(audioChannels.count)
-        updated?(averagePowerLevel, peakHoldLevel)
     }
 }
