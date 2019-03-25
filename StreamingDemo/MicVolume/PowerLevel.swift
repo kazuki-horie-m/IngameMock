@@ -12,32 +12,34 @@ final class PowerLevel: NSObject {
     private let captureSession = AVCaptureSession()
     let serialQueue = DispatchQueue(label: "PowerLevel.serialqueue.audio")
     
-    var updated: ((Float, Float) -> Void)?
+    weak var updated: ((Float, Float) -> Void)?
     
     override init() {
         super.init()
         setupCaptureRoute()
     }
     
-    func setupCaptureRoute() {
-        // OSがデフォルトにしているマイクデバイスを選ぶ
-        let audioDevice = AVCaptureDevice.default(for: AVMediaType.audio)
-        
-        // マイクデバイスをキャプチャセッションにつなぐ入力クラスを用意
-        let audioInput = try! AVCaptureDeviceInput(device: audioDevice!)
-
-        // マイク入力の出力先（今回はデータをデリゲートメソッドに渡す）を用意
-        let audioDataOut = AVCaptureAudioDataOutput()
-        // デリゲートオブジェクトを設定
-        audioDataOut.setSampleBufferDelegate(self, queue: serialQueue)
-
-        // キャプチャセッションに入出力を接続。これでいつでもstartできる
-        captureSession.addInput(audioInput)
-        captureSession.addOutput(audioDataOut)
-    }
     
     func start() { captureSession.startRunning() }
     func stop() { captureSession.stopRunning() }
+    
+    func setupCaptureRoute() {
+        captureSession.usesApplicationAudioSession = true
+        captureSession.automaticallyConfiguresApplicationAudioSession = false
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        try! audioSession.setCategory(.playAndRecord, mode: .measurement, options: [.mixWithOthers, .allowBluetooth, .allowBluetoothA2DP])
+        try! audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        
+        let audioDevice = AVCaptureDevice.default(for: AVMediaType.audio)
+        let audioInput = try! AVCaptureDeviceInput(device: audioDevice!)
+        captureSession.addInput(audioInput)
+        
+        let audioDataOut = AVCaptureAudioDataOutput()
+        audioDataOut.setSampleBufferDelegate(self, queue: serialQueue)
+        captureSession.addOutput(audioDataOut)
+        
+    }
 }
 
 // デリゲートメソッドの用意
