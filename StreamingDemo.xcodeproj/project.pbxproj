@@ -40,7 +40,7 @@
 		766D94F9224495CF005D383E /* BroadcastSetupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766D94F722449517005D383E /* BroadcastSetupViewController.storyboard */; };
 		766D95012244E8C6005D383E /* MicVolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D95002244E8C6005D383E /* MicVolumeViewController.swift */; };
 		766D95032244E91D005D383E /* MicVolumeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766D95022244E91D005D383E /* MicVolumeViewController.storyboard */; };
-		766D95052244E996005D383E /* PowerLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D95042244E996005D383E /* PowerLevel.swift */; };
+		766D95052244E996005D383E /* MicVolumeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D95042244E996005D383E /* MicVolumeObserver.swift */; };
 		76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */; };
 		76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */; };
 		76A37575222F9CFE00B2AF9A /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A37570222F9BB600B2AF9A /* SocketIO.framework */; };
@@ -185,7 +185,7 @@
 		766D94F722449517005D383E /* BroadcastSetupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BroadcastSetupViewController.storyboard; sourceTree = "<group>"; };
 		766D95002244E8C6005D383E /* MicVolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicVolumeViewController.swift; sourceTree = "<group>"; };
 		766D95022244E91D005D383E /* MicVolumeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MicVolumeViewController.storyboard; sourceTree = "<group>"; };
-		766D95042244E996005D383E /* PowerLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerLevel.swift; sourceTree = "<group>"; };
+		766D95042244E996005D383E /* MicVolumeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicVolumeObserver.swift; sourceTree = "<group>"; };
 		76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSTopViewController.swift; sourceTree = "<group>"; };
 		76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WSTopViewController.storyboard; sourceTree = "<group>"; };
 		76A37570222F9BB600B2AF9A /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
@@ -472,7 +472,7 @@
 			children = (
 				766D95002244E8C6005D383E /* MicVolumeViewController.swift */,
 				766D95022244E91D005D383E /* MicVolumeViewController.storyboard */,
-				766D95042244E996005D383E /* PowerLevel.swift */,
+				766D95042244E996005D383E /* MicVolumeObserver.swift */,
 			);
 			path = MicVolume;
 			sourceTree = "<group>";
@@ -867,7 +867,7 @@
 				7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */,
 				760E302F2240F729007588D7 /* AudioObserverViewController.swift in Sources */,
 				76DC4868222F5FC900ED1B0B /* NSObject+Ex.swift in Sources */,
-				766D95052244E996005D383E /* PowerLevel.swift in Sources */,
+				766D95052244E996005D383E /* MicVolumeObserver.swift in Sources */,
 				76A3758C2230E5BE00B2AF9A /* IceCandidate.swift in Sources */,
 				65625ECD223C03A00045C073 /* WRRoomTopViewController.swift in Sources */,
 				76EDDB79222E57D00017D1F6 /* StreamingHaishinViewController.swift in Sources */,

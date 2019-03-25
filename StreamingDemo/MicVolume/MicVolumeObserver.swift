@@ -1,5 +1,5 @@
 //
-//  PowerLevel.swift
+//  MicVolumeObserver.swift
 //  StreamingDemo
 //
 //  Created by kazuki.horie.ts on 2019/03/22.
@@ -8,11 +8,11 @@
 
 import AVFoundation
 
-final class PowerLevel: NSObject {
+final class MicVolumeObserver: NSObject {
     private let captureSession = AVCaptureSession()
-    let serialQueue = DispatchQueue(label: "PowerLevel.serialqueue.audio")
+    let serialQueue = DispatchQueue(label: "MicVolumeObserver.serialqueue.audio")
     
-    weak var updated: ((Float, Float) -> Void)?
+    var updated: ((Float, Float) -> Void)?
     
     override init() {
         super.init()
@@ -42,8 +42,7 @@ final class PowerLevel: NSObject {
     }
 }
 
-// デリゲートメソッドの用意
-extension PowerLevel: AVCaptureAudioDataOutputSampleBufferDelegate {
+extension MicVolumeObserver: AVCaptureAudioDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         let audioChannels = connection.audioChannels
         

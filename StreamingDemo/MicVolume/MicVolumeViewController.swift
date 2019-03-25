@@ -12,20 +12,20 @@ class MicVolumeViewController: UIViewController {
     @IBOutlet private weak var lblAve: UILabel?
     @IBOutlet private weak var lblPeak: UILabel?
     
-    let obj = PowerLevel()
+    let observer = MicVolumeObserver()
     
     @IBAction private func start(sender: UIButton) {
-        obj.start() // コンソールにマイク入力のレベルをdB表示
+        observer.start() // コンソールにマイク入力のレベルをdB表示
     }
     
     @IBAction private func stop(sender: UIButton) {
-        obj.stop() // 処理停止
+        observer.stop() // 処理停止
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        obj.updated = { [unowned self] ave, peak in
+        observer.updated = { [unowned self] ave, peak in
             print("\(ave) / \(peak)")
             
             DispatchQueue.main.async {
@@ -38,7 +38,7 @@ class MicVolumeViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        obj.updated = nil
+        observer.updated = nil
     }
     
 }
