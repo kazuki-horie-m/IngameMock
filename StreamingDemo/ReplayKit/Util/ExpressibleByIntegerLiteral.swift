@@ -1,0 +1,31 @@
+//
+//  ExpressibleByIntegerLiteral.swift
+//  StreamingDemo
+//
+//  Created by kazuki.horie.ts on 2019/03/28.
+//  Copyright © 2019 Kazuki Horie. All rights reserved.
+//
+
+import Foundation
+
+extension ExpressibleByIntegerLiteral {
+    var data: Data {
+        var value: Self = self
+        return Data(bytes: &value, count: MemoryLayout<Self>.size)
+    }
+    
+    init(data: Data) {
+        let diff: Int = MemoryLayout<Self>.size - data.count
+        if 0 < diff {
+            var buffer = Data(repeating: 0, count: diff)
+            buffer.append(data)
+            self = buffer.withUnsafeBytes { $0.pointee }
+            return
+        }
+        self = data.withUnsafeBytes { $0.pointee }
+    }
+    
+    init(data: Slice<Data>) {
+        self.init(data: Data(data))
+    }
+}

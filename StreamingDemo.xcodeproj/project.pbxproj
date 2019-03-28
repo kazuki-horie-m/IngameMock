@@ -86,6 +86,10 @@
 		76EDDB8D222E68990017D1F6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EDDB84222E68990017D1F6 /* RxCocoa.framework */; };
 		76EDDB90222E695F0017D1F6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EDDB8F222E695E0017D1F6 /* SwiftyJSON.framework */; };
 		76EDDB97222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDDB96222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift */; };
+		76F1ABA4224B7DAA000749A3 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1ABA2224B7D7B000749A3 /* MD5.swift */; };
+		76F1ABAC224C5C73000749A3 /* ByteArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1ABA5224C5A06000749A3 /* ByteArray.swift */; };
+		76F1ABAD224C5C77000749A3 /* ExpressibleByIntegerLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1ABA8224C5A96000749A3 /* ExpressibleByIntegerLiteral.swift */; };
+		76F1ABAE224C5C7B000749A3 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1ABAA224C5C3C000749A3 /* URL+.swift */; };
 		E30B1AA95261F1F3B9809E7A /* Pods_StreamingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EE9731C2ADC6590E0F5AD9 /* Pods_StreamingDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +239,10 @@
 		76EDDB84222E68990017D1F6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		76EDDB8F222E695E0017D1F6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		76EDDB96222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingParentPlayerViewController.swift; sourceTree = "<group>"; };
+		76F1ABA2224B7D7B000749A3 /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		76F1ABA5224C5A06000749A3 /* ByteArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteArray.swift; sourceTree = "<group>"; };
+		76F1ABA8224C5A96000749A3 /* ExpressibleByIntegerLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressibleByIntegerLiteral.swift; sourceTree = "<group>"; };
+		76F1ABAA224C5C3C000749A3 /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
 		891280B8937B6EEEB43569F0 /* Pods-StreamingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingDemo.release.xcconfig"; path = "Target Support Files/Pods-StreamingDemo/Pods-StreamingDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B5EE9731C2ADC6590E0F5AD9 /* Pods_StreamingDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -325,6 +333,7 @@
 		65625ED42242A6920045C073 /* ReplayKit */ = {
 			isa = PBXGroup;
 			children = (
+				76F1ABA7224C5A18000749A3 /* Util */,
 				65625ED92242A7230045C073 /* Extension */,
 				65625ED52242A6AD0045C073 /* ReplayKitViewController.swift */,
 				65625ED72242A6C40045C073 /* ReplayKitViewController.storyboard */,
@@ -579,6 +588,17 @@
 				7655FF4122265D200054B5A8 /* StreamingChildPlayerViewController.swift */,
 			);
 			path = Streaming;
+			sourceTree = "<group>";
+		};
+		76F1ABA7224C5A18000749A3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				76F1ABA2224B7D7B000749A3 /* MD5.swift */,
+				76F1ABA5224C5A06000749A3 /* ByteArray.swift */,
+				76F1ABA8224C5A96000749A3 /* ExpressibleByIntegerLiteral.swift */,
+				76F1ABAA224C5C3C000749A3 /* URL+.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -842,7 +862,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				65625EF82242A8B30045C073 /* SampleHandler.swift in Sources */,
+				76F1ABAE224C5C7B000749A3 /* URL+.swift in Sources */,
+				76F1ABAC224C5C73000749A3 /* ByteArray.swift in Sources */,
 				65625F122242AAF90045C073 /* RTMPBroadcaster.swift in Sources */,
+				76F1ABAD224C5C77000749A3 /* ExpressibleByIntegerLiteral.swift in Sources */,
+				76F1ABA4224B7DAA000749A3 /* MD5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,7 +993,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.sharetask.StreamingDemoUpload2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "alldevelopment-ex2";
 				SKIP_INSTALL = YES;
@@ -994,7 +1018,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.sharetask.StreamingDemoUpload2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1019,7 +1043,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.sharetask.StreamingDemoUpload1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "alldevelopment-ex1";
 				SKIP_INSTALL = YES;
@@ -1044,7 +1068,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin.StreamingDemoUpload1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.sharetask.StreamingDemoUpload1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1189,9 +1213,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.sharetask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "rinrin-dev";
+				PROVISIONING_PROFILE_SPECIFIER = "ShareTask-Dev";
 				SWIFT_OBJC_BRIDGING_HEADER = StreamingDemo/OpenEarsHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1218,7 +1242,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.rinrin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tctc.sharetask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = StreamingDemo/OpenEarsHeader.h;

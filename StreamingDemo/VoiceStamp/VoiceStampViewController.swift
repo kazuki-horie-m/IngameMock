@@ -65,13 +65,13 @@ class VoiceStampViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        guard let gifView = GifWebView(fileName: "kamehameha") else { return }
-        view.addSubview(gifView)
-        gifView.startAnimate()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.3) {
-            gifView.removeFromSuperview()
-        }
+//        guard let gifView = GifWebView(fileName: "kamehameha") else { return }
+//        view.addSubview(gifView)
+//        gifView.startAnimate()
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.3) {
+//            gifView.removeFromSuperview()
+//        }
     }
     
     private var timer: Timer?
@@ -88,7 +88,7 @@ class VoiceStampViewController: UIViewController {
 //        allowAirPlay
         
         let audioSession = AVAudioSession.sharedInstance()
-        try audioSession.setCategory(.playAndRecord, mode: .measurement, options: [.mixWithOthers, .allowBluetooth, .allowBluetoothA2DP])
+        try audioSession.setCategory(.playAndRecord, mode: .measurement, options: [.mixWithOthers, .allowBluetooth])
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
@@ -98,6 +98,7 @@ class VoiceStampViewController: UIViewController {
         recognitionRequest.shouldReportPartialResults = true
         
         let inputNode = audioEngine.inputNode
+        inputNode.removeTap(onBus: 0)
         
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { [weak self] (result, error) in
             guard let `self` = self else { return }
@@ -110,7 +111,6 @@ class VoiceStampViewController: UIViewController {
             
             if error != nil || isFinal {
                 self.stopRecoding()
-                inputNode.removeTap(onBus: 0)
             }
         }
             
@@ -124,13 +124,17 @@ class VoiceStampViewController: UIViewController {
         try audioEngine.start()
         
         statusLabel.text = "Recognizing..."
+        print("[TCTC] startRecoding")
     }
  
     private func stopRecoding() {
         if audioEngine.isRunning {
+            print("[TCTC] stopRecoding")
             audioEngine.stop()
             recognitionRequest?.endAudio()
+            audioEngine.inputNode.removeTap(onBus: 0)
             recognitionRequest = nil
+            recognitionTask?.cancel()
             recognitionTask = nil
             
             self.statusLabel.text = "Stop"

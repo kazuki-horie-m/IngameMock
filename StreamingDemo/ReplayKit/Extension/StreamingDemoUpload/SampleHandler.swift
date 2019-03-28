@@ -29,22 +29,28 @@ class SampleHandler: RPBroadcastSampleHandler {
 //            let streamName: String = setupInfo?["streamName"] as? String else {
 //                return
 //        }
-        let endpointURL: String = "rtmp://192.168.2.1:1935/live"
-        let streamName: String = "live"
+//        let endpointURL: String = "rtmp://192.168.2.1:1935/live"
+//        let endpointURL: String = "rtmp://liveencoder:wowza13mixi@18.179.111.10:1935/live"
+        let endpointURL: String = "rtmp://liveencoder:wowza13mixi@18.179.111.10:1935/live"
+//        let endpointURL: String = "rtmp://liveencoder:wowza13mixi@18.179.111.10:1935/live?authmod=adobe&user=liveencoder"
+        let streamName: String = "myStream"
         broadcaster.streamName = streamName
         broadcaster.connect(endpointURL, arguments: nil)
     }
     
     override func broadcastPaused() {
         // User has requested to pause the broadcast. Samples will stop being delivered.
+        NSLog("[TCTC] SampleHandler broadcastPaused")
     }
     
     override func broadcastResumed() {
         // User has requested to resume the broadcast. Samples delivery will resume.
+        NSLog("[TCTC] SampleHandler broadcastResumed")
     }
     
     override func broadcastFinished() {
         // User has requested to finish the broadcast.
+        NSLog("[TCTC] SampleHandler broadcastFinished")
     }
     
     override func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
@@ -60,9 +66,11 @@ class SampleHandler: RPBroadcastSampleHandler {
             }
             broadcaster.appendSampleBuffer(sampleBuffer, withType: .video)
         case .audioApp:
+            broadcaster.appendSampleBuffer(sampleBuffer, withType: .audio)
             break
         case .audioMic:
-            broadcaster.appendSampleBuffer(sampleBuffer, withType: .audio)
+//            broadcaster.appendSampleBuffer(sampleBuffer, withType: .audio)
+            break
         }
     }
 }
