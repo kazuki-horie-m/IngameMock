@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b6t-XN-Utt">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Container View Controller-->
+        <scene sceneID="Plk-f7-lEW">
+            <objects>
+                <viewController id="b6t-XN-Utt" customClass="ContainerViewController" customModule="StreamingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQ4-yQ-0hO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjs-fx-rTk">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.081321229719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQa-Wh-Tbk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <action selector="dismissViewWithSender:" destination="b6t-XN-Utt" eventType="touchUpInside" id="oGz-fK-0RL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.24183840679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gjs-fx-rTk" firstAttribute="centerX" secondItem="tQ4-yQ-0hO" secondAttribute="centerX" id="5Yz-rd-vzY"/>
+                            <constraint firstItem="vQa-Wh-Tbk" firstAttribute="top" secondItem="Dke-XU-mGK" secondAttribute="top" id="ROa-3n-zks"/>
+                            <constraint firstItem="vQa-Wh-Tbk" firstAttribute="leading" secondItem="Dke-XU-mGK" secondAttribute="leading" id="THs-aQ-hLc"/>
+                            <constraint firstItem="Dke-XU-mGK" firstAttribute="bottom" secondItem="vQa-Wh-Tbk" secondAttribute="bottom" id="lXn-49-LgY"/>
+                            <constraint firstItem="gjs-fx-rTk" firstAttribute="centerY" secondItem="tQ4-yQ-0hO" secondAttribute="centerY" id="wj8-rc-EkG"/>
+                            <constraint firstItem="Dke-XU-mGK" firstAttribute="trailing" secondItem="vQa-Wh-Tbk" secondAttribute="trailing" id="z2D-eo-ZS9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dke-XU-mGK"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="gjs-fx-rTk" id="mFS-Qg-jWi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5u1-uy-y3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="-291"/>
+        </scene>
+    </scenes>
+</document>

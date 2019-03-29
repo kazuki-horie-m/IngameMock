@@ -41,6 +41,10 @@
 		766D95012244E8C6005D383E /* MicVolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D95002244E8C6005D383E /* MicVolumeViewController.swift */; };
 		766D95032244E91D005D383E /* MicVolumeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766D95022244E91D005D383E /* MicVolumeViewController.storyboard */; };
 		766D95052244E996005D383E /* MicVolumeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D95042244E996005D383E /* MicVolumeObserver.swift */; };
+		768DFBC6224CE08200358F49 /* ModalyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768DFBC5224CE08200358F49 /* ModalyViewController.swift */; };
+		768DFBC8224CE0AE00358F49 /* ModalyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768DFBC7224CE0AE00358F49 /* ModalyViewController.storyboard */; };
+		768DFBCA224DF32F00358F49 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768DFBC9224DF32F00358F49 /* ContainerViewController.swift */; };
+		768DFBCC224DF34B00358F49 /* ContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768DFBCB224DF34B00358F49 /* ContainerViewController.storyboard */; };
 		76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */; };
 		76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */; };
 		76A37575222F9CFE00B2AF9A /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A37570222F9BB600B2AF9A /* SocketIO.framework */; };
@@ -190,6 +194,10 @@
 		766D95002244E8C6005D383E /* MicVolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicVolumeViewController.swift; sourceTree = "<group>"; };
 		766D95022244E91D005D383E /* MicVolumeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MicVolumeViewController.storyboard; sourceTree = "<group>"; };
 		766D95042244E996005D383E /* MicVolumeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicVolumeObserver.swift; sourceTree = "<group>"; };
+		768DFBC5224CE08200358F49 /* ModalyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalyViewController.swift; sourceTree = "<group>"; };
+		768DFBC7224CE0AE00358F49 /* ModalyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ModalyViewController.storyboard; sourceTree = "<group>"; };
+		768DFBC9224DF32F00358F49 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		768DFBCB224DF34B00358F49 /* ContainerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContainerViewController.storyboard; sourceTree = "<group>"; };
 		76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSTopViewController.swift; sourceTree = "<group>"; };
 		76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WSTopViewController.storyboard; sourceTree = "<group>"; };
 		76A37570222F9BB600B2AF9A /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
@@ -500,6 +508,10 @@
 			children = (
 				76BD9324223F4649005752EA /* OpenEarsViewController.swift */,
 				76BD9326223F4657005752EA /* OpenEarsViewController.storyboard */,
+				768DFBC5224CE08200358F49 /* ModalyViewController.swift */,
+				768DFBC7224CE0AE00358F49 /* ModalyViewController.storyboard */,
+				768DFBC9224DF32F00358F49 /* ContainerViewController.swift */,
+				768DFBCB224DF34B00358F49 /* ContainerViewController.storyboard */,
 			);
 			path = OpenEars;
 			sourceTree = "<group>";
@@ -773,12 +785,14 @@
 				76DDE4DF2237571800EFACB0 /* SFUHostViewController.storyboard in Resources */,
 				7655FF1D2226593A0054B5A8 /* LaunchScreen.storyboard in Resources */,
 				760E30312240F73F007588D7 /* AudioObserverViewController.storyboard in Resources */,
+				768DFBCC224DF34B00358F49 /* ContainerViewController.storyboard in Resources */,
 				76DC4865222F5F9B00ED1B0B /* WRTopViewController.storyboard in Resources */,
 				76BD9327223F4657005752EA /* OpenEarsViewController.storyboard in Resources */,
 				766D95032244E91D005D383E /* MicVolumeViewController.storyboard in Resources */,
 				7655FF1A2226593A0054B5A8 /* Assets.xcassets in Resources */,
 				76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */,
 				65625ED82242A6C40045C073 /* ReplayKitViewController.storyboard in Resources */,
+				768DFBC8224CE0AE00358F49 /* ModalyViewController.storyboard in Resources */,
 				76DC4860222F5B8D00ED1B0B /* LaunchTopViewController.storyboard in Resources */,
 				76BD9345223F4DDB005752EA /* AcousticModelEnglish.bundle in Resources */,
 				76DDE4E32237576E00EFACB0 /* SFUAudienceViewController.storyboard in Resources */,
@@ -882,6 +896,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768DFBC6224CE08200358F49 /* ModalyViewController.swift in Sources */,
 				76A37579222F9F7E00B2AF9A /* NetworkManager.swift in Sources */,
 				76DDE4DD223756F300EFACB0 /* SFUHostViewController.swift in Sources */,
 				76EDDB7C222E5FDD0017D1F6 /* StreamingPlayerManager.swift in Sources */,
@@ -906,6 +921,7 @@
 				7655FF13222659370054B5A8 /* AppDelegate.swift in Sources */,
 				76DC486A222F628200ED1B0B /* TopNavigationController.swift in Sources */,
 				76DC485E222F5B7300ED1B0B /* LaunchTopViewController.swift in Sources */,
+				768DFBCA224DF32F00358F49 /* ContainerViewController.swift in Sources */,
 				76A3758A2230E5AC00B2AF9A /* SessionDescription.swift in Sources */,
 				76A375842230E53800B2AF9A /* Message.swift in Sources */,
 				76A375862230E56F00B2AF9A /* Config.swift in Sources */,

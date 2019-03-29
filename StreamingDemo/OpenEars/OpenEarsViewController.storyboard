@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Xv-Fa-QwD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Xv-Fa-QwD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,12 +55,25 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8u-Sm-TfQ">
+                                        <rect key="frame" x="16" y="284" width="343" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="ryc-7m-Kbi"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="MIv-EU-xg0" kind="presentation" id="0JM-dk-dWD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="PM3-1l-eHE" firstAttribute="leading" secondItem="dUk-Cx-pOI" secondAttribute="leading" id="3Wf-yJ-J7S"/>
                                     <constraint firstItem="PM3-1l-eHE" firstAttribute="top" secondItem="dUk-Cx-pOI" secondAttribute="top" constant="8" id="86Q-tC-qD8"/>
+                                    <constraint firstAttribute="bottom" secondItem="N8u-Sm-TfQ" secondAttribute="bottom" constant="16" id="9L3-m6-OM0"/>
                                     <constraint firstAttribute="trailing" secondItem="PM3-1l-eHE" secondAttribute="trailing" id="Au7-AU-MhS"/>
+                                    <constraint firstItem="N8u-Sm-TfQ" firstAttribute="leading" secondItem="dUk-Cx-pOI" secondAttribute="leading" constant="16" id="IlG-h7-Ra8"/>
+                                    <constraint firstAttribute="trailing" secondItem="N8u-Sm-TfQ" secondAttribute="trailing" constant="16" id="glS-1c-eNA"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -84,6 +97,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ig1-53-Rs3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--ModalyViewController-->
+        <scene sceneID="g8U-J4-dKa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ModalyViewController" id="MIv-EU-xg0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohz-i4-CGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="61"/>
         </scene>
     </scenes>
 </document>
