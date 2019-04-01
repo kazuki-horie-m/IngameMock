@@ -30,8 +30,8 @@ class SampleHandler: RPBroadcastSampleHandler {
 //                return
 //        }
 //        let endpointURL: String = "rtmp://192.168.2.1:1935/live"
-        let endpointURL: String = "rtmp://liveencoder:wowza13mixi@18.179.111.10:1935/live"
-        let streamName: String = "myStream"
+        let endpointURL: String = "rtmp://liveencoder:wowza13mixi@18.179.111.10:1935/rinrin"
+        let streamName: String = "live"
         broadcaster.streamName = streamName
         broadcaster.connect(endpointURL, arguments: nil)
     }

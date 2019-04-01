@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="24g-PN-Hta">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="24g-PN-Hta">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -110,6 +110,13 @@
                                     <segue destination="6qU-aL-Clr" kind="show" id="Kdz-wz-yIY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMg-PN-rOm">
+                                <rect key="frame" x="151" y="590" width="73" height="30"/>
+                                <state key="normal" title="ScrollSync"/>
+                                <connections>
+                                    <segue destination="txv-BS-nkA" kind="show" id="Nz7-yX-7ZO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -120,6 +127,7 @@
                             <constraint firstItem="WiV-G1-2TD" firstAttribute="top" secondItem="FsB-Op-pQX" secondAttribute="bottom" constant="16" id="Ci4-xL-R4I"/>
                             <constraint firstItem="Dpf-d9-fHp" firstAttribute="top" secondItem="9ut-n3-Cpu" secondAttribute="top" constant="64" id="EqX-YB-u0c"/>
                             <constraint firstItem="FsB-Op-pQX" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="Fo1-8V-iyQ"/>
+                            <constraint firstItem="PMg-PN-rOm" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="GOG-Ry-bry"/>
                             <constraint firstItem="oNI-Co-UnW" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="IvS-HK-2Yr"/>
                             <constraint firstItem="bf4-Ym-wVs" firstAttribute="top" secondItem="TIC-45-nry" secondAttribute="bottom" constant="16" id="IvW-Sc-v8u"/>
                             <constraint firstItem="sGs-4D-vGE" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="Mrv-OZ-Z4u"/>
@@ -134,6 +142,7 @@
                             <constraint firstItem="sGs-4D-vGE" firstAttribute="top" secondItem="xs3-eb-8Km" secondAttribute="bottom" constant="16" id="sZ4-eo-fQD"/>
                             <constraint firstItem="TIC-45-nry" firstAttribute="centerX" secondItem="oCn-LJ-t8f" secondAttribute="centerX" id="sjw-Ql-IQ8"/>
                             <constraint firstItem="xs3-eb-8Km" firstAttribute="top" secondItem="WiV-G1-2TD" secondAttribute="bottom" constant="16" id="ton-bR-HQa"/>
+                            <constraint firstItem="PMg-PN-rOm" firstAttribute="top" secondItem="sGs-4D-vGE" secondAttribute="bottom" constant="16" id="weT-sH-OQd"/>
                             <constraint firstItem="ce4-Rd-RbP" firstAttribute="top" secondItem="gYL-do-8Ee" secondAttribute="bottom" constant="16" id="y71-N2-U9w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ut-n3-Cpu"/>
@@ -224,6 +233,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73n-Yv-mu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="792" y="179"/>
+        </scene>
+        <!--ScrollSyncViewController-->
+        <scene sceneID="OhL-JF-n68">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ScrollSyncViewController" id="txv-BS-nkA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q5V-bE-JNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="259"/>
         </scene>
         <!--ReplayKitViewController-->
         <scene sceneID="ofW-dq-iX7">

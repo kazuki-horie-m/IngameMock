@@ -45,6 +45,9 @@
 		768DFBC8224CE0AE00358F49 /* ModalyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768DFBC7224CE0AE00358F49 /* ModalyViewController.storyboard */; };
 		768DFBCA224DF32F00358F49 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768DFBC9224DF32F00358F49 /* ContainerViewController.swift */; };
 		768DFBCC224DF34B00358F49 /* ContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768DFBCB224DF34B00358F49 /* ContainerViewController.storyboard */; };
+		769BFB892251C16B00ADD5B7 /* ScrollSyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769BFB882251C16B00ADD5B7 /* ScrollSyncViewController.swift */; };
+		769BFB8B2251C18500ADD5B7 /* ScrollSyncViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769BFB8A2251C18500ADD5B7 /* ScrollSyncViewController.storyboard */; };
+		769BFB8F2251C52400ADD5B7 /* ScrollSyncCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769BFB8E2251C52400ADD5B7 /* ScrollSyncCell.swift */; };
 		76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */; };
 		76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */; };
 		76A37575222F9CFE00B2AF9A /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A37570222F9BB600B2AF9A /* SocketIO.framework */; };
@@ -198,6 +201,9 @@
 		768DFBC7224CE0AE00358F49 /* ModalyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ModalyViewController.storyboard; sourceTree = "<group>"; };
 		768DFBC9224DF32F00358F49 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		768DFBCB224DF34B00358F49 /* ContainerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContainerViewController.storyboard; sourceTree = "<group>"; };
+		769BFB882251C16B00ADD5B7 /* ScrollSyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSyncViewController.swift; sourceTree = "<group>"; };
+		769BFB8A2251C18500ADD5B7 /* ScrollSyncViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollSyncViewController.storyboard; sourceTree = "<group>"; };
+		769BFB8E2251C52400ADD5B7 /* ScrollSyncCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSyncCell.swift; sourceTree = "<group>"; };
 		76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSTopViewController.swift; sourceTree = "<group>"; };
 		76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WSTopViewController.storyboard; sourceTree = "<group>"; };
 		76A37570222F9BB600B2AF9A /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
@@ -440,6 +446,7 @@
 		7655FF11222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				769BFB872251C15100ADD5B7 /* ScrollSync */,
 				766D94FF2244E8A9005D383E /* MicVolume */,
 				65625ED42242A6920045C073 /* ReplayKit */,
 				76BD933F223F4DDB005752EA /* Framework */,
@@ -492,6 +499,16 @@
 				766D95042244E996005D383E /* MicVolumeObserver.swift */,
 			);
 			path = MicVolume;
+			sourceTree = "<group>";
+		};
+		769BFB872251C15100ADD5B7 /* ScrollSync */ = {
+			isa = PBXGroup;
+			children = (
+				769BFB882251C16B00ADD5B7 /* ScrollSyncViewController.swift */,
+				769BFB8A2251C18500ADD5B7 /* ScrollSyncViewController.storyboard */,
+				769BFB8E2251C52400ADD5B7 /* ScrollSyncCell.swift */,
+			);
+			path = ScrollSync;
 			sourceTree = "<group>";
 		};
 		76A3756B222F8DB300B2AF9A /* WebSocket */ = {
@@ -797,6 +814,7 @@
 				76BD9345223F4DDB005752EA /* AcousticModelEnglish.bundle in Resources */,
 				76DDE4E32237576E00EFACB0 /* SFUAudienceViewController.storyboard in Resources */,
 				7655FF18222659370054B5A8 /* StreamingTopViewController.storyboard in Resources */,
+				769BFB8B2251C18500ADD5B7 /* ScrollSyncViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,6 +920,7 @@
 				76EDDB7C222E5FDD0017D1F6 /* StreamingPlayerManager.swift in Sources */,
 				65625ED1223C03E30045C073 /* SignalingRoomClient.swift in Sources */,
 				7655FF15222659370054B5A8 /* StreamingTopViewController.swift in Sources */,
+				769BFB892251C16B00ADD5B7 /* ScrollSyncViewController.swift in Sources */,
 				76A375882230E59400B2AF9A /* RTCStates.swift in Sources */,
 				7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */,
 				760E302F2240F729007588D7 /* AudioObserverViewController.swift in Sources */,
@@ -913,6 +932,7 @@
 				76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */,
 				76DDE4E12237575400EFACB0 /* SFUAudienceViewController.swift in Sources */,
 				76BD9325223F4649005752EA /* OpenEarsViewController.swift in Sources */,
+				769BFB8F2251C52400ADD5B7 /* ScrollSyncCell.swift in Sources */,
 				65625ECF223C03CF0045C073 /* WebRTCRoomClient.swift in Sources */,
 				766D95012244E8C6005D383E /* MicVolumeViewController.swift in Sources */,
 				76A375822230E51500B2AF9A /* SignalingClient.swift in Sources */,
