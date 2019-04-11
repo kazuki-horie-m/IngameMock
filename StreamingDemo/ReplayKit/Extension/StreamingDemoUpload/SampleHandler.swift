@@ -30,8 +30,8 @@ class SampleHandler: RPBroadcastSampleHandler {
 //                return
 //        }
 //        let endpointURL: String = "rtmp://192.168.2.1:1935/live"
-        let endpointURL: String = "rtmp://liveencoder:wowza13mixi@18.179.111.10:1935/rinrin"
-        let streamName: String = "live"
+        let endpointURL: String = "rtmp://liveencoder:wowza13mixi@18.182.65.36:1935/live"
+        let streamName: String = "myStream"
         broadcaster.streamName = streamName
         broadcaster.connect(endpointURL, arguments: nil)
     }
@@ -58,14 +58,14 @@ class SampleHandler: RPBroadcastSampleHandler {
                 let dimensions: CMVideoDimensions = CMVideoFormatDescriptionGetDimensions(description)
                 broadcaster.stream.videoSettings = [
                     "width": dimensions.width,
-                    "height": dimensions.height ,
-                    "profileLevel": kVTProfileLevel_H264_Baseline_AutoLevel
+                    "height": dimensions.height,
+                    "profileLevel": kVTProfileLevel_H264_Baseline_AutoLevel,
+                    "maxKeyFrameIntervalDuration": 0.5
                 ]
             }
             broadcaster.appendSampleBuffer(sampleBuffer, withType: .video)
         case .audioApp:
             broadcaster.appendSampleBuffer(sampleBuffer, withType: .audio)
-            break
         case .audioMic:
 //            broadcaster.appendSampleBuffer(sampleBuffer, withType: .audio)
             break

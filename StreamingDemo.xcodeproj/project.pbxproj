@@ -25,6 +25,8 @@
 		65625F142242ABF10045C073 /* HaishinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76EDDB83222E68990017D1F6 /* HaishinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		65625F152242ABFC0045C073 /* HaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EDDB83222E68990017D1F6 /* HaishinKit.framework */; };
 		65625F192242B71B0045C073 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65625EE12242A8120045C073 /* ReplayKit.framework */; };
+		760A7667225F3D2A00B26D47 /* JSONDecoder+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760A7666225F3D2A00B26D47 /* JSONDecoder+.swift */; };
+		760A7669225F3D3F00B26D47 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760A7668225F3D3F00B26D47 /* Encodable+.swift */; };
 		760AD4A62240A81C000B1283 /* GifWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760AD4A52240A81C000B1283 /* GifWebView.swift */; };
 		760E302F2240F729007588D7 /* AudioObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E302E2240F729007588D7 /* AudioObserverViewController.swift */; };
 		760E30312240F73F007588D7 /* AudioObserverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760E30302240F73F007588D7 /* AudioObserverViewController.storyboard */; };
@@ -48,6 +50,7 @@
 		769BFB892251C16B00ADD5B7 /* ScrollSyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769BFB882251C16B00ADD5B7 /* ScrollSyncViewController.swift */; };
 		769BFB8B2251C18500ADD5B7 /* ScrollSyncViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769BFB8A2251C18500ADD5B7 /* ScrollSyncViewController.storyboard */; };
 		769BFB8F2251C52400ADD5B7 /* ScrollSyncCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769BFB8E2251C52400ADD5B7 /* ScrollSyncCell.swift */; };
+		769BFB91225215EA00ADD5B7 /* AppLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769BFB90225215EA00ADD5B7 /* AppLog.swift */; };
 		76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */; };
 		76A3756F222F8DE600B2AF9A /* WSTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */; };
 		76A37575222F9CFE00B2AF9A /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A37570222F9BB600B2AF9A /* SocketIO.framework */; };
@@ -175,6 +178,8 @@
 		65625F042242A8B40045C073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65625F112242AAF90045C073 /* RTMPBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMPBroadcaster.swift; sourceTree = "<group>"; };
 		7393DF25F165D7FB40BE6730 /* Pods-StreamingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingDemo.debug.xcconfig"; path = "Target Support Files/Pods-StreamingDemo/Pods-StreamingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		760A7666225F3D2A00B26D47 /* JSONDecoder+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+.swift"; sourceTree = "<group>"; };
+		760A7668225F3D3F00B26D47 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		760AD4A52240A81C000B1283 /* GifWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWebView.swift; sourceTree = "<group>"; };
 		760E302E2240F729007588D7 /* AudioObserverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioObserverViewController.swift; sourceTree = "<group>"; };
 		760E30302240F73F007588D7 /* AudioObserverViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioObserverViewController.storyboard; sourceTree = "<group>"; };
@@ -204,6 +209,7 @@
 		769BFB882251C16B00ADD5B7 /* ScrollSyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSyncViewController.swift; sourceTree = "<group>"; };
 		769BFB8A2251C18500ADD5B7 /* ScrollSyncViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollSyncViewController.storyboard; sourceTree = "<group>"; };
 		769BFB8E2251C52400ADD5B7 /* ScrollSyncCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSyncCell.swift; sourceTree = "<group>"; };
+		769BFB90225215EA00ADD5B7 /* AppLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLog.swift; sourceTree = "<group>"; };
 		76A3756C222F8DCD00B2AF9A /* WSTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSTopViewController.swift; sourceTree = "<group>"; };
 		76A3756E222F8DE600B2AF9A /* WSTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WSTopViewController.storyboard; sourceTree = "<group>"; };
 		76A37570222F9BB600B2AF9A /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
@@ -409,6 +415,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		760A7665225F3CF400B26D47 /* Class Extension */ = {
+			isa = PBXGroup;
+			children = (
+				760A7666225F3D2A00B26D47 /* JSONDecoder+.swift */,
+				760A7668225F3D3F00B26D47 /* Encodable+.swift */,
+			);
+			path = "Class Extension";
+			sourceTree = "<group>";
+		};
 		760E302D2240F707007588D7 /* AudioObserver */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +461,7 @@
 		7655FF11222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				760A7665225F3CF400B26D47 /* Class Extension */,
 				769BFB872251C15100ADD5B7 /* ScrollSync */,
 				766D94FF2244E8A9005D383E /* MicVolume */,
 				65625ED42242A6920045C073 /* ReplayKit */,
@@ -460,6 +476,7 @@
 				65625ECB223C03690045C073 /* WebRTC-Room */,
 				76DDE4DB223756CB00EFACB0 /* SFU */,
 				7655FF12222659370054B5A8 /* AppDelegate.swift */,
+				769BFB90225215EA00ADD5B7 /* AppLog.swift */,
 				76EDDB7A222E5A3F0017D1F6 /* Bridging-Header.h */,
 				76BD9333223F48A9005752EA /* OpenEarsHeader.h */,
 				7655FF192226593A0054B5A8 /* Assets.xcassets */,
@@ -916,6 +933,7 @@
 			files = (
 				768DFBC6224CE08200358F49 /* ModalyViewController.swift in Sources */,
 				76A37579222F9F7E00B2AF9A /* NetworkManager.swift in Sources */,
+				760A7667225F3D2A00B26D47 /* JSONDecoder+.swift in Sources */,
 				76DDE4DD223756F300EFACB0 /* SFUHostViewController.swift in Sources */,
 				76EDDB7C222E5FDD0017D1F6 /* StreamingPlayerManager.swift in Sources */,
 				65625ED1223C03E30045C073 /* SignalingRoomClient.swift in Sources */,
@@ -924,6 +942,7 @@
 				76A375882230E59400B2AF9A /* RTCStates.swift in Sources */,
 				7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */,
 				760E302F2240F729007588D7 /* AudioObserverViewController.swift in Sources */,
+				769BFB91225215EA00ADD5B7 /* AppLog.swift in Sources */,
 				76DC4868222F5FC900ED1B0B /* NSObject+Ex.swift in Sources */,
 				766D95052244E996005D383E /* MicVolumeObserver.swift in Sources */,
 				76A3758C2230E5BE00B2AF9A /* IceCandidate.swift in Sources */,
@@ -945,6 +964,7 @@
 				76A3758A2230E5AC00B2AF9A /* SessionDescription.swift in Sources */,
 				76A375842230E53800B2AF9A /* Message.swift in Sources */,
 				76A375862230E56F00B2AF9A /* Config.swift in Sources */,
+				760A7669225F3D3F00B26D47 /* Encodable+.swift in Sources */,
 				76CDA1EE2239055800250653 /* VoiceStampViewController.swift in Sources */,
 				76DC4863222F5C4700ED1B0B /* WRTopViewController.swift in Sources */,
 				76A375802230E50100B2AF9A /* WebRTCClient.swift in Sources */,

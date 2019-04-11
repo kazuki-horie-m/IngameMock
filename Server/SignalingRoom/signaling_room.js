@@ -28,7 +28,7 @@ wsServer.on('connection', function(ws) {
 });
 function isSame(ws1, ws2) {
   // -- compare object --
-  return (ws1 === ws2);     
+  return (ws1 === ws2);
   // -- compare undocumented id --
   //return (ws1._ultron.id === ws2._ultron.id);
 }
@@ -50,6 +50,7 @@ io.on('connection', function(socket) {
       socket.join(roomname);
       console.log('id=' + socket.id + ' enter room=' + roomname);
       setRoomname(roomname);
+      emitMessage('message', 'todoitayo')
     });
 
     function setRoomname(room) {
@@ -66,7 +67,7 @@ io.on('connection', function(socket) {
       var roomname = getRoomname();
 
       if (roomname) {
-        //console.log('===== message broadcast to room -->' + roomname);
+        console.log('===== message broadcast to room -->' + roomname);
         socket.broadcast.to(roomname).emit(type, message);
       }
       else {
@@ -80,7 +81,7 @@ io.on('connection', function(socket) {
     socket.on('message', function(message) {
         var date = new Date();
         message.from = socket.id;
-        //console.log(date + 'id=' + socket.id + ' Received Message: ' + JSON.stringify(message));
+        console.log(date + 'id=' + socket.id + ' Received Message: ' + JSON.stringify(message));
 
         // get send target
         var target = message.sendto;
