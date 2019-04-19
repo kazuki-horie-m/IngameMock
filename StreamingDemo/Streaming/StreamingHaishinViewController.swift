@@ -14,28 +14,28 @@ import VideoToolbox
 class StreamingHaishinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         StreamingPlayerManager.shared.vcLive = self
     }
-    
+
     func startLive() {
         let httpStream = HTTPStream()
         httpStream.attachCamera(DeviceUtil.device(withPosition: .back))
         httpStream.attachAudio(AVCaptureDevice.default(for: .audio))
         httpStream.publish("hello")
-        
+
         let hkView = GLHKView(frame: view.bounds)
         hkView.attachStream(httpStream)
-        
+
         let httpService = HLSService(domain: "", type: "_http._tcp", name: "HaishinKit", port: 8080)
         httpService.startRunning()
         httpService.addHTTPStream(httpStream)
-        
+
         // add ViewController#view
         view.addSubview(hkView)
     }
-    
+
     func stopLive() {
-        
+
     }
 }

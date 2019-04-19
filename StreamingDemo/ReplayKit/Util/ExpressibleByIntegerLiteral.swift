@@ -13,7 +13,7 @@ extension ExpressibleByIntegerLiteral {
         var value: Self = self
         return Data(bytes: &value, count: MemoryLayout<Self>.size)
     }
-    
+
     init(data: Data) {
         let diff: Int = MemoryLayout<Self>.size - data.count
         if 0 < diff {
@@ -24,7 +24,7 @@ extension ExpressibleByIntegerLiteral {
         }
         self = data.withUnsafeBytes { $0.pointee }
     }
-    
+
     init(data: Slice<Data>) {
         self.init(data: Data(data))
     }

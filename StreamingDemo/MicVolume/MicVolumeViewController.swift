@@ -11,34 +11,34 @@ import UIKit
 class MicVolumeViewController: UIViewController {
     @IBOutlet private weak var lblAve: UILabel?
     @IBOutlet private weak var lblPeak: UILabel?
-    
+
     let observer = MicVolumeObserver()
-    
+
     @IBAction private func start(sender: UIButton) {
         observer.start() // コンソールにマイク入力のレベルをdB表示
     }
-    
+
     @IBAction private func stop(sender: UIButton) {
         observer.stop() // 処理停止
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         observer.updated = { [unowned self] index, ave, peak in
             print("\(index), \(ave), \(peak)")
-            
+
             DispatchQueue.main.async {
                 self.lblAve?.text = "Average: \(ave)"
                 self.lblPeak?.text = "Peak: \(peak)"
             }
         }
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
+
         observer.updated = nil
     }
-    
+
 }

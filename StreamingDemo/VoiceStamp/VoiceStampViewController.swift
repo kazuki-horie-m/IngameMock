@@ -15,38 +15,38 @@ class VoiceStampViewController: UIViewController {
     @IBOutlet private weak var recordButton: UIButton!
     @IBOutlet private weak var statusLabel: UILabel!
     @IBOutlet private weak var speechLabel: UILabel!
-    
+
     private let disposeBag = DisposeBag()
-    
+
     private var recognitionTask: SFSpeechRecognitionTask?
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private let audioEngine = AVAudioEngine()
-    
+
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))
-    
+
     @IBAction private func recordButtonTouchDown(sender: UIButton) {
         sender.backgroundColor = .green
         if !audioEngine.isRunning {
             try? startRecording()
         }
     }
-    
+
     @IBAction private func recordButtonTouchUp(sender: UIButton) {
         sender.backgroundColor = .clear
         stopRecoding()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         speechRecognizer?.delegate = self
-        
+
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        SFSpeechRecognizer.requestAuthorization { (status) in
+
+        SFSpeechRecognizer.requestAuthorization { status in
             OperationQueue.main.addOperation {
                 switch status {
                 case .authorized:
@@ -61,72 +61,72 @@ class VoiceStampViewController: UIViewController {
             }
         }
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-//        guard let gifView = GifWebView(fileName: "kamehameha") else { return }
-//        view.addSubview(gifView)
-//        gifView.startAnimate()
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.3) {
-//            gifView.removeFromSuperview()
-//        }
+
+        //        guard let gifView = GifWebView(fileName: "kamehameha") else { return }
+        //        view.addSubview(gifView)
+        //        gifView.startAnimate()
+        //
+        //        DispatchQueue.main.asyncAfter(deadline: .now() + 3.3) {
+        //            gifView.removeFromSuperview()
+        //        }
     }
-    
+
     private var timer: Timer?
-    
+
     private func startRecording() throws {
         refreshTask()
-        
-//        mixWithOthers
-//        duckOthers
-//        allowBluetooth
-//        defaultToSpeaker
-//        interruptSpokenAudioAndMixWithOthers
-//        allowBluetoothA2DP
-//        allowAirPlay
-        
+
+        //        mixWithOthers
+        //        duckOthers
+        //        allowBluetooth
+        //        defaultToSpeaker
+        //        interruptSpokenAudioAndMixWithOthers
+        //        allowBluetoothA2DP
+        //        allowAirPlay
+
         let audioSession = AVAudioSession.sharedInstance()
         try audioSession.setCategory(.playAndRecord, mode: .measurement, options: [.mixWithOthers, .allowBluetooth])
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-        
+
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         guard let recognitionRequest = recognitionRequest
             else { fatalError("Error: Request") }
-        
+
         recognitionRequest.shouldReportPartialResults = true
-        
+
         let inputNode = audioEngine.inputNode
         inputNode.removeTap(onBus: 0)
-        
-        recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { [weak self] (result, error) in
+
+        recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { [weak self] result, error in
             guard let `self` = self else { return }
             var isFinal = false
-            
+
             if let result = result {
                 self.speechLabel.text = result.bestTranscription.formattedString
                 isFinal = result.isFinal
             }
-            
+
             if error != nil || isFinal {
                 self.stopRecoding()
             }
         }
-            
+
         let recordingFormat = inputNode.outputFormat(forBus: 0)
-        
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
+
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, _: AVAudioTime) in
             self.recognitionRequest?.append(buffer)
         }
-        
+
         audioEngine.prepare()
         try audioEngine.start()
-        
+
         statusLabel.text = "Recognizing..."
         print("[TCTC] startRecoding")
     }
- 
+
     private func stopRecoding() {
         if audioEngine.isRunning {
             print("[TCTC] stopRecoding")
@@ -136,11 +136,11 @@ class VoiceStampViewController: UIViewController {
             recognitionRequest = nil
             recognitionTask?.cancel()
             recognitionTask = nil
-            
+
             self.statusLabel.text = "Stop"
         }
     }
-    
+
     private func refreshTask() {
         recognitionTask?.cancel()
         recognitionTask = nil
@@ -148,8 +148,8 @@ class VoiceStampViewController: UIViewController {
 }
 
 extension VoiceStampViewController: SFSpeechRecognizerDelegate {
-    
+
     public func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
-        
+
     }
 }

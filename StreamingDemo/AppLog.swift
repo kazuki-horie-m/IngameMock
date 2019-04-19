@@ -9,7 +9,7 @@
 import Foundation
 
 class AppLog {
-    class func debug(_ msg: String) {
-        print("[TCTC] " + msg)
+    class func debug(_ item: Any) {
+        print("[TCTC] " + String(describing: item))
     }
 }

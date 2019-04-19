@@ -11,6 +11,5 @@ import UIKit
 class LaunchTopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }

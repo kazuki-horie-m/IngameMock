@@ -15,14 +15,14 @@ extension URL {
         components.user = nil
         return components.url?.absoluteString ?? absoluteString
     }
-    
+
     var absoluteWithoutQueryString: String {
         guard let query: String = self.query else {
             return self.absoluteString
         }
         return absoluteString.replacingOccurrences(of: "?" + query, with: "")
     }
-    
+
     func dictionaryFromQuery() -> [String: String] {
         var result: [String: String] = [:]
         guard let query = URLComponents(string: absoluteString)?.queryItems else {

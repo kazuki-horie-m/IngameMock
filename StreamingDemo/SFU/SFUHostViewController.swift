@@ -15,63 +15,57 @@ import SwiftyJSON
 class SFUHostViewController: UIViewController {
     @IBOutlet private weak var videoView: RTCMTLVideoView!
     @IBOutlet private weak var cameraView: RTCMTLVideoView!
-    
+
     @IBOutlet private weak var webRTCStatusLabel: UILabel?
-    
+
     private lazy var signalClient = SignalingClient(serverUrl: Config.janus.signalingServerUrl, protocols: ["janus-protocol", "janus-admin-protocol"])
     private lazy var webRTCClient = WebRTCClient(iceServers: Config.janus.webRTCIceServers)
-    
+
     private var signalingConnected: Bool = false
-    
+
     private var hasLocalSdp: Bool = false
     private var hasRemoteSdp: Bool = false
-    
+
     private var localCandidateCount: Int = 0
     private var remoteCandidateCount: Int = 0
-    
+
     private var speakerOn: Bool = false
     private var mute: Bool = false
-    
+
     enum SignalType: String {
         case create = "create"
         case attach = "attach"
         case handle = "handle"
         case keepalive = "keepaplive"
         case info = "info"
-        
 
-        
         var transaction: String {
             let device: String = "iPhone"
             let userId: String = "TCTC"
             return device + "-" + userId + "-" + self.rawValue
         }
     }
-    
 
-    
-    
-    
     @IBAction func joinButtonAction(_ sender: UIButton) {
         sendJanusCreate()
     }
-    
+
     @IBAction func enableVideoAction(_ sender: UIButton) {
         self.webRTCClient.startCaptureLocalVideo(renderer: cameraView)
         self.webRTCClient.renderRemoteVideo(to: videoView)
     }
-    
+
     @IBAction func getInfoAction(_ sender: UIButton) {
         sendJanusInfo()
     }
-    
+
     @IBAction func disableVideoAction(_ sender: UIButton) {
         webRTCClient.stopCapture()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.signalingConnected = false
         self.hasLocalSdp = false
         self.hasRemoteSdp = false
@@ -79,115 +73,113 @@ class SFUHostViewController: UIViewController {
         self.remoteCandidateCount = 0
         self.speakerOn = false
         self.webRTCStatusLabel?.text = "New"
-        
+
         self.webRTCClient.delegate = self
         self.signalClient.delegate = self
-        
+
         self.signalClient.connect()
-        
+
         cameraView.contentMode = .scaleAspectFill
         cameraView.clipsToBounds = true
         cameraView.subviews.forEach {
             $0.contentMode = .scaleAspectFill
         }
-        
+
         videoView.clipsToBounds = true
         videoView.contentMode = .scaleAspectFill
         videoView.subviews.forEach {
             $0.contentMode = .scaleAspectFill
         }
     }
-    
+
     private func sendJanusCreate() {
-        let packet:[String: Any] = [
-                    "janus": "create",
-                    "transaction": SignalType.create.transaction
+        let packet: [String: Any] = [
+            "janus": "create",
+            "transaction": SignalType.create.transaction
         ]
-        
+
         signalClient.send(packet: packet)
     }
-    
+
     private func sendJanusInfo() {
-        let packet:[String: Any] = [
+        let packet: [String: Any] = [
             "janus": "info",
             "transaction": SignalType.info.transaction
         ]
-        
+
         signalClient.send(packet: packet)
     }
-    
-    
+
     private func sendJanusAttach(_ sessionId: Int64) {
-        let packet:[String: Any] = [
-            "janus" : "attach",
-            "session_id" : sessionId,
-            "plugin" : "janus.plugin.videoroom",
+        let packet: [String: Any] = [
+            "janus": "attach",
+            "session_id": sessionId,
+            "plugin": "janus.plugin.videoroom",
             "ptype": "publisher",
-            "transaction" : SignalType.attach.transaction
+            "transaction": SignalType.attach.transaction
         ]
         signalClient.send(packet: packet)
     }
-    
+
     private func sendJanusHandle(sessionId: Int64, handleId: Int64) {
-        let packet:[String: Any] = [
-            "janus" : "message",
-            "session_id" : sessionId,
-            "handle_id" : handleId,
+        let packet: [String: Any] = [
+            "janus": "message",
+            "session_id": sessionId,
+            "handle_id": handleId,
             "ptype": "publisher",
-            "transaction" : SignalType.handle.transaction,
-            "body" : [
+            "transaction": SignalType.handle.transaction,
+            "body": [
                 "ptype": "publisher",
                 "video": true,
                 "audio": true
             ]
         ]
-        
+
         signalClient.send(packet: packet)
     }
-    
-    
+
     private func sendJanusOffer() {
-//        "janus": "message",
-//        "body": {
-//            "request": "configure",
-//            "audio": true,
-//            "video": true
-//        },
-//        "transaction": "Rrf6qvLNKz2t",
-//        "jsep": {
-//            "type": "offer",
-//            "sdp": "v=0\r\no=mozilla...略"
-//        }
+        //        "janus": "message",
+        //        "body": {
+        //            "request": "configure",
+        //            "audio": true,
+        //            "video": true
+        //        },
+        //        "transaction": "Rrf6qvLNKz2t",
+        //        "jsep": {
+        //            "type": "offer",
+        //            "sdp": "v=0\r\no=mozilla...略"
+        //        }
     }
-    
+
     private func receiveJanusAnswer() {
-//        "janus": "event",
-//        "session_id": 7295224440092912,
-//        "transaction": "Rrf6qvLNKz2t",
-//        "sender": 3445604340575114,
-//        "plugindata": {
-//            "plugin": "janus.plugin.videoroom",
-//            "data": {
-//                "videoroom": "event",
-//                "room": 1234,
-//                "configured": "ok",
-//                "audio_codec": "opus",
-//                "video_codec": "vp8"
-//            }
-//        },
-//        "jsep": {
-//            "type": "answer",
-//            "sdp": "v=0\r\no=mozilla...略"
-//        }
+        //        "janus": "event",
+        //        "session_id": 7295224440092912,
+        //        "transaction": "Rrf6qvLNKz2t",
+        //        "sender": 3445604340575114,
+        //        "plugindata": {
+        //            "plugin": "janus.plugin.videoroom",
+        //            "data": {
+        //                "videoroom": "event",
+        //                "room": 1234,
+        //                "configured": "ok",
+        //                "audio_codec": "opus",
+        //                "video_codec": "vp8"
+        //            }
+        //        },
+        //        "jsep": {
+        //            "type": "answer",
+        //            "sdp": "v=0\r\no=mozilla...略"
+        //        }
     }
-    
+
     fileprivate func parse(_ jsonData: JSON) {
         guard let transaction = jsonData["transaction"].string
             else {
                 print("unknown message")
                 return
         }
-        
+
         switch transaction {
         case SignalType.create.transaction:
             receivedCreated(jsonData)
@@ -200,31 +192,31 @@ class SFUHostViewController: UIViewController {
             print("unknown transaction message")
         }
     }
-    
+
     private func receivedCreated(_ jsonData: JSON) {
         if let sessionId = jsonData["data"]["id"].int64 {
             sendJanusAttach(sessionId)
         }
     }
-    
+
     private func receivedAttached(_ jsonData: JSON) {
         guard let sessionId = jsonData["session_id"].int64,
             let handleId = jsonData["data"]["id"].int64
             else { return }
         sendJanusHandle(sessionId: sessionId, handleId: handleId)
     }
-    
+
     // 前の。
     private func offer() {
-        self.webRTCClient.offer { (sdp) in
+        self.webRTCClient.offer { sdp in
             self.hasLocalSdp = true
             self.signalClient.send(sdp: sdp)
         }
     }
-    
+
     // 前の。
     private func receiveAnswer() {
-        self.webRTCClient.answer { (localSdp) in
+        self.webRTCClient.answer { localSdp in
             self.hasLocalSdp = true
             self.signalClient.send(sdp: localSdp)
         }
@@ -235,28 +227,28 @@ extension SFUHostViewController: SignalClientDelegate {
     func signalClientDidConnect(_ signalClient: SignalingClient) {
         self.signalingConnected = true
     }
-    
+
     func signalClientDidDisconnect(_ signalClient: SignalingClient) {
         self.signalingConnected = false
     }
-    
+
     func signalClient(_ signalClient: SignalingClient, didReceiveRemoteSdp sdp: RTCSessionDescription) {
         print("Received remote sdp")
-        self.webRTCClient.set(remoteSdp: sdp) { (error) in
+        self.webRTCClient.set(remoteSdp: sdp) { _ in
             self.hasRemoteSdp = true
         }
     }
-    
+
     func signalClient(_ signalClient: SignalingClient, didReceiveCandidate candidate: RTCIceCandidate) {
         print("Received remote candidate")
         self.remoteCandidateCount += 1
         self.webRTCClient.set(remoteCandidate: candidate)
     }
-    
+
     func didReceiveMessage(_ signalClient: SignalingClient, message: String) {
         let msg = "websocketDidReceiveMessage: " + message
         print(msg)
-        
+
         let data = message.data(using: .utf8)!
         do {
             let jsonData = try JSON(data: data)
@@ -268,13 +260,13 @@ extension SFUHostViewController: SignalClientDelegate {
 }
 
 extension SFUHostViewController: WebRTCClientDelegate {
-    
+
     func webRTCClient(_ client: WebRTCClient, didDiscoverLocalCandidate candidate: RTCIceCandidate) {
         print("discovered local candidate")
         self.localCandidateCount += 1
         self.signalClient.send(candidate: candidate)
     }
-    
+
     func webRTCClient(_ client: WebRTCClient, didChangeConnectionState state: RTCIceConnectionState) {
         let textColor: UIColor
         switch state {
@@ -292,7 +284,7 @@ extension SFUHostViewController: WebRTCClientDelegate {
             self.webRTCStatusLabel?.textColor = textColor
         }
     }
-    
+
     func webRTCClient(_ client: WebRTCClient, didReceiveData data: Data) {
         DispatchQueue.main.async {
             let message = String(data: data, encoding: .utf8) ?? "(Binary: \(data.count) bytes)"

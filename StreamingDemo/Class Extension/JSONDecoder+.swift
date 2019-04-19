@@ -13,7 +13,7 @@ extension JSONDecoder {
         let data = try JSONSerialization.data(withJSONObject: object, options: opt)
         return try decode(T.self, from: data)
     }
-    
+
     func decode<T: Decodable>(_ type: T.Type, from data: [String: Any]) -> T? {
         dateDecodingStrategy = .iso8601
         return try? decode(T.self, withJSONObject: data)

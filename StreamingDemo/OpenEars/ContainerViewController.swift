@@ -10,20 +10,20 @@ import UIKit
 
 class ContainerViewController: UIViewController {
     @IBOutlet private weak var label: UILabel?
-    
+
     @IBAction func dismissView(sender: UIButton) {
         super.dismiss(animated: true, completion: nil)
     }
-    
+
     var identifier: String? {
         didSet {
             label?.text = identifier
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         label?.text = identifier
     }
-    
+
 }

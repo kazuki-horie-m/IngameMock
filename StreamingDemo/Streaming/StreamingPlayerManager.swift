@@ -11,7 +11,7 @@ import AVKit
 
 class StreamingPlayerManager {
     static let shared = StreamingPlayerManager()
-    
+
     weak var vcParent: AVPlayerViewController?
     weak var vcChild: AVPlayerViewController?
     weak var vcLive: StreamingHaishinViewController?
