@@ -14,10 +14,15 @@ class WSTopViewController: UIViewController {
     @IBOutlet private weak var tfAddress: UITextField?
     @IBOutlet private weak var tvLog: UITextView?
 
-    //    private let destinationURL: String = "http://192.168.2.1:8188"
-    private let destinationURL: String = "ws://192.168.2.1:8188"
-    //    private let destinationURL: String = "ws://10.196.42.175:8188"
-    private lazy var manager = SocketManager(socketURL: URL(string: destinationURL)!, config: [.log(true), .compress])
+    //    private let destinationUrlString: String = "http://192.168.2.1:8188"
+    //    private let destinationUrlString: String = "ws://192.168.2.1:8188"
+    private let destinationUrlString: String = "ws://10.196.221.231:8188" // open-smapho24
+    //    private let destinationUrlString: String = "ws://10.196.42.175:8188" // mx-data
+    private lazy var destinationUrl: URL = {
+        guard let url = URL(string: destinationUrlString) else { fatalError("destinationURL") }
+        return url
+    }()
+    private lazy var manager = SocketManager(socketURL: destinationUrl, config: [.log(true), .compress])
     private var socket: SocketIOClient {
         return manager.defaultSocket
     }
@@ -52,7 +57,7 @@ class WSTopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tfAddress?.text = destinationURL
+        tfAddress?.text = destinationUrlString
     }
 
     override func viewWillAppear(_ animated: Bool) {

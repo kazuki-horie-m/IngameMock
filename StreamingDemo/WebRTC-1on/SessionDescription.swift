@@ -15,7 +15,8 @@ enum SdpType: String, Codable {
 
     var rtcSdpType: RTCSdpType {
         switch self {
-        case .offer:    return .offer
+        case .offer:
+            return .offer
         case .answer:   return .answer
         case .prAnswer: return .prAnswer
         }

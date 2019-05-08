@@ -12,7 +12,8 @@ import WebRTC
 extension RTCIceConnectionState: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .new:          return "new"
+        case .new:
+            return "new"
         case .checking:     return "checking"
         case .connected:    return "connected"
         case .completed:    return "completed"
