@@ -20,13 +20,13 @@ final class DebugLogTableViewCell: UITableViewCell {
         switch data.level {
         case "error":
             textColor = .white
-            bgColor = .red //UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.75)
+            bgColor = .red
         case "warning":
             textColor = .darkGray
-            bgColor = .yellow //UIColor(red: 1.0, green: 0.95, blue: 0.2, alpha: 0.75)
+            bgColor = .yellow
         default:
             textColor = .white
-            bgColor = .darkGray //UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.75)
+            bgColor = .darkGray
         }
         
         label?.textColor = textColor
