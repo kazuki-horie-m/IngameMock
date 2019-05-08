@@ -31,6 +31,7 @@
 		760E302F2240F729007588D7 /* AudioObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E302E2240F729007588D7 /* AudioObserverViewController.swift */; };
 		760E30312240F73F007588D7 /* AudioObserverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760E30302240F73F007588D7 /* AudioObserverViewController.storyboard */; };
 		762E268C223742AF00B8BFF4 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762E268B223742AF00B8BFF4 /* WebRTC.framework */; };
+		764D832322829D4C00ECDABB /* DebugLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D832222829D4C00ECDABB /* DebugLogTableViewCell.swift */; };
 		7655FF13222659370054B5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF12222659370054B5A8 /* AppDelegate.swift */; };
 		7655FF15222659370054B5A8 /* StreamingTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF14222659370054B5A8 /* StreamingTopViewController.swift */; };
 		7655FF18222659370054B5A8 /* StreamingTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7655FF16222659370054B5A8 /* StreamingTopViewController.storyboard */; };
@@ -39,6 +40,9 @@
 		7655FF282226593A0054B5A8 /* StreamingDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF272226593A0054B5A8 /* StreamingDemoTests.swift */; };
 		7655FF332226593A0054B5A8 /* StreamingDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF322226593A0054B5A8 /* StreamingDemoUITests.swift */; };
 		7655FF4222265D200054B5A8 /* StreamingChildPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FF4122265D200054B5A8 /* StreamingChildPlayerViewController.swift */; };
+		7668A2442282767700210EE7 /* DebugLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7668A2432282767700210EE7 /* DebugLogViewController.swift */; };
+		7668A2462282773900210EE7 /* DebugLogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7668A2452282773900210EE7 /* DebugLogViewController.storyboard */; };
+		7668A24822827D3500210EE7 /* DebugWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7668A24722827D3500210EE7 /* DebugWindow.swift */; };
 		766D94F9224495CF005D383E /* BroadcastSetupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766D94F722449517005D383E /* BroadcastSetupViewController.storyboard */; };
 		766D95012244E8C6005D383E /* MicVolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D95002244E8C6005D383E /* MicVolumeViewController.swift */; };
 		766D95032244E91D005D383E /* MicVolumeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766D95022244E91D005D383E /* MicVolumeViewController.storyboard */; };
@@ -184,6 +188,7 @@
 		760E302E2240F729007588D7 /* AudioObserverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioObserverViewController.swift; sourceTree = "<group>"; };
 		760E30302240F73F007588D7 /* AudioObserverViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioObserverViewController.storyboard; sourceTree = "<group>"; };
 		762E268B223742AF00B8BFF4 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = Lib/WebRTC.framework; sourceTree = "<group>"; };
+		764D832222829D4C00ECDABB /* DebugLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogTableViewCell.swift; sourceTree = "<group>"; };
 		7655FF0F222659370054B5A8 /* StreamingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7655FF12222659370054B5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7655FF14222659370054B5A8 /* StreamingTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingTopViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +203,9 @@
 		7655FF322226593A0054B5A8 /* StreamingDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingDemoUITests.swift; sourceTree = "<group>"; };
 		7655FF342226593A0054B5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7655FF4122265D200054B5A8 /* StreamingChildPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingChildPlayerViewController.swift; sourceTree = "<group>"; };
+		7668A2432282767700210EE7 /* DebugLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogViewController.swift; sourceTree = "<group>"; };
+		7668A2452282773900210EE7 /* DebugLogViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugLogViewController.storyboard; sourceTree = "<group>"; };
+		7668A24722827D3500210EE7 /* DebugWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugWindow.swift; sourceTree = "<group>"; };
 		766D94F722449517005D383E /* BroadcastSetupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BroadcastSetupViewController.storyboard; sourceTree = "<group>"; };
 		766D95002244E8C6005D383E /* MicVolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicVolumeViewController.swift; sourceTree = "<group>"; };
 		766D95022244E91D005D383E /* MicVolumeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MicVolumeViewController.storyboard; sourceTree = "<group>"; };
@@ -461,6 +469,7 @@
 		7655FF11222659370054B5A8 /* StreamingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7668A2422282754C00210EE7 /* Debug */,
 				760A7665225F3CF400B26D47 /* Class Extension */,
 				769BFB872251C15100ADD5B7 /* ScrollSync */,
 				766D94FF2244E8A9005D383E /* MicVolume */,
@@ -476,7 +485,6 @@
 				65625ECB223C03690045C073 /* WebRTC-Room */,
 				76DDE4DB223756CB00EFACB0 /* SFU */,
 				7655FF12222659370054B5A8 /* AppDelegate.swift */,
-				769BFB90225215EA00ADD5B7 /* AppLog.swift */,
 				76EDDB7A222E5A3F0017D1F6 /* Bridging-Header.h */,
 				76BD9333223F48A9005752EA /* OpenEarsHeader.h */,
 				7655FF192226593A0054B5A8 /* Assets.xcassets */,
@@ -506,6 +514,18 @@
 				7655FF342226593A0054B5A8 /* Info.plist */,
 			);
 			path = StreamingDemoUITests;
+			sourceTree = "<group>";
+		};
+		7668A2422282754C00210EE7 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				769BFB90225215EA00ADD5B7 /* AppLog.swift */,
+				7668A24722827D3500210EE7 /* DebugWindow.swift */,
+				764D832222829D4C00ECDABB /* DebugLogTableViewCell.swift */,
+				7668A2432282767700210EE7 /* DebugLogViewController.swift */,
+				7668A2452282773900210EE7 /* DebugLogViewController.storyboard */,
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 		766D94FF2244E8A9005D383E /* MicVolume */ = {
@@ -657,7 +677,6 @@
 				65625EF02242A8B30045C073 /* Sources */,
 				65625EF12242A8B30045C073 /* Frameworks */,
 				65625EF22242A8B30045C073 /* Resources */,
-				76F4D92622699AF80075F1A9 /* Swift Lint Script */,
 			);
 			buildRules = (
 			);
@@ -833,6 +852,7 @@
 				76DDE4E32237576E00EFACB0 /* SFUAudienceViewController.storyboard in Resources */,
 				7655FF18222659370054B5A8 /* StreamingTopViewController.storyboard in Resources */,
 				769BFB8B2251C18500ADD5B7 /* ScrollSyncViewController.storyboard in Resources */,
+				7668A2462282773900210EE7 /* DebugLogViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,24 +924,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
 		};
-		76F4D92622699AF80075F1A9 /* Swift Lint Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Swift Lint Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint autocorrect --format\nswiftlint\nelse\necho \"warning: SwiftLint not installed. run [brew install swiftlint], or download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -970,16 +972,19 @@
 				76A3756D222F8DCD00B2AF9A /* WSTopViewController.swift in Sources */,
 				76DDE4E12237575400EFACB0 /* SFUAudienceViewController.swift in Sources */,
 				76BD9325223F4649005752EA /* OpenEarsViewController.swift in Sources */,
+				7668A2442282767700210EE7 /* DebugLogViewController.swift in Sources */,
 				769BFB8F2251C52400ADD5B7 /* ScrollSyncCell.swift in Sources */,
 				65625ECF223C03CF0045C073 /* WebRTCRoomClient.swift in Sources */,
 				766D95012244E8C6005D383E /* MicVolumeViewController.swift in Sources */,
 				76A375822230E51500B2AF9A /* SignalingClient.swift in Sources */,
 				760AD4A62240A81C000B1283 /* GifWebView.swift in Sources */,
 				76EDDB97222F5A7A0017D1F6 /* StreamingParentPlayerViewController.swift in Sources */,
+				7668A24822827D3500210EE7 /* DebugWindow.swift in Sources */,
 				7655FF13222659370054B5A8 /* AppDelegate.swift in Sources */,
 				76DC486A222F628200ED1B0B /* TopNavigationController.swift in Sources */,
 				76DC485E222F5B7300ED1B0B /* LaunchTopViewController.swift in Sources */,
 				768DFBCA224DF32F00358F49 /* ContainerViewController.swift in Sources */,
+				764D832322829D4C00ECDABB /* DebugLogTableViewCell.swift in Sources */,
 				76A3758A2230E5AC00B2AF9A /* SessionDescription.swift in Sources */,
 				76A375842230E53800B2AF9A /* Message.swift in Sources */,
 				76A375862230E56F00B2AF9A /* Config.swift in Sources */,

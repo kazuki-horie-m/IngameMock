@@ -29,6 +29,8 @@ class ScrollSyncViewController: UIViewController {
         collectionView2.delegate = self
         collectionView1.dataSource = self
         collectionView2.dataSource = self
+        
+        AppLog.debug("viewDidLoad")
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -44,6 +46,20 @@ class ScrollSyncViewController: UIViewController {
 
         pre1 = scrollView1.contentOffset
         pre2 = scrollView2.contentOffset
+        
+        AppLog.warning("viewDidAppear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        AppLog.info("viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        AppLog.error("viewDidDisappear")
     }
 
     private func setColor(to view: UIView) {

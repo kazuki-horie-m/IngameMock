@@ -12,10 +12,24 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var debugWindow: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        addDebugWindow()
+        
         return true
+    }
+    
+    private func addDebugWindow() {
+        let debugWindow = DebugWindow(frame: UIScreen.main.bounds)
+        let viewController = UIStoryboard.init(name: "DebugLogViewController", bundle: nil).instantiateViewController(withIdentifier: "identifier_debug")
+        debugWindow.rootViewController = viewController
+        debugWindow.windowLevel = .alert
+        debugWindow.isUserInteractionEnabled = true
+        debugWindow.makeKeyAndVisible()
+        self.debugWindow = debugWindow
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
